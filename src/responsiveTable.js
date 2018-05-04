@@ -2,7 +2,9 @@ const $ = require("jquery");
 
 // Responsive table
 exports.responsiveTable = function(displayMessage) {
-  displayResTableHeading(undefined, displayMessage);
+  setTimeout(function() {
+    displayResTableHeading(undefined, displayMessage);
+  }, 1);
   $(".collapse").on("show.bs.collapse", function() {
     var that = this;
     setTimeout(function() {
