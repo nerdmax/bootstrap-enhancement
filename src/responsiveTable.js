@@ -1,8 +1,8 @@
 const $ = require("jquery");
 
 // Responsive table
-exports.responsiveTable = function() {
-  displayResTableHeading();
+exports.responsiveTable = function(displayMessage) {
+  displayResTableHeading(undefined, displayMessage);
   $(".collapse").on("show.bs.collapse", function() {
     var that = this;
     setTimeout(function() {
@@ -11,7 +11,7 @@ exports.responsiveTable = function() {
   });
 };
 
-function displayResTableHeading(parentEle) {
+function displayResTableHeading(parentEle, displayMessage) {
   if (parentEle == undefined) {
     parentEle = document.getElementsByTagName("BODY")[0];
   }
@@ -31,9 +31,16 @@ function displayResTableHeading(parentEle) {
           tableWidth != 0 &&
           tableWidth > tableWrapperWidth
         ) {
-          $(this)
-            .find(".table-responsive-heading")
-            .show();
+          $(
+            `<p class="table-responsive-heading">${
+              displayMessage === undefined
+                ? "Scroll horizontally for more details"
+                : displayMessage
+            }</p>`
+          ).appendTo(this);
+          // $(this)
+          //   .find(".table-responsive-heading")
+          //   .show();
         }
         //console.log(tableWrapperWidth);
         //console.log(tableWidth);
