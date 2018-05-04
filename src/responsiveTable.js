@@ -1,3 +1,5 @@
+const $ = require("jquery");
+
 // Responsive table
 exports.responsiveTable = function() {
   displayResTableHeading();
