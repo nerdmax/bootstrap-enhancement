@@ -1,3 +1,3 @@
-const responsiveTable = require("./responsiveTable");
+const responsiveTable = require('./responsiveTable');
 
 exports.responsiveTable = responsiveTable;
