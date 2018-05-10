@@ -1,16 +1,21 @@
 const $ = require("jquery");
 
-// Responsive table
-exports.responsiveTable = function(displayMessage) {
+// Init
+exports.init = function(displayMessage) {
   setTimeout(function() {
     displayResTableHeading(undefined, displayMessage);
   }, 1);
   $(".collapse").on("show.bs.collapse", function() {
     var that = this;
     setTimeout(function() {
-      displayResTableHeading(that);
+      displayResTableHeading(that, displayMessage);
     }, 1);
   });
+};
+
+// Force upate
+exports.update = function(displayMessage) {
+  displayResTableHeading(undefined, displayMessage);
 };
 
 function displayResTableHeading(parentEle, displayMessage) {
