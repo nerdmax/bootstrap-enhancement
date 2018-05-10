@@ -4,22 +4,22 @@ function displayResTableHeading(parentEle, displayMessage) {
   setTimeout(() => {
     const parentEleSafe =
       parentEle === undefined ? document.getElementsByTagName('BODY')[0] : parentEle;
-    console.log('parentEleSafe: ', parentEleSafe);
+    // console.log('parentEleSafe: ', parentEleSafe);
     $(parentEleSafe)
       .find('.table-responsive')
       .each((index, tableWrapperElement) => {
-        console.log(tableWrapperElement);
+        // console.log(tableWrapperElement);
         $(tableWrapperElement).each(() => {
-          console.log($(tableWrapperElement));
+          // console.log($(tableWrapperElement));
           const tableWrapperWidth = $(tableWrapperElement).width();
           const tableWidth = $(tableWrapperElement)
             .find('table')
             .width();
-          console.log(tableWrapperWidth);
-          console.log(tableWidth);
+          // console.log(tableWrapperWidth);
+          // console.log(tableWidth);
           const isMessageExist =
             $(tableWrapperElement).siblings('.table-responsive-heading').length !== 0;
-          console.log('isMessageExist: ', isMessageExist);
+          // console.log('isMessageExist: ', isMessageExist);
           if (
             tableWrapperWidth !== 0 &&
             tableWidth !== 0 &&
