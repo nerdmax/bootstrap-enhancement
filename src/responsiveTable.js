@@ -1,44 +1,48 @@
 const $ = require('jquery');
 
 function displayResTableHeading(parentEle, displayMessage) {
-  const parentEleSafe =
-    parentEle === undefined ? document.getElementsByTagName('BODY')[0] : parentEle;
-  $(parentEleSafe)
-    .find('.table-responsive')
-    .each(() => {
-      $(this).each(() => {
-        // console.log($(this));
-        const tableWrapperWidth = $(this).width();
-        const tableWidth = $(this)
-          .find('table')
-          .width();
-        // console.log(tableWrapperWidth);
-        // console.log(tableWidth);
-
-        if (tableWrapperWidth !== 0 && tableWidth !== 0 && tableWidth > tableWrapperWidth) {
-          $(this).prepend(`<p class="table-responsive-heading">${
-            displayMessage === undefined ? 'Scroll horizontally for more details' : displayMessage
-          }</p>`);
-          // $(this)
-          //   .find(".table-responsive-heading")
-          //   .show();
-        }
-        // console.log(tableWrapperWidth);
-        // console.log(tableWidth);
+  setTimeout(() => {
+    const parentEleSafe =
+      parentEle === undefined ? document.getElementsByTagName('BODY')[0] : parentEle;
+    console.log('parentEleSafe: ', parentEleSafe);
+    $(parentEleSafe)
+      .find('.table-responsive')
+      .each((index, tableWrapperElement) => {
+        console.log(tableWrapperElement);
+        $(tableWrapperElement).each(() => {
+          console.log($(tableWrapperElement));
+          const tableWrapperWidth = $(tableWrapperElement).width();
+          const tableWidth = $(tableWrapperElement)
+            .find('table')
+            .width();
+          console.log(tableWrapperWidth);
+          console.log(tableWidth);
+          const isMessageExist =
+            $(tableWrapperElement).siblings('.table-responsive-heading').length !== 0;
+          console.log('isMessageExist: ', isMessageExist);
+          if (
+            tableWrapperWidth !== 0 &&
+            tableWidth !== 0 &&
+            tableWidth > tableWrapperWidth &&
+            !isMessageExist
+          ) {
+            $(`<p class="table-responsive-heading">${
+              displayMessage === undefined
+                ? 'Scroll table horizontally to see more.'
+                : displayMessage
+            }</p>`).insertBefore($(tableWrapperElement));
+          }
+        });
       });
-    });
+  }, 1);
 }
 
 // Init
 exports.init = function init(displayMessage) {
-  setTimeout(() => {
-    displayResTableHeading(undefined, displayMessage);
-  }, 1);
+  displayResTableHeading(undefined, displayMessage);
   $('.collapse').on('show.bs.collapse', () => {
     const that = this;
-    setTimeout(() => {
-      displayResTableHeading(that, displayMessage);
-    }, 1);
+    displayResTableHeading(that, displayMessage);
   });
 };
 
