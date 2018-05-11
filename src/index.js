@@ -1,3 +1,5 @@
+import * as checkBreakPoint from './checkBreakPoint/index';
+
 const responsiveTable = require('./responsiveTable');
 
-exports.responsiveTable = responsiveTable;
+export { responsiveTable, checkBreakPoint };
