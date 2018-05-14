@@ -95,7 +95,7 @@ function isMatchingExpression(str) {
     }
 
     const acceptedBreakpoints = breakpointList.slice(start, end);
-    console.log('acceptedBreakpoints: ', acceptedBreakpoints);
+    // console.log('acceptedBreakpoints: ', acceptedBreakpoints);
 
     return isAnyActive(acceptedBreakpoints);
   }
