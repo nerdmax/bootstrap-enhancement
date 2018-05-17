@@ -9,7 +9,7 @@ export function init() {
         // console.log(event.currentTarget);
         const $chevronIcon = $(document)
           .find(`[href='#${$(event.target).attr('id')}']`)
-          .find('svg');
+          .find('svg[bse]');
         // console.log($chevronIcon);
         $chevronIcon.attr('data-icon', 'chevron-up');
         // $(`#${this.id}-chevron`).toggleClass('fa-chevron-down fa-chevron-up');
@@ -18,7 +18,7 @@ export function init() {
       $('.collapse').on('hide.bs.collapse', (event) => {
         const $chevronIcon = $(document)
           .find(`[href='#${$(event.target).attr('id')}']`)
-          .find('svg');
+          .find('svg[bse]');
         $chevronIcon.attr('data-icon', 'chevron-down');
       });
     })
