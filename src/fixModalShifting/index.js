@@ -1,4 +1,4 @@
-import { addStyles, hasScrollBar } from '../utilities';
+import { addStyles, hasScrollBar } from '../bseUtilities';
 
 function addStyleToFixModalShifting() {
   if (hasScrollBar()) {
