@@ -1,4 +1,4 @@
-const $ = require('jquery');
+import $ from 'jquery';
 
 /**
  * Checks if the span is set to display lock via CSS
