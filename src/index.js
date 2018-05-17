@@ -1,6 +1,5 @@
-import * as fixModalShifting from './fixModalShifting/index';
 import * as bseUtilities from './bseUtilities/index';
+import * as responsiveTable from './responsiveTable/index';
+import * as fixModalShifting from './fixModalShifting/index';
 
-const responsiveTable = require('./responsiveTable');
-
-export { responsiveTable, fixModalShifting, bseUtilities };
+export { bseUtilities, responsiveTable, fixModalShifting };

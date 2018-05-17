@@ -38,15 +38,15 @@ function displayResTableHeading(parentEle, displayMessage) {
 }
 
 // Init
-exports.init = function init(displayMessage) {
+export function init(displayMessage) {
   displayResTableHeading(undefined, displayMessage);
   $('.collapse').on('show.bs.collapse', () => {
     const that = this;
     displayResTableHeading(that, displayMessage);
   });
-};
+}
 
 // Force upate
-exports.update = (displayMessage) => {
+export function update(displayMessage) {
   displayResTableHeading(undefined, displayMessage);
-};
+}
