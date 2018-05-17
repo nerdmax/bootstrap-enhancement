@@ -1,4 +1,4 @@
-import { getJquery } from '../bseUtilities/index';
+import { getJquery } from '../utilities/index';
 
 export function init() {
   getJquery()
