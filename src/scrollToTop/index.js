@@ -1,9 +1,8 @@
-import { getJquery, addStyles } from '../utilities/index';
+import $ from 'jquery';
+import { addStyles } from '../utilities/index';
 
 export function init(innerElement) {
-  getJquery()
-    .then(($) => {
-      addStyles(`
+  addStyles(`
         .scroll-to-top {
           display: none;
           position: fixed;
@@ -22,31 +21,27 @@ export function init(innerElement) {
         }
       `);
 
-      const $scrollAnchor = $(`<a class="scroll-to-top" href="">${innerElement}</a>`);
+  const $scrollAnchor = $(`<a class="scroll-to-top" href="">${innerElement}</a>`);
 
-      $('body').append($scrollAnchor);
+  $('body').append($scrollAnchor);
 
-      $(window).scroll(() => {
-        if ($(window).scrollTop() > 100) {
-          $scrollAnchor.fadeIn();
-        } else {
-          $scrollAnchor.fadeOut();
-        }
-      });
+  $(window).scroll(() => {
+    if ($(window).scrollTop() > 100) {
+      $scrollAnchor.fadeIn();
+    } else {
+      $scrollAnchor.fadeOut();
+    }
+  });
 
-      $scrollAnchor.click((e) => {
-        e.preventDefault();
-        $('body, html').animate(
-          {
-            scrollTop: 0,
-          },
-          800,
-        );
-      });
-    })
-    .catch((e) => {
-      console.error(e);
-    });
+  $scrollAnchor.click((e) => {
+    e.preventDefault();
+    $('body, html').animate(
+      {
+        scrollTop: 0,
+      },
+      800,
+    );
+  });
 }
 
 export function update() {}
