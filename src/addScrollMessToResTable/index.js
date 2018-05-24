@@ -44,6 +44,10 @@ export function init(displayMessage) {
     const that = this;
     displayResTableHeading(that, displayMessage);
   });
+  $(window).on('hashchange', () => {
+    console.log('REGRESH');
+    displayResTableHeading(undefined, displayMessage);
+  });
 }
 
 // Force upate
