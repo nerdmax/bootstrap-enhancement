@@ -6,7 +6,7 @@ function displayResTableHeading(parentEle, displayMessage) {
       parentEle === undefined ? document.getElementsByTagName('BODY')[0] : parentEle;
     // console.log('parentEleSafe: ', parentEleSafe);
     $(parentEleSafe)
-      .find('.table-responsive[bse]')
+      .find('.table-responsive[bse-resTableMess]')
       .each((index, tableWrapperElement) => {
         // console.log(tableWrapperElement);
         $(tableWrapperElement).each(() => {

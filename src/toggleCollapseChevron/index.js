@@ -9,7 +9,7 @@ export function init() {
         // console.log(event.currentTarget);
         const $chevronIcon = $(document)
           .find(`[href='#${$(event.target).attr('id')}']`)
-          .find('svg[bse]');
+          .find('svg[bse-toggleCollapChevron]');
         // console.log($chevronIcon);
         $chevronIcon.attr('data-icon', 'chevron-up');
         // $(`#${this.id}-chevron`).toggleClass('fa-chevron-down fa-chevron-up');
