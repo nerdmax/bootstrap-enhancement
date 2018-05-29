@@ -13,3 +13,12 @@ export {
   scrollToTop,
   resList,
 };
+// console.log('sdjfkljd');
+// const testtttt = 'test export';
+// const test2 = () => {
+//   console.log('test');
+//   const testArray = [1, 2, 3, 4];
+//   console.log(testArray.find(no => no > 2));
+// };
+// export { testtttt, test2 };
+// export default testtttt;
