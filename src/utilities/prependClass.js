@@ -1,10 +1,12 @@
-import $ from 'jquery';
+import getJquery from './../utilities/getJquery';
 
 export default function prependClass(sel, strClass) {
-  const $el = $(sel);
+  getJquery().then(($) => {
+    const $el = $(sel);
 
-  /* prepend class */
-  let classes = $el.attr('class') ? $el.attr('class') : '';
-  classes = `${strClass} ${classes}`;
-  $el.attr('class', classes);
+    /* prepend class */
+    let classes = $el.attr('class') ? $el.attr('class') : '';
+    classes = `${strClass} ${classes}`;
+    $el.attr('class', classes);
+  });
 }

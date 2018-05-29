@@ -6,6 +6,7 @@ export default function getJquery() {
     } else if (window.jQuery) {
       $$ = window.jQuery;
     } else {
+      console.error('Please make sure you loaded jQuery and added it to the window object');
       reject(new Error('Please make sure you loaded jQuery and added it to the window object'));
     }
     resolve($$);
