@@ -2,8 +2,11 @@
 
 // console.log(bse.responsiveTable);
 
-// import bse from '../src/index';
+// import * as bse from '../src/index';
+import * as bseDist from '../dist/bootstrap-enhancement';
 
-// console.log(bse);
+// const bseReq = require('../dist/bootstrap-enhancement');
 
-console.log(process.version);
+console.log(bseDist);
+
+// console.log(process.version);
