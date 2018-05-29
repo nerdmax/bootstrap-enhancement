@@ -5,7 +5,7 @@ import * as toggleCollapseChevron from './toggleCollapseChevron/index';
 import * as scrollToTop from './scrollToTop/index';
 import * as resList from './resList/index';
 
-export {
+const bse = {
   utilities,
   addScrollMessToResTable,
   fixModalShifting,
@@ -13,6 +13,11 @@ export {
   scrollToTop,
   resList,
 };
+
+export default bse;
+
+utilities.addToWindow('bse', bse);
+
 // console.log('sdjfkljd');
 // const testtttt = 'test export';
 // const test2 = () => {
