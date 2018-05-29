@@ -3,10 +3,14 @@
 // console.log(bse.responsiveTable);
 
 // import * as bse from '../src/index';
-import bseDist from '../dist/bootstrap-enhancement';
+import $ from 'jquery';
+window.$ = $;
+import bse from '../dist/bootstrap-enhancement';
 
 // const bseReq = require('../dist/bootstrap-enhancement');
 
-console.log(bseDist);
+console.log(bse);
+
+bse.resList.init();
 
 // console.log(process.version);
