@@ -1,6 +1,6 @@
 export default function addToWindow(keyValue, element) {
   return new Promise((resolve, reject) => {
-    console.log(window[keyValue]);
+    // console.log(window[keyValue]);
     if (typeof window !== 'undefined') {
       if (typeof window[keyValue] === 'undefined') {
         window[keyValue] = element;

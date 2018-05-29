@@ -16,7 +16,7 @@ const bse = {
 
 export default bse;
 
-// utilities.addToWindow('bse', bse);
+utilities.addToWindow('bse', bse);
 
 // console.log('sdjfkljd');
 // const testtttt = 'test export';
