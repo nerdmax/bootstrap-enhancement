@@ -1,0 +1,110 @@
+{
+  "coverage": "28.57%",
+  "expectCount": 28,
+  "actualCount": 8,
+  "files": {
+    "src/addScrollMessToResTable/index.js": {
+      "expectCount": 3,
+      "actualCount": 0,
+      "undocumentLines": [
+        3,
+        43,
+        58
+      ]
+    },
+    "src/fixModalShifting/index.js": {
+      "expectCount": 3,
+      "actualCount": 2,
+      "undocumentLines": [
+        22
+      ]
+    },
+    "src/index.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/resList/index.js": {
+      "expectCount": 3,
+      "actualCount": 0,
+      "undocumentLines": [
+        4,
+        69,
+        79
+      ]
+    },
+    "src/scrollToTop/index.js": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        4,
+        48
+      ]
+    },
+    "src/toggleCollapseChevron/index.js": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        3,
+        30
+      ]
+    },
+    "src/utilities/addStyles.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "src/utilities/addToWindow.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "src/utilities/checkBreakPoint/checkSize.js": {
+      "expectCount": 2,
+      "actualCount": 1,
+      "undocumentLines": [
+        13
+      ]
+    },
+    "src/utilities/checkBreakPoint/is.js": {
+      "expectCount": 6,
+      "actualCount": 4,
+      "undocumentLines": [
+        3,
+        105
+      ]
+    },
+    "src/utilities/getJquery.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "src/utilities/getScrollBarWidth.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "src/utilities/hasScrollBar.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "src/utilities/prependClass.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    }
+  }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/resList/index.js | bootstrap-enhancement</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-bse">bse</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#addscrollmesstorestable">addScrollMessToResTable</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-init">init</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-update">update</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#fixmodalshifting">fixModalShifting</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-init">init</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-update">update</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#reslist">resList</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-init">init</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-update">update</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#scrolltotop">scrollToTop</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-init">init</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-update">update</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#togglecollapsechevron">toggleCollapseChevron</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-init">init</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-update">update</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#utilities">utilities</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-addStyles">addStyles</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-addToWindow">addToWindow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getJquery">getJquery</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getScrollBarWidth">getScrollBarWidth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-hasScrollBar">hasScrollBar</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-prependClass">prependClass</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#utilities-checkbreakpoint">utilities/checkBreakPoint</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-checkSize">checkSize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-is">is</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/resList/index.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import getJquery from &apos;./../utilities/getJquery&apos;;
+import { prependClass } from &apos;../utilities/index&apos;;
+
+function convertListToDropdown(config = {}) {
+  getJquery().then(($) =&gt; {
+    // console.log(config);
+    const { breakPoint = &apos;lg&apos;, className } = config;
+    const windowUrl = window.location.href;
+    // console.log(&apos;windowUrl: &apos;, windowUrl);
+    $(&apos;body&apos;)
+      .find(&apos;ul[bse-resList]&apos;)
+      .each((ulIndex, ulElement) =&gt; {
+        // Loop through all menus
+        prependClass(ulElement, `d-none d-${breakPoint}-flex`);
+        const isDropdownExist = $(ulElement).siblings(&apos;select&apos;).length !== 0;
+        if (isDropdownExist) {
+          // Update drop down list&apos;s select
+          const $dropDown = $($(ulElement).siblings(&apos;select&apos;)[0]);
+          $dropDown.find(&apos;option&apos;).each((optionIndex, optionElement) =&gt; {
+            const href = optionElement.value;
+            const isActived = windowUrl.indexOf(href) !== -1;
+            if (isActived) {
+              optionElement.selected = true;
+            } else {
+              optionElement.selected = false;
+            }
+            // console.log(optionElement.selected);
+            // console.log(optionElement.value);
+          });
+        } else {
+          // Crete new drop down list
+          const $dropDown = $(&apos;&lt;select /&gt;&apos;, {
+            class: `d-${breakPoint}-none ${className}`,
+          });
+          $(ulElement)
+            .find(&apos;li&apos;)
+            .each((liIndex, liElement) =&gt; {
+              // console.log(liElement);
+              // console.log($(liElement).find(&apos;a&apos;));
+              $(liElement)
+                .find(&apos;a&apos;)
+                .each((aIndex, aElement) =&gt; {
+                  const href = $(aElement).attr(&apos;href&apos;);
+                  const text = $(aElement).text();
+                  const isActived = windowUrl.indexOf(href) !== -1;
+                  const $option = $(&apos;&lt;option /&gt;&apos;, {
+                    value: href,
+                    text,
+                    selected: isActived,
+                  });
+                  $option.appendTo($dropDown);
+                });
+            });
+          // console.log($dropDown);
+          $dropDown.insertAfter($(ulElement));
+          // Add navigate funcitonality to options
+          $dropDown.on(&apos;change&apos;, (event) =&gt; {
+            // console.log(event.currentTarget);
+            window.location = $(event.currentTarget)
+              .find(&apos;option:selected&apos;)
+              .val();
+          });
+        }
+      });
+  });
+}
+
+// Init
+export function init(config) {
+  getJquery().then(($) =&gt; {
+    convertListToDropdown(config);
+    $(window).on(&apos;hashchange&apos;, () =&gt; {
+      convertListToDropdown(config);
+    });
+  });
+}
+
+// Force upate
+export function update() {}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
