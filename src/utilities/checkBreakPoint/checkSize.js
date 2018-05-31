@@ -1,4 +1,4 @@
-
+// TODO: Need to load jQuery properly.
 /**
  * Checks if the span is set to display lock via CSS
  */
