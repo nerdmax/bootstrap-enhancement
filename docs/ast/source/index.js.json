@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 876,
+  "end": 2962,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 31,
+      "line": 73,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 876,
+    "end": 2962,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 31,
+        "line": 73,
         "column": 0
       }
     },
@@ -30,65 +30,63 @@
     "body": [
       {
         "type": "ImportDeclaration",
-        "start": 21,
-        "end": 68,
+        "start": 0,
+        "end": 47,
         "loc": {
           "start": {
-            "line": 2,
+            "line": 1,
             "column": 0
           },
           "end": {
-            "line": 2,
+            "line": 1,
             "column": 47
           }
         },
         "specifiers": [
           {
             "type": "ImportNamespaceSpecifier",
-            "start": 28,
-            "end": 42,
+            "start": 7,
+            "end": 21,
             "loc": {
               "start": {
-                "line": 2,
+                "line": 1,
                 "column": 7
               },
               "end": {
-                "line": 2,
+                "line": 1,
                 "column": 21
               }
             },
             "local": {
               "type": "Identifier",
-              "start": 33,
-              "end": 42,
+              "start": 12,
+              "end": 21,
               "loc": {
                 "start": {
-                  "line": 2,
+                  "line": 1,
                   "column": 12
                 },
                 "end": {
-                  "line": 2,
+                  "line": 1,
                   "column": 21
                 },
                 "identifierName": "utilities"
               },
-              "name": "utilities",
-              "leadingComments": null
-            },
-            "leadingComments": null
+              "name": "utilities"
+            }
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 48,
-          "end": 67,
+          "start": 27,
+          "end": 46,
           "loc": {
             "start": {
-              "line": 2,
+              "line": 1,
               "column": 27
             },
             "end": {
-              "line": 2,
+              "line": 1,
               "column": 46
             }
           },
@@ -97,66 +95,48 @@
             "raw": "'./utilities/index'"
           },
           "value": "./utilities/index"
-        },
-        "leadingComments": [
-          {
-            "type": "CommentBlock",
-            "value": "* @module index ",
-            "start": 0,
-            "end": 20,
-            "loc": {
-              "start": {
-                "line": 1,
-                "column": 0
-              },
-              "end": {
-                "line": 1,
-                "column": 20
-              }
-            }
-          }
-        ]
+        }
       },
       {
         "type": "ImportDeclaration",
-        "start": 69,
-        "end": 144,
+        "start": 48,
+        "end": 123,
         "loc": {
           "start": {
-            "line": 3,
+            "line": 2,
             "column": 0
           },
           "end": {
-            "line": 3,
+            "line": 2,
             "column": 75
           }
         },
         "specifiers": [
           {
             "type": "ImportNamespaceSpecifier",
-            "start": 76,
-            "end": 104,
+            "start": 55,
+            "end": 83,
             "loc": {
               "start": {
-                "line": 3,
+                "line": 2,
                 "column": 7
               },
               "end": {
-                "line": 3,
+                "line": 2,
                 "column": 35
               }
             },
             "local": {
               "type": "Identifier",
-              "start": 81,
-              "end": 104,
+              "start": 60,
+              "end": 83,
               "loc": {
                 "start": {
-                  "line": 3,
+                  "line": 2,
                   "column": 12
                 },
                 "end": {
-                  "line": 3,
+                  "line": 2,
                   "column": 35
                 },
                 "identifierName": "addScrollMessToResTable"
@@ -167,15 +147,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 110,
-          "end": 143,
+          "start": 89,
+          "end": 122,
           "loc": {
             "start": {
-              "line": 3,
+              "line": 2,
               "column": 41
             },
             "end": {
-              "line": 3,
+              "line": 2,
               "column": 74
             }
           },
@@ -188,44 +168,44 @@
       },
       {
         "type": "ImportDeclaration",
-        "start": 145,
-        "end": 206,
+        "start": 124,
+        "end": 185,
         "loc": {
           "start": {
-            "line": 4,
+            "line": 3,
             "column": 0
           },
           "end": {
-            "line": 4,
+            "line": 3,
             "column": 61
           }
         },
         "specifiers": [
           {
             "type": "ImportNamespaceSpecifier",
-            "start": 152,
-            "end": 173,
+            "start": 131,
+            "end": 152,
             "loc": {
               "start": {
-                "line": 4,
+                "line": 3,
                 "column": 7
               },
               "end": {
-                "line": 4,
+                "line": 3,
                 "column": 28
               }
             },
             "local": {
               "type": "Identifier",
-              "start": 157,
-              "end": 173,
+              "start": 136,
+              "end": 152,
               "loc": {
                 "start": {
-                  "line": 4,
+                  "line": 3,
                   "column": 12
                 },
                 "end": {
-                  "line": 4,
+                  "line": 3,
                   "column": 28
                 },
                 "identifierName": "fixModalShifting"
@@ -236,15 +216,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 179,
-          "end": 205,
+          "start": 158,
+          "end": 184,
           "loc": {
             "start": {
-              "line": 4,
+              "line": 3,
               "column": 34
             },
             "end": {
-              "line": 4,
+              "line": 3,
               "column": 60
             }
           },
@@ -257,44 +237,44 @@
       },
       {
         "type": "ImportDeclaration",
-        "start": 207,
-        "end": 278,
+        "start": 186,
+        "end": 257,
         "loc": {
           "start": {
-            "line": 5,
+            "line": 4,
             "column": 0
           },
           "end": {
-            "line": 5,
+            "line": 4,
             "column": 71
           }
         },
         "specifiers": [
           {
             "type": "ImportNamespaceSpecifier",
-            "start": 214,
-            "end": 240,
+            "start": 193,
+            "end": 219,
             "loc": {
               "start": {
-                "line": 5,
+                "line": 4,
                 "column": 7
               },
               "end": {
-                "line": 5,
+                "line": 4,
                 "column": 33
               }
             },
             "local": {
               "type": "Identifier",
-              "start": 219,
-              "end": 240,
+              "start": 198,
+              "end": 219,
               "loc": {
                 "start": {
-                  "line": 5,
+                  "line": 4,
                   "column": 12
                 },
                 "end": {
-                  "line": 5,
+                  "line": 4,
                   "column": 33
                 },
                 "identifierName": "toggleCollapseChevron"
@@ -305,15 +285,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 246,
-          "end": 277,
+          "start": 225,
+          "end": 256,
           "loc": {
             "start": {
-              "line": 5,
+              "line": 4,
               "column": 39
             },
             "end": {
-              "line": 5,
+              "line": 4,
               "column": 70
             }
           },
@@ -326,44 +306,44 @@
       },
       {
         "type": "ImportDeclaration",
-        "start": 279,
-        "end": 330,
+        "start": 258,
+        "end": 309,
         "loc": {
           "start": {
-            "line": 6,
+            "line": 5,
             "column": 0
           },
           "end": {
-            "line": 6,
+            "line": 5,
             "column": 51
           }
         },
         "specifiers": [
           {
             "type": "ImportNamespaceSpecifier",
-            "start": 286,
-            "end": 302,
+            "start": 265,
+            "end": 281,
             "loc": {
               "start": {
-                "line": 6,
+                "line": 5,
                 "column": 7
               },
               "end": {
-                "line": 6,
+                "line": 5,
                 "column": 23
               }
             },
             "local": {
               "type": "Identifier",
-              "start": 291,
-              "end": 302,
+              "start": 270,
+              "end": 281,
               "loc": {
                 "start": {
-                  "line": 6,
+                  "line": 5,
                   "column": 12
                 },
                 "end": {
-                  "line": 6,
+                  "line": 5,
                   "column": 23
                 },
                 "identifierName": "scrollToTop"
@@ -374,15 +354,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 308,
-          "end": 329,
+          "start": 287,
+          "end": 308,
           "loc": {
             "start": {
-              "line": 6,
+              "line": 5,
               "column": 29
             },
             "end": {
-              "line": 6,
+              "line": 5,
               "column": 50
             }
           },
@@ -395,44 +375,44 @@
       },
       {
         "type": "ImportDeclaration",
-        "start": 331,
-        "end": 374,
+        "start": 310,
+        "end": 353,
         "loc": {
           "start": {
-            "line": 7,
+            "line": 6,
             "column": 0
           },
           "end": {
-            "line": 7,
+            "line": 6,
             "column": 43
           }
         },
         "specifiers": [
           {
             "type": "ImportNamespaceSpecifier",
-            "start": 338,
-            "end": 350,
+            "start": 317,
+            "end": 329,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 6,
                 "column": 7
               },
               "end": {
-                "line": 7,
+                "line": 6,
                 "column": 19
               }
             },
             "local": {
               "type": "Identifier",
-              "start": 343,
-              "end": 350,
+              "start": 322,
+              "end": 329,
               "loc": {
                 "start": {
-                  "line": 7,
+                  "line": 6,
                   "column": 12
                 },
                 "end": {
-                  "line": 7,
+                  "line": 6,
                   "column": 19
                 },
                 "identifierName": "resList"
@@ -443,15 +423,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 356,
-          "end": 373,
+          "start": 335,
+          "end": 352,
           "loc": {
             "start": {
-              "line": 7,
+              "line": 6,
               "column": 25
             },
             "end": {
-              "line": 7,
+              "line": 6,
               "column": 42
             }
           },
@@ -460,7 +440,25 @@
             "raw": "'./resList/index'"
           },
           "value": "./resList/index"
-        }
+        },
+        "trailingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * utilities\n ",
+            "start": 355,
+            "end": 375,
+            "loc": {
+              "start": {
+                "line": 8,
+                "column": 0
+              },
+              "end": {
+                "line": 10,
+                "column": 3
+              }
+            }
+          }
+        ]
       },
       {
         "type": "Identifier",
@@ -468,11 +466,11 @@
         "end": 503,
         "loc": {
           "start": {
-            "line": 9,
+            "line": 11,
             "column": 0
           },
           "end": {
-            "line": 16,
+            "line": 18,
             "column": 2
           }
         },
@@ -483,11 +481,11 @@
             "end": 502,
             "loc": {
               "start": {
-                "line": 9,
+                "line": 11,
                 "column": 6
               },
               "end": {
-                "line": 16,
+                "line": 18,
                 "column": 1
               }
             },
@@ -497,16 +495,17 @@
               "end": 385,
               "loc": {
                 "start": {
-                  "line": 9,
+                  "line": 11,
                   "column": 6
                 },
                 "end": {
-                  "line": 9,
+                  "line": 11,
                   "column": 9
                 },
                 "identifierName": "bse"
               },
-              "name": "bse"
+              "name": "bse",
+              "leadingComments": null
             },
             "init": {
               "type": "ObjectExpression",
@@ -514,11 +513,11 @@
               "end": 502,
               "loc": {
                 "start": {
-                  "line": 9,
+                  "line": 11,
                   "column": 12
                 },
                 "end": {
-                  "line": 16,
+                  "line": 18,
                   "column": 1
                 }
               },
@@ -529,11 +528,11 @@
                   "end": 401,
                   "loc": {
                     "start": {
-                      "line": 10,
+                      "line": 12,
                       "column": 2
                     },
                     "end": {
-                      "line": 10,
+                      "line": 12,
                       "column": 11
                     }
                   },
@@ -546,11 +545,11 @@
                     "end": 401,
                     "loc": {
                       "start": {
-                        "line": 10,
+                        "line": 12,
                         "column": 2
                       },
                       "end": {
-                        "line": 10,
+                        "line": 12,
                         "column": 11
                       },
                       "identifierName": "utilities"
@@ -563,11 +562,11 @@
                     "end": 401,
                     "loc": {
                       "start": {
-                        "line": 10,
+                        "line": 12,
                         "column": 2
                       },
                       "end": {
-                        "line": 10,
+                        "line": 12,
                         "column": 11
                       },
                       "identifierName": "utilities"
@@ -584,11 +583,11 @@
                   "end": 428,
                   "loc": {
                     "start": {
-                      "line": 11,
+                      "line": 13,
                       "column": 2
                     },
                     "end": {
-                      "line": 11,
+                      "line": 13,
                       "column": 25
                     }
                   },
@@ -601,11 +600,11 @@
                     "end": 428,
                     "loc": {
                       "start": {
-                        "line": 11,
+                        "line": 13,
                         "column": 2
                       },
                       "end": {
-                        "line": 11,
+                        "line": 13,
                         "column": 25
                       },
                       "identifierName": "addScrollMessToResTable"
@@ -618,11 +617,11 @@
                     "end": 428,
                     "loc": {
                       "start": {
-                        "line": 11,
+                        "line": 13,
                         "column": 2
                       },
                       "end": {
-                        "line": 11,
+                        "line": 13,
                         "column": 25
                       },
                       "identifierName": "addScrollMessToResTable"
@@ -639,11 +638,11 @@
                   "end": 448,
                   "loc": {
                     "start": {
-                      "line": 12,
+                      "line": 14,
                       "column": 2
                     },
                     "end": {
-                      "line": 12,
+                      "line": 14,
                       "column": 18
                     }
                   },
@@ -656,11 +655,11 @@
                     "end": 448,
                     "loc": {
                       "start": {
-                        "line": 12,
+                        "line": 14,
                         "column": 2
                       },
                       "end": {
-                        "line": 12,
+                        "line": 14,
                         "column": 18
                       },
                       "identifierName": "fixModalShifting"
@@ -673,11 +672,11 @@
                     "end": 448,
                     "loc": {
                       "start": {
-                        "line": 12,
+                        "line": 14,
                         "column": 2
                       },
                       "end": {
-                        "line": 12,
+                        "line": 14,
                         "column": 18
                       },
                       "identifierName": "fixModalShifting"
@@ -694,11 +693,11 @@
                   "end": 473,
                   "loc": {
                     "start": {
-                      "line": 13,
+                      "line": 15,
                       "column": 2
                     },
                     "end": {
-                      "line": 13,
+                      "line": 15,
                       "column": 23
                     }
                   },
@@ -711,11 +710,11 @@
                     "end": 473,
                     "loc": {
                       "start": {
-                        "line": 13,
+                        "line": 15,
                         "column": 2
                       },
                       "end": {
-                        "line": 13,
+                        "line": 15,
                         "column": 23
                       },
                       "identifierName": "toggleCollapseChevron"
@@ -728,11 +727,11 @@
                     "end": 473,
                     "loc": {
                       "start": {
-                        "line": 13,
+                        "line": 15,
                         "column": 2
                       },
                       "end": {
-                        "line": 13,
+                        "line": 15,
                         "column": 23
                       },
                       "identifierName": "toggleCollapseChevron"
@@ -749,11 +748,11 @@
                   "end": 488,
                   "loc": {
                     "start": {
-                      "line": 14,
+                      "line": 16,
                       "column": 2
                     },
                     "end": {
-                      "line": 14,
+                      "line": 16,
                       "column": 13
                     }
                   },
@@ -766,11 +765,11 @@
                     "end": 488,
                     "loc": {
                       "start": {
-                        "line": 14,
+                        "line": 16,
                         "column": 2
                       },
                       "end": {
-                        "line": 14,
+                        "line": 16,
                         "column": 13
                       },
                       "identifierName": "scrollToTop"
@@ -783,11 +782,11 @@
                     "end": 488,
                     "loc": {
                       "start": {
-                        "line": 14,
+                        "line": 16,
                         "column": 2
                       },
                       "end": {
-                        "line": 14,
+                        "line": 16,
                         "column": 13
                       },
                       "identifierName": "scrollToTop"
@@ -804,11 +803,11 @@
                   "end": 499,
                   "loc": {
                     "start": {
-                      "line": 15,
+                      "line": 17,
                       "column": 2
                     },
                     "end": {
-                      "line": 15,
+                      "line": 17,
                       "column": 9
                     }
                   },
@@ -821,11 +820,11 @@
                     "end": 499,
                     "loc": {
                       "start": {
-                        "line": 15,
+                        "line": 17,
                         "column": 2
                       },
                       "end": {
-                        "line": 15,
+                        "line": 17,
                         "column": 9
                       },
                       "identifierName": "resList"
@@ -838,11 +837,11 @@
                     "end": 499,
                     "loc": {
                       "start": {
-                        "line": 15,
+                        "line": 17,
                         "column": 2
                       },
                       "end": {
-                        "line": 15,
+                        "line": 17,
                         "column": 9
                       },
                       "identifierName": "resList"
@@ -854,39 +853,40 @@
                   }
                 }
               ]
-            }
+            },
+            "leadingComments": null
           }
         ],
         "kind": "const",
+        "leadingComments": [],
         "trailingComments": [],
-        "name": "_",
-        "leadingComments": []
+        "name": "_"
       },
       {
         "type": "Identifier",
-        "start": 555,
-        "end": 574,
+        "start": 2906,
+        "end": 2925,
         "loc": {
           "start": {
-            "line": 18,
+            "line": 70,
             "column": 0
           },
           "end": {
-            "line": 18,
+            "line": 70,
             "column": 19
           }
         },
         "declaration": {
           "type": "Identifier",
-          "start": 570,
-          "end": 573,
+          "start": 2921,
+          "end": 2924,
           "loc": {
             "start": {
-              "line": 18,
+              "line": 70,
               "column": 15
             },
             "end": {
-              "line": 18,
+              "line": 70,
               "column": 18
             },
             "identifierName": "bse"
@@ -900,57 +900,57 @@
       },
       {
         "type": "ExpressionStatement",
-        "start": 576,
-        "end": 610,
+        "start": 2927,
+        "end": 2961,
         "loc": {
           "start": {
-            "line": 20,
+            "line": 72,
             "column": 0
           },
           "end": {
-            "line": 20,
+            "line": 72,
             "column": 34
           }
         },
         "expression": {
           "type": "CallExpression",
-          "start": 576,
-          "end": 609,
+          "start": 2927,
+          "end": 2960,
           "loc": {
             "start": {
-              "line": 20,
+              "line": 72,
               "column": 0
             },
             "end": {
-              "line": 20,
+              "line": 72,
               "column": 33
             }
           },
           "callee": {
             "type": "MemberExpression",
-            "start": 576,
-            "end": 597,
+            "start": 2927,
+            "end": 2948,
             "loc": {
               "start": {
-                "line": 20,
+                "line": 72,
                 "column": 0
               },
               "end": {
-                "line": 20,
+                "line": 72,
                 "column": 21
               }
             },
             "object": {
               "type": "Identifier",
-              "start": 576,
-              "end": 585,
+              "start": 2927,
+              "end": 2936,
               "loc": {
                 "start": {
-                  "line": 20,
+                  "line": 72,
                   "column": 0
                 },
                 "end": {
-                  "line": 20,
+                  "line": 72,
                   "column": 9
                 },
                 "identifierName": "utilities"
@@ -959,15 +959,15 @@
             },
             "property": {
               "type": "Identifier",
-              "start": 586,
-              "end": 597,
+              "start": 2937,
+              "end": 2948,
               "loc": {
                 "start": {
-                  "line": 20,
+                  "line": 72,
                   "column": 10
                 },
                 "end": {
-                  "line": 20,
+                  "line": 72,
                   "column": 21
                 },
                 "identifierName": "addToWindow"
@@ -979,15 +979,15 @@
           "arguments": [
             {
               "type": "StringLiteral",
-              "start": 598,
-              "end": 603,
+              "start": 2949,
+              "end": 2954,
               "loc": {
                 "start": {
-                  "line": 20,
+                  "line": 72,
                   "column": 22
                 },
                 "end": {
-                  "line": 20,
+                  "line": 72,
                   "column": 27
                 }
               },
@@ -999,15 +999,15 @@
             },
             {
               "type": "Identifier",
-              "start": 605,
-              "end": 608,
+              "start": 2956,
+              "end": 2959,
               "loc": {
                 "start": {
-                  "line": 20,
+                  "line": 72,
                   "column": 29
                 },
                 "end": {
-                  "line": 20,
+                  "line": 72,
                   "column": 32
                 },
                 "identifierName": "bse"
@@ -1015,165 +1015,19 @@
               "name": "bse"
             }
           ]
-        },
-        "trailingComments": [
-          {
-            "type": "CommentLine",
-            "value": " console.log('sdjfkljd');",
-            "start": 612,
-            "end": 639,
-            "loc": {
-              "start": {
-                "line": 22,
-                "column": 0
-              },
-              "end": {
-                "line": 22,
-                "column": 27
-              }
-            }
-          },
-          {
-            "type": "CommentLine",
-            "value": " const testtttt = 'test export';",
-            "start": 640,
-            "end": 674,
-            "loc": {
-              "start": {
-                "line": 23,
-                "column": 0
-              },
-              "end": {
-                "line": 23,
-                "column": 34
-              }
-            }
-          },
-          {
-            "type": "CommentLine",
-            "value": " const test2 = () => {",
-            "start": 675,
-            "end": 699,
-            "loc": {
-              "start": {
-                "line": 24,
-                "column": 0
-              },
-              "end": {
-                "line": 24,
-                "column": 24
-              }
-            }
-          },
-          {
-            "type": "CommentLine",
-            "value": "   console.log('test');",
-            "start": 700,
-            "end": 725,
-            "loc": {
-              "start": {
-                "line": 25,
-                "column": 0
-              },
-              "end": {
-                "line": 25,
-                "column": 25
-              }
-            }
-          },
-          {
-            "type": "CommentLine",
-            "value": "   const testArray = [1, 2, 3, 4];",
-            "start": 726,
-            "end": 762,
-            "loc": {
-              "start": {
-                "line": 26,
-                "column": 0
-              },
-              "end": {
-                "line": 26,
-                "column": 36
-              }
-            }
-          },
-          {
-            "type": "CommentLine",
-            "value": "   console.log(testArray.find(no => no > 2));",
-            "start": 763,
-            "end": 810,
-            "loc": {
-              "start": {
-                "line": 27,
-                "column": 0
-              },
-              "end": {
-                "line": 27,
-                "column": 47
-              }
-            }
-          },
-          {
-            "type": "CommentLine",
-            "value": " };",
-            "start": 811,
-            "end": 816,
-            "loc": {
-              "start": {
-                "line": 28,
-                "column": 0
-              },
-              "end": {
-                "line": 28,
-                "column": 5
-              }
-            }
-          },
-          {
-            "type": "CommentLine",
-            "value": " export { testtttt, test2 };",
-            "start": 817,
-            "end": 847,
-            "loc": {
-              "start": {
-                "line": 29,
-                "column": 0
-              },
-              "end": {
-                "line": 29,
-                "column": 30
-              }
-            }
-          },
-          {
-            "type": "CommentLine",
-            "value": " export default testtttt;",
-            "start": 848,
-            "end": 875,
-            "loc": {
-              "start": {
-                "line": 30,
-                "column": 0
-              },
-              "end": {
-                "line": 30,
-                "column": 27
-              }
-            }
-          }
-        ]
+        }
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 555,
-        "end": 574,
+        "start": 2906,
+        "end": 2925,
         "loc": {
           "start": {
-            "line": 18,
+            "line": 70,
             "column": 0
           },
           "end": {
-            "line": 18,
+            "line": 70,
             "column": 19
           }
         },
@@ -1183,11 +1037,11 @@
           "end": 503,
           "loc": {
             "start": {
-              "line": 9,
+              "line": 11,
               "column": 0
             },
             "end": {
-              "line": 16,
+              "line": 18,
               "column": 2
             }
           },
@@ -1198,11 +1052,11 @@
               "end": 502,
               "loc": {
                 "start": {
-                  "line": 9,
+                  "line": 11,
                   "column": 6
                 },
                 "end": {
-                  "line": 16,
+                  "line": 18,
                   "column": 1
                 }
               },
@@ -1212,16 +1066,17 @@
                 "end": 385,
                 "loc": {
                   "start": {
-                    "line": 9,
+                    "line": 11,
                     "column": 6
                   },
                   "end": {
-                    "line": 9,
+                    "line": 11,
                     "column": 9
                   },
                   "identifierName": "bse"
                 },
-                "name": "bse"
+                "name": "bse",
+                "leadingComments": null
               },
               "init": {
                 "type": "ObjectExpression",
@@ -1229,11 +1084,11 @@
                 "end": 502,
                 "loc": {
                   "start": {
-                    "line": 9,
+                    "line": 11,
                     "column": 12
                   },
                   "end": {
-                    "line": 16,
+                    "line": 18,
                     "column": 1
                   }
                 },
@@ -1244,11 +1099,11 @@
                     "end": 401,
                     "loc": {
                       "start": {
-                        "line": 10,
+                        "line": 12,
                         "column": 2
                       },
                       "end": {
-                        "line": 10,
+                        "line": 12,
                         "column": 11
                       }
                     },
@@ -1261,11 +1116,11 @@
                       "end": 401,
                       "loc": {
                         "start": {
-                          "line": 10,
+                          "line": 12,
                           "column": 2
                         },
                         "end": {
-                          "line": 10,
+                          "line": 12,
                           "column": 11
                         },
                         "identifierName": "utilities"
@@ -1278,11 +1133,11 @@
                       "end": 401,
                       "loc": {
                         "start": {
-                          "line": 10,
+                          "line": 12,
                           "column": 2
                         },
                         "end": {
-                          "line": 10,
+                          "line": 12,
                           "column": 11
                         },
                         "identifierName": "utilities"
@@ -1299,11 +1154,11 @@
                     "end": 428,
                     "loc": {
                       "start": {
-                        "line": 11,
+                        "line": 13,
                         "column": 2
                       },
                       "end": {
-                        "line": 11,
+                        "line": 13,
                         "column": 25
                       }
                     },
@@ -1316,11 +1171,11 @@
                       "end": 428,
                       "loc": {
                         "start": {
-                          "line": 11,
+                          "line": 13,
                           "column": 2
                         },
                         "end": {
-                          "line": 11,
+                          "line": 13,
                           "column": 25
                         },
                         "identifierName": "addScrollMessToResTable"
@@ -1333,11 +1188,11 @@
                       "end": 428,
                       "loc": {
                         "start": {
-                          "line": 11,
+                          "line": 13,
                           "column": 2
                         },
                         "end": {
-                          "line": 11,
+                          "line": 13,
                           "column": 25
                         },
                         "identifierName": "addScrollMessToResTable"
@@ -1354,11 +1209,11 @@
                     "end": 448,
                     "loc": {
                       "start": {
-                        "line": 12,
+                        "line": 14,
                         "column": 2
                       },
                       "end": {
-                        "line": 12,
+                        "line": 14,
                         "column": 18
                       }
                     },
@@ -1371,11 +1226,11 @@
                       "end": 448,
                       "loc": {
                         "start": {
-                          "line": 12,
+                          "line": 14,
                           "column": 2
                         },
                         "end": {
-                          "line": 12,
+                          "line": 14,
                           "column": 18
                         },
                         "identifierName": "fixModalShifting"
@@ -1388,11 +1243,11 @@
                       "end": 448,
                       "loc": {
                         "start": {
-                          "line": 12,
+                          "line": 14,
                           "column": 2
                         },
                         "end": {
-                          "line": 12,
+                          "line": 14,
                           "column": 18
                         },
                         "identifierName": "fixModalShifting"
@@ -1409,11 +1264,11 @@
                     "end": 473,
                     "loc": {
                       "start": {
-                        "line": 13,
+                        "line": 15,
                         "column": 2
                       },
                       "end": {
-                        "line": 13,
+                        "line": 15,
                         "column": 23
                       }
                     },
@@ -1426,11 +1281,11 @@
                       "end": 473,
                       "loc": {
                         "start": {
-                          "line": 13,
+                          "line": 15,
                           "column": 2
                         },
                         "end": {
-                          "line": 13,
+                          "line": 15,
                           "column": 23
                         },
                         "identifierName": "toggleCollapseChevron"
@@ -1443,11 +1298,11 @@
                       "end": 473,
                       "loc": {
                         "start": {
-                          "line": 13,
+                          "line": 15,
                           "column": 2
                         },
                         "end": {
-                          "line": 13,
+                          "line": 15,
                           "column": 23
                         },
                         "identifierName": "toggleCollapseChevron"
@@ -1464,11 +1319,11 @@
                     "end": 488,
                     "loc": {
                       "start": {
-                        "line": 14,
+                        "line": 16,
                         "column": 2
                       },
                       "end": {
-                        "line": 14,
+                        "line": 16,
                         "column": 13
                       }
                     },
@@ -1481,11 +1336,11 @@
                       "end": 488,
                       "loc": {
                         "start": {
-                          "line": 14,
+                          "line": 16,
                           "column": 2
                         },
                         "end": {
-                          "line": 14,
+                          "line": 16,
                           "column": 13
                         },
                         "identifierName": "scrollToTop"
@@ -1498,11 +1353,11 @@
                       "end": 488,
                       "loc": {
                         "start": {
-                          "line": 14,
+                          "line": 16,
                           "column": 2
                         },
                         "end": {
-                          "line": 14,
+                          "line": 16,
                           "column": 13
                         },
                         "identifierName": "scrollToTop"
@@ -1519,11 +1374,11 @@
                     "end": 499,
                     "loc": {
                       "start": {
-                        "line": 15,
+                        "line": 17,
                         "column": 2
                       },
                       "end": {
-                        "line": 15,
+                        "line": 17,
                         "column": 9
                       }
                     },
@@ -1536,11 +1391,11 @@
                       "end": 499,
                       "loc": {
                         "start": {
-                          "line": 15,
+                          "line": 17,
                           "column": 2
                         },
                         "end": {
-                          "line": 15,
+                          "line": 17,
                           "column": 9
                         },
                         "identifierName": "resList"
@@ -1553,11 +1408,11 @@
                       "end": 499,
                       "loc": {
                         "start": {
-                          "line": 15,
+                          "line": 17,
                           "column": 2
                         },
                         "end": {
-                          "line": 15,
+                          "line": 17,
                           "column": 9
                         },
                         "identifierName": "resList"
@@ -1569,42 +1424,59 @@
                     }
                   }
                 ]
-              }
+              },
+              "leadingComments": null
             }
           ],
           "kind": "const",
-          "trailingComments": [
+          "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "* This is a description of the init function. ",
-              "start": 504,
-              "end": 554,
+              "value": "*\n * utilities\n ",
+              "start": 355,
+              "end": 375,
               "loc": {
                 "start": {
-                  "line": 17,
+                  "line": 8,
                   "column": 0
                 },
                 "end": {
-                  "line": 17,
-                  "column": 50
+                  "line": 10,
+                  "column": 3
+                }
+              }
+            },
+            {
+              "type": "CommentBlock",
+              "value": "*\n * This is the main object that contains all methods\n * @type {Object}\n * @property {Object} bse.utilities\n * Utilityies related to bootstrap\n * @property {function(sel: Object, strClass: string)} bse.utilities.prependClass\n * Add class names to the left most position to avoid overwriting original class's style\n * @property {function():Promise<Object, MyError>} bse.utilities.getJquery\n * Must use this way to get jQuery if we want to attach something to bootstrap's event.\n * @property {function():boolean} bse.utilities.hasScrollBar\n * Check if the current page has scroll bar.\n * @property {function():number} bse.utilities.getScrollBarWidth\n * Get scroll bar's width.\n * @property {function(css: string)} bse.utilities.addStyles\n * Add some css styles to the top most position in head tag.\n * @property {Object} bse.utilities.checkBreakPoint\n * @property {function():string} bse.utilities.checkBreakPoint.checkSize\n * Get window width's info in bootstrap 4's grid system standards.\n * @property {function():boolean} bse.utilities.checkBreakPoint.is\n * Check which grid level is window in.\n * @property {function(keyValue: string, element: Object):Promise<Object, MyError>} bse.utilities.addToWindow\n * Attach object to window without overwriting anything else.\n *\n * @property {Object} bse.addScrollMessToResTable\n * Add a message when the table in .table-responsive is scrollable.\n * @property {function(displayMessage: string)} bse.addScrollMessToResTable.init\n * Init addScrollMessToResTable\n * @property {function(displayMessage: string)} bse.addScrollMessToResTable.update\n * Update addScrollMessToResTable\n *\n * @property {Object} bse.fixModalShifting\n * Fix bootstrap modal's shifting issue.\n * @property {function()} bse.fixModalShifting.init\n * Init fixModalShifting\n *\n * @property {Object} bse.toggleCollapseChevron\n * Automatically toggle bootstrap collapse's chevron based on show or hide collapse.\n * @property {function()} bse.toggleCollapseChevron.init\n * Init toggleCollapseChevron\n *\n * @property {Object} bse.scrollToTop\n * Add scroll to top anchor on the right bottom of the whole page.\n * @property {function(innerElement: string)} bse.scrollToTop.init\n * Init scrollToTop\n *\n * @property {Object} bse.resList\n * Convert a ul li menu to a select options element and display it on small device\n * @property {function(config: Object)} bse.resList.init\n * Init resList\n ",
+              "start": 505,
+              "end": 2905,
+              "loc": {
+                "start": {
+                  "line": 20,
+                  "column": 0
+                },
+                "end": {
+                  "line": 69,
+                  "column": 3
                 }
               }
             }
           ],
-          "leadingComments": [
+          "trailingComments": [
             {
               "type": "CommentBlock",
-              "value": "* This is a description of the init function. ",
-              "start": 504,
-              "end": 554,
+              "value": "*\n * This is the main object that contains all methods\n * @type {Object}\n * @property {Object} bse.utilities\n * Utilityies related to bootstrap\n * @property {function(sel: Object, strClass: string)} bse.utilities.prependClass\n * Add class names to the left most position to avoid overwriting original class's style\n * @property {function():Promise<Object, MyError>} bse.utilities.getJquery\n * Must use this way to get jQuery if we want to attach something to bootstrap's event.\n * @property {function():boolean} bse.utilities.hasScrollBar\n * Check if the current page has scroll bar.\n * @property {function():number} bse.utilities.getScrollBarWidth\n * Get scroll bar's width.\n * @property {function(css: string)} bse.utilities.addStyles\n * Add some css styles to the top most position in head tag.\n * @property {Object} bse.utilities.checkBreakPoint\n * @property {function():string} bse.utilities.checkBreakPoint.checkSize\n * Get window width's info in bootstrap 4's grid system standards.\n * @property {function():boolean} bse.utilities.checkBreakPoint.is\n * Check which grid level is window in.\n * @property {function(keyValue: string, element: Object):Promise<Object, MyError>} bse.utilities.addToWindow\n * Attach object to window without overwriting anything else.\n *\n * @property {Object} bse.addScrollMessToResTable\n * Add a message when the table in .table-responsive is scrollable.\n * @property {function(displayMessage: string)} bse.addScrollMessToResTable.init\n * Init addScrollMessToResTable\n * @property {function(displayMessage: string)} bse.addScrollMessToResTable.update\n * Update addScrollMessToResTable\n *\n * @property {Object} bse.fixModalShifting\n * Fix bootstrap modal's shifting issue.\n * @property {function()} bse.fixModalShifting.init\n * Init fixModalShifting\n *\n * @property {Object} bse.toggleCollapseChevron\n * Automatically toggle bootstrap collapse's chevron based on show or hide collapse.\n * @property {function()} bse.toggleCollapseChevron.init\n * Init toggleCollapseChevron\n *\n * @property {Object} bse.scrollToTop\n * Add scroll to top anchor on the right bottom of the whole page.\n * @property {function(innerElement: string)} bse.scrollToTop.init\n * Init scrollToTop\n *\n * @property {Object} bse.resList\n * Convert a ul li menu to a select options element and display it on small device\n * @property {function(config: Object)} bse.resList.init\n * Init resList\n ",
+              "start": 505,
+              "end": 2905,
               "loc": {
                 "start": {
-                  "line": 17,
+                  "line": 20,
                   "column": 0
                 },
                 "end": {
-                  "line": 17,
-                  "column": 50
+                  "line": 69,
+                  "column": 3
                 }
               }
             }
@@ -1613,17 +1485,17 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "* This is a description of the init function. ",
-            "start": 504,
-            "end": 554,
+            "value": "*\n * This is the main object that contains all methods\n * @type {Object}\n * @property {Object} bse.utilities\n * Utilityies related to bootstrap\n * @property {function(sel: Object, strClass: string)} bse.utilities.prependClass\n * Add class names to the left most position to avoid overwriting original class's style\n * @property {function():Promise<Object, MyError>} bse.utilities.getJquery\n * Must use this way to get jQuery if we want to attach something to bootstrap's event.\n * @property {function():boolean} bse.utilities.hasScrollBar\n * Check if the current page has scroll bar.\n * @property {function():number} bse.utilities.getScrollBarWidth\n * Get scroll bar's width.\n * @property {function(css: string)} bse.utilities.addStyles\n * Add some css styles to the top most position in head tag.\n * @property {Object} bse.utilities.checkBreakPoint\n * @property {function():string} bse.utilities.checkBreakPoint.checkSize\n * Get window width's info in bootstrap 4's grid system standards.\n * @property {function():boolean} bse.utilities.checkBreakPoint.is\n * Check which grid level is window in.\n * @property {function(keyValue: string, element: Object):Promise<Object, MyError>} bse.utilities.addToWindow\n * Attach object to window without overwriting anything else.\n *\n * @property {Object} bse.addScrollMessToResTable\n * Add a message when the table in .table-responsive is scrollable.\n * @property {function(displayMessage: string)} bse.addScrollMessToResTable.init\n * Init addScrollMessToResTable\n * @property {function(displayMessage: string)} bse.addScrollMessToResTable.update\n * Update addScrollMessToResTable\n *\n * @property {Object} bse.fixModalShifting\n * Fix bootstrap modal's shifting issue.\n * @property {function()} bse.fixModalShifting.init\n * Init fixModalShifting\n *\n * @property {Object} bse.toggleCollapseChevron\n * Automatically toggle bootstrap collapse's chevron based on show or hide collapse.\n * @property {function()} bse.toggleCollapseChevron.init\n * Init toggleCollapseChevron\n *\n * @property {Object} bse.scrollToTop\n * Add scroll to top anchor on the right bottom of the whole page.\n * @property {function(innerElement: string)} bse.scrollToTop.init\n * Init scrollToTop\n *\n * @property {Object} bse.resList\n * Convert a ul li menu to a select options element and display it on small device\n * @property {function(config: Object)} bse.resList.init\n * Init resList\n ",
+            "start": 505,
+            "end": 2905,
             "loc": {
               "start": {
-                "line": 17,
+                "line": 20,
                 "column": 0
               },
               "end": {
-                "line": 17,
-                "column": 50
+                "line": 69,
+                "column": 3
               }
             }
           }
@@ -1635,198 +1507,38 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "* @module index ",
-      "start": 0,
-      "end": 20,
+      "value": "*\n * utilities\n ",
+      "start": 355,
+      "end": 375,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 8,
           "column": 0
         },
         "end": {
-          "line": 1,
-          "column": 20
+          "line": 10,
+          "column": 3
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "* This is a description of the init function. ",
-      "start": 504,
-      "end": 554,
+      "value": "*\n * This is the main object that contains all methods\n * @type {Object}\n * @property {Object} bse.utilities\n * Utilityies related to bootstrap\n * @property {function(sel: Object, strClass: string)} bse.utilities.prependClass\n * Add class names to the left most position to avoid overwriting original class's style\n * @property {function():Promise<Object, MyError>} bse.utilities.getJquery\n * Must use this way to get jQuery if we want to attach something to bootstrap's event.\n * @property {function():boolean} bse.utilities.hasScrollBar\n * Check if the current page has scroll bar.\n * @property {function():number} bse.utilities.getScrollBarWidth\n * Get scroll bar's width.\n * @property {function(css: string)} bse.utilities.addStyles\n * Add some css styles to the top most position in head tag.\n * @property {Object} bse.utilities.checkBreakPoint\n * @property {function():string} bse.utilities.checkBreakPoint.checkSize\n * Get window width's info in bootstrap 4's grid system standards.\n * @property {function():boolean} bse.utilities.checkBreakPoint.is\n * Check which grid level is window in.\n * @property {function(keyValue: string, element: Object):Promise<Object, MyError>} bse.utilities.addToWindow\n * Attach object to window without overwriting anything else.\n *\n * @property {Object} bse.addScrollMessToResTable\n * Add a message when the table in .table-responsive is scrollable.\n * @property {function(displayMessage: string)} bse.addScrollMessToResTable.init\n * Init addScrollMessToResTable\n * @property {function(displayMessage: string)} bse.addScrollMessToResTable.update\n * Update addScrollMessToResTable\n *\n * @property {Object} bse.fixModalShifting\n * Fix bootstrap modal's shifting issue.\n * @property {function()} bse.fixModalShifting.init\n * Init fixModalShifting\n *\n * @property {Object} bse.toggleCollapseChevron\n * Automatically toggle bootstrap collapse's chevron based on show or hide collapse.\n * @property {function()} bse.toggleCollapseChevron.init\n * Init toggleCollapseChevron\n *\n * @property {Object} bse.scrollToTop\n * Add scroll to top anchor on the right bottom of the whole page.\n * @property {function(innerElement: string)} bse.scrollToTop.init\n * Init scrollToTop\n *\n * @property {Object} bse.resList\n * Convert a ul li menu to a select options element and display it on small device\n * @property {function(config: Object)} bse.resList.init\n * Init resList\n ",
+      "start": 505,
+      "end": 2905,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 20,
           "column": 0
         },
         "end": {
-          "line": 17,
-          "column": 50
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " console.log('sdjfkljd');",
-      "start": 612,
-      "end": 639,
-      "loc": {
-        "start": {
-          "line": 22,
-          "column": 0
-        },
-        "end": {
-          "line": 22,
-          "column": 27
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " const testtttt = 'test export';",
-      "start": 640,
-      "end": 674,
-      "loc": {
-        "start": {
-          "line": 23,
-          "column": 0
-        },
-        "end": {
-          "line": 23,
-          "column": 34
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " const test2 = () => {",
-      "start": 675,
-      "end": 699,
-      "loc": {
-        "start": {
-          "line": 24,
-          "column": 0
-        },
-        "end": {
-          "line": 24,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": "   console.log('test');",
-      "start": 700,
-      "end": 725,
-      "loc": {
-        "start": {
-          "line": 25,
-          "column": 0
-        },
-        "end": {
-          "line": 25,
-          "column": 25
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": "   const testArray = [1, 2, 3, 4];",
-      "start": 726,
-      "end": 762,
-      "loc": {
-        "start": {
-          "line": 26,
-          "column": 0
-        },
-        "end": {
-          "line": 26,
-          "column": 36
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": "   console.log(testArray.find(no => no > 2));",
-      "start": 763,
-      "end": 810,
-      "loc": {
-        "start": {
-          "line": 27,
-          "column": 0
-        },
-        "end": {
-          "line": 27,
-          "column": 47
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " };",
-      "start": 811,
-      "end": 816,
-      "loc": {
-        "start": {
-          "line": 28,
-          "column": 0
-        },
-        "end": {
-          "line": 28,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " export { testtttt, test2 };",
-      "start": 817,
-      "end": 847,
-      "loc": {
-        "start": {
-          "line": 29,
-          "column": 0
-        },
-        "end": {
-          "line": 29,
-          "column": 30
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " export default testtttt;",
-      "start": 848,
-      "end": 875,
-      "loc": {
-        "start": {
-          "line": 30,
-          "column": 0
-        },
-        "end": {
-          "line": 30,
-          "column": 27
+          "line": 69,
+          "column": 3
         }
       }
     }
   ],
   "tokens": [
-    {
-      "type": "CommentBlock",
-      "value": "* @module index ",
-      "start": 0,
-      "end": 20,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 0
-        },
-        "end": {
-          "line": 1,
-          "column": 20
-        }
-      }
-    },
     {
       "type": {
         "label": "import",
@@ -1842,15 +1554,15 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 21,
-      "end": 27,
+      "start": 0,
+      "end": 6,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 1,
           "column": 0
         },
         "end": {
-          "line": 2,
+          "line": 1,
           "column": 6
         }
       }
@@ -1869,15 +1581,15 @@
         "updateContext": null
       },
       "value": "*",
-      "start": 28,
-      "end": 29,
+      "start": 7,
+      "end": 8,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 1,
           "column": 7
         },
         "end": {
-          "line": 2,
+          "line": 1,
           "column": 8
         }
       }
@@ -1895,15 +1607,15 @@
         "binop": null
       },
       "value": "as",
-      "start": 30,
-      "end": 32,
+      "start": 9,
+      "end": 11,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 1,
           "column": 9
         },
         "end": {
-          "line": 2,
+          "line": 1,
           "column": 11
         }
       }
@@ -1921,15 +1633,15 @@
         "binop": null
       },
       "value": "utilities",
-      "start": 33,
-      "end": 42,
+      "start": 12,
+      "end": 21,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 1,
           "column": 12
         },
         "end": {
-          "line": 2,
+          "line": 1,
           "column": 21
         }
       }
@@ -1947,15 +1659,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 43,
-      "end": 47,
+      "start": 22,
+      "end": 26,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 1,
           "column": 22
         },
         "end": {
-          "line": 2,
+          "line": 1,
           "column": 26
         }
       }
@@ -1974,15 +1686,15 @@
         "updateContext": null
       },
       "value": "./utilities/index",
-      "start": 48,
-      "end": 67,
+      "start": 27,
+      "end": 46,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 1,
           "column": 27
         },
         "end": {
-          "line": 2,
+          "line": 1,
           "column": 46
         }
       }
@@ -2000,15 +1712,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 67,
-      "end": 68,
+      "start": 46,
+      "end": 47,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 1,
           "column": 46
         },
         "end": {
-          "line": 2,
+          "line": 1,
           "column": 47
         }
       }
@@ -2028,15 +1740,15 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 69,
-      "end": 75,
+      "start": 48,
+      "end": 54,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 0
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 6
         }
       }
@@ -2055,15 +1767,15 @@
         "updateContext": null
       },
       "value": "*",
-      "start": 76,
-      "end": 77,
+      "start": 55,
+      "end": 56,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 7
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 8
         }
       }
@@ -2081,15 +1793,15 @@
         "binop": null
       },
       "value": "as",
-      "start": 78,
-      "end": 80,
+      "start": 57,
+      "end": 59,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 9
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 11
         }
       }
@@ -2107,15 +1819,15 @@
         "binop": null
       },
       "value": "addScrollMessToResTable",
-      "start": 81,
-      "end": 104,
+      "start": 60,
+      "end": 83,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 12
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 35
         }
       }
@@ -2133,15 +1845,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 105,
-      "end": 109,
+      "start": 84,
+      "end": 88,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 36
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 40
         }
       }
@@ -2160,15 +1872,15 @@
         "updateContext": null
       },
       "value": "./addScrollMessToResTable/index",
-      "start": 110,
-      "end": 143,
+      "start": 89,
+      "end": 122,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 41
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 74
         }
       }
@@ -2186,15 +1898,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 143,
-      "end": 144,
+      "start": 122,
+      "end": 123,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 74
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 75
         }
       }
@@ -2214,15 +1926,15 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 145,
-      "end": 151,
+      "start": 124,
+      "end": 130,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 3,
           "column": 0
         },
         "end": {
-          "line": 4,
+          "line": 3,
           "column": 6
         }
       }
@@ -2241,15 +1953,15 @@
         "updateContext": null
       },
       "value": "*",
-      "start": 152,
-      "end": 153,
+      "start": 131,
+      "end": 132,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 3,
           "column": 7
         },
         "end": {
-          "line": 4,
+          "line": 3,
           "column": 8
         }
       }
@@ -2267,15 +1979,15 @@
         "binop": null
       },
       "value": "as",
-      "start": 154,
-      "end": 156,
+      "start": 133,
+      "end": 135,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 3,
           "column": 9
         },
         "end": {
-          "line": 4,
+          "line": 3,
           "column": 11
         }
       }
@@ -2293,15 +2005,15 @@
         "binop": null
       },
       "value": "fixModalShifting",
-      "start": 157,
-      "end": 173,
+      "start": 136,
+      "end": 152,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 3,
           "column": 12
         },
         "end": {
-          "line": 4,
+          "line": 3,
           "column": 28
         }
       }
@@ -2319,15 +2031,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 174,
-      "end": 178,
+      "start": 153,
+      "end": 157,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 3,
           "column": 29
         },
         "end": {
-          "line": 4,
+          "line": 3,
           "column": 33
         }
       }
@@ -2346,15 +2058,15 @@
         "updateContext": null
       },
       "value": "./fixModalShifting/index",
-      "start": 179,
-      "end": 205,
+      "start": 158,
+      "end": 184,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 3,
           "column": 34
         },
         "end": {
-          "line": 4,
+          "line": 3,
           "column": 60
         }
       }
@@ -2372,15 +2084,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 205,
-      "end": 206,
+      "start": 184,
+      "end": 185,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 3,
           "column": 60
         },
         "end": {
-          "line": 4,
+          "line": 3,
           "column": 61
         }
       }
@@ -2400,15 +2112,15 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 207,
-      "end": 213,
+      "start": 186,
+      "end": 192,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 4,
           "column": 0
         },
         "end": {
-          "line": 5,
+          "line": 4,
           "column": 6
         }
       }
@@ -2427,15 +2139,15 @@
         "updateContext": null
       },
       "value": "*",
-      "start": 214,
-      "end": 215,
+      "start": 193,
+      "end": 194,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 4,
           "column": 7
         },
         "end": {
-          "line": 5,
+          "line": 4,
           "column": 8
         }
       }
@@ -2453,15 +2165,15 @@
         "binop": null
       },
       "value": "as",
-      "start": 216,
-      "end": 218,
+      "start": 195,
+      "end": 197,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 4,
           "column": 9
         },
         "end": {
-          "line": 5,
+          "line": 4,
           "column": 11
         }
       }
@@ -2479,15 +2191,15 @@
         "binop": null
       },
       "value": "toggleCollapseChevron",
-      "start": 219,
-      "end": 240,
+      "start": 198,
+      "end": 219,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 4,
           "column": 12
         },
         "end": {
-          "line": 5,
+          "line": 4,
           "column": 33
         }
       }
@@ -2505,15 +2217,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 241,
-      "end": 245,
+      "start": 220,
+      "end": 224,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 4,
           "column": 34
         },
         "end": {
-          "line": 5,
+          "line": 4,
           "column": 38
         }
       }
@@ -2532,15 +2244,15 @@
         "updateContext": null
       },
       "value": "./toggleCollapseChevron/index",
-      "start": 246,
-      "end": 277,
+      "start": 225,
+      "end": 256,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 4,
           "column": 39
         },
         "end": {
-          "line": 5,
+          "line": 4,
           "column": 70
         }
       }
@@ -2558,15 +2270,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 277,
-      "end": 278,
+      "start": 256,
+      "end": 257,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 4,
           "column": 70
         },
         "end": {
-          "line": 5,
+          "line": 4,
           "column": 71
         }
       }
@@ -2586,15 +2298,15 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 279,
-      "end": 285,
+      "start": 258,
+      "end": 264,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 0
         },
         "end": {
-          "line": 6,
+          "line": 5,
           "column": 6
         }
       }
@@ -2613,15 +2325,15 @@
         "updateContext": null
       },
       "value": "*",
-      "start": 286,
-      "end": 287,
+      "start": 265,
+      "end": 266,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 7
         },
         "end": {
-          "line": 6,
+          "line": 5,
           "column": 8
         }
       }
@@ -2639,15 +2351,15 @@
         "binop": null
       },
       "value": "as",
-      "start": 288,
-      "end": 290,
+      "start": 267,
+      "end": 269,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 9
         },
         "end": {
-          "line": 6,
+          "line": 5,
           "column": 11
         }
       }
@@ -2665,15 +2377,15 @@
         "binop": null
       },
       "value": "scrollToTop",
-      "start": 291,
-      "end": 302,
+      "start": 270,
+      "end": 281,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 12
         },
         "end": {
-          "line": 6,
+          "line": 5,
           "column": 23
         }
       }
@@ -2691,15 +2403,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 303,
-      "end": 307,
+      "start": 282,
+      "end": 286,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 24
         },
         "end": {
-          "line": 6,
+          "line": 5,
           "column": 28
         }
       }
@@ -2718,15 +2430,15 @@
         "updateContext": null
       },
       "value": "./scrollToTop/index",
-      "start": 308,
-      "end": 329,
+      "start": 287,
+      "end": 308,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 29
         },
         "end": {
-          "line": 6,
+          "line": 5,
           "column": 50
         }
       }
@@ -2744,15 +2456,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 329,
-      "end": 330,
+      "start": 308,
+      "end": 309,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 50
         },
         "end": {
-          "line": 6,
+          "line": 5,
           "column": 51
         }
       }
@@ -2772,15 +2484,15 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 331,
-      "end": 337,
+      "start": 310,
+      "end": 316,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 7,
+          "line": 6,
           "column": 6
         }
       }
@@ -2799,15 +2511,15 @@
         "updateContext": null
       },
       "value": "*",
-      "start": 338,
-      "end": 339,
+      "start": 317,
+      "end": 318,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 7
         },
         "end": {
-          "line": 7,
+          "line": 6,
           "column": 8
         }
       }
@@ -2825,15 +2537,15 @@
         "binop": null
       },
       "value": "as",
-      "start": 340,
-      "end": 342,
+      "start": 319,
+      "end": 321,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 9
         },
         "end": {
-          "line": 7,
+          "line": 6,
           "column": 11
         }
       }
@@ -2851,15 +2563,15 @@
         "binop": null
       },
       "value": "resList",
-      "start": 343,
-      "end": 350,
+      "start": 322,
+      "end": 329,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 12
         },
         "end": {
-          "line": 7,
+          "line": 6,
           "column": 19
         }
       }
@@ -2877,15 +2589,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 351,
-      "end": 355,
+      "start": 330,
+      "end": 334,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 20
         },
         "end": {
-          "line": 7,
+          "line": 6,
           "column": 24
         }
       }
@@ -2904,15 +2616,15 @@
         "updateContext": null
       },
       "value": "./resList/index",
-      "start": 356,
-      "end": 373,
+      "start": 335,
+      "end": 352,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 25
         },
         "end": {
-          "line": 7,
+          "line": 6,
           "column": 42
         }
       }
@@ -2930,16 +2642,32 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 373,
-      "end": 374,
+      "start": 352,
+      "end": 353,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 42
         },
         "end": {
-          "line": 7,
+          "line": 6,
           "column": 43
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * utilities\n ",
+      "start": 355,
+      "end": 375,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 10,
+          "column": 3
         }
       }
     },
@@ -2962,11 +2690,11 @@
       "end": 381,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 11,
           "column": 0
         },
         "end": {
-          "line": 9,
+          "line": 11,
           "column": 5
         }
       }
@@ -2988,11 +2716,11 @@
       "end": 385,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 11,
           "column": 6
         },
         "end": {
-          "line": 9,
+          "line": 11,
           "column": 9
         }
       }
@@ -3015,11 +2743,11 @@
       "end": 387,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 11,
           "column": 10
         },
         "end": {
-          "line": 9,
+          "line": 11,
           "column": 11
         }
       }
@@ -3040,11 +2768,11 @@
       "end": 389,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 11,
           "column": 12
         },
         "end": {
-          "line": 9,
+          "line": 11,
           "column": 13
         }
       }
@@ -3066,11 +2794,11 @@
       "end": 401,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 12,
           "column": 2
         },
         "end": {
-          "line": 10,
+          "line": 12,
           "column": 11
         }
       }
@@ -3092,11 +2820,11 @@
       "end": 402,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 12,
           "column": 11
         },
         "end": {
-          "line": 10,
+          "line": 12,
           "column": 12
         }
       }
@@ -3118,11 +2846,11 @@
       "end": 428,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 13,
           "column": 2
         },
         "end": {
-          "line": 11,
+          "line": 13,
           "column": 25
         }
       }
@@ -3144,11 +2872,11 @@
       "end": 429,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 13,
           "column": 25
         },
         "end": {
-          "line": 11,
+          "line": 13,
           "column": 26
         }
       }
@@ -3170,11 +2898,11 @@
       "end": 448,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 2
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 18
         }
       }
@@ -3196,11 +2924,11 @@
       "end": 449,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 18
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 19
         }
       }
@@ -3222,11 +2950,11 @@
       "end": 473,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 15,
           "column": 2
         },
         "end": {
-          "line": 13,
+          "line": 15,
           "column": 23
         }
       }
@@ -3248,11 +2976,11 @@
       "end": 474,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 15,
           "column": 23
         },
         "end": {
-          "line": 13,
+          "line": 15,
           "column": 24
         }
       }
@@ -3274,11 +3002,11 @@
       "end": 488,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 16,
           "column": 2
         },
         "end": {
-          "line": 14,
+          "line": 16,
           "column": 13
         }
       }
@@ -3300,11 +3028,11 @@
       "end": 489,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 16,
           "column": 13
         },
         "end": {
-          "line": 14,
+          "line": 16,
           "column": 14
         }
       }
@@ -3326,11 +3054,11 @@
       "end": 499,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 17,
           "column": 2
         },
         "end": {
-          "line": 15,
+          "line": 17,
           "column": 9
         }
       }
@@ -3352,11 +3080,11 @@
       "end": 500,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 17,
           "column": 9
         },
         "end": {
-          "line": 15,
+          "line": 17,
           "column": 10
         }
       }
@@ -3377,11 +3105,11 @@
       "end": 502,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 18,
           "column": 0
         },
         "end": {
-          "line": 16,
+          "line": 18,
           "column": 1
         }
       }
@@ -3403,28 +3131,28 @@
       "end": 503,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 18,
           "column": 1
         },
         "end": {
-          "line": 16,
+          "line": 18,
           "column": 2
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "* This is a description of the init function. ",
-      "start": 504,
-      "end": 554,
+      "value": "*\n * This is the main object that contains all methods\n * @type {Object}\n * @property {Object} bse.utilities\n * Utilityies related to bootstrap\n * @property {function(sel: Object, strClass: string)} bse.utilities.prependClass\n * Add class names to the left most position to avoid overwriting original class's style\n * @property {function():Promise<Object, MyError>} bse.utilities.getJquery\n * Must use this way to get jQuery if we want to attach something to bootstrap's event.\n * @property {function():boolean} bse.utilities.hasScrollBar\n * Check if the current page has scroll bar.\n * @property {function():number} bse.utilities.getScrollBarWidth\n * Get scroll bar's width.\n * @property {function(css: string)} bse.utilities.addStyles\n * Add some css styles to the top most position in head tag.\n * @property {Object} bse.utilities.checkBreakPoint\n * @property {function():string} bse.utilities.checkBreakPoint.checkSize\n * Get window width's info in bootstrap 4's grid system standards.\n * @property {function():boolean} bse.utilities.checkBreakPoint.is\n * Check which grid level is window in.\n * @property {function(keyValue: string, element: Object):Promise<Object, MyError>} bse.utilities.addToWindow\n * Attach object to window without overwriting anything else.\n *\n * @property {Object} bse.addScrollMessToResTable\n * Add a message when the table in .table-responsive is scrollable.\n * @property {function(displayMessage: string)} bse.addScrollMessToResTable.init\n * Init addScrollMessToResTable\n * @property {function(displayMessage: string)} bse.addScrollMessToResTable.update\n * Update addScrollMessToResTable\n *\n * @property {Object} bse.fixModalShifting\n * Fix bootstrap modal's shifting issue.\n * @property {function()} bse.fixModalShifting.init\n * Init fixModalShifting\n *\n * @property {Object} bse.toggleCollapseChevron\n * Automatically toggle bootstrap collapse's chevron based on show or hide collapse.\n * @property {function()} bse.toggleCollapseChevron.init\n * Init toggleCollapseChevron\n *\n * @property {Object} bse.scrollToTop\n * Add scroll to top anchor on the right bottom of the whole page.\n * @property {function(innerElement: string)} bse.scrollToTop.init\n * Init scrollToTop\n *\n * @property {Object} bse.resList\n * Convert a ul li menu to a select options element and display it on small device\n * @property {function(config: Object)} bse.resList.init\n * Init resList\n ",
+      "start": 505,
+      "end": 2905,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 20,
           "column": 0
         },
         "end": {
-          "line": 17,
-          "column": 50
+          "line": 69,
+          "column": 3
         }
       }
     },
@@ -3443,15 +3171,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 555,
-      "end": 561,
+      "start": 2906,
+      "end": 2912,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 70,
           "column": 0
         },
         "end": {
-          "line": 18,
+          "line": 70,
           "column": 6
         }
       }
@@ -3471,15 +3199,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 562,
-      "end": 569,
+      "start": 2913,
+      "end": 2920,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 70,
           "column": 7
         },
         "end": {
-          "line": 18,
+          "line": 70,
           "column": 14
         }
       }
@@ -3497,15 +3225,15 @@
         "binop": null
       },
       "value": "bse",
-      "start": 570,
-      "end": 573,
+      "start": 2921,
+      "end": 2924,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 70,
           "column": 15
         },
         "end": {
-          "line": 18,
+          "line": 70,
           "column": 18
         }
       }
@@ -3523,15 +3251,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 573,
-      "end": 574,
+      "start": 2924,
+      "end": 2925,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 70,
           "column": 18
         },
         "end": {
-          "line": 18,
+          "line": 70,
           "column": 19
         }
       }
@@ -3549,15 +3277,15 @@
         "binop": null
       },
       "value": "utilities",
-      "start": 576,
-      "end": 585,
+      "start": 2927,
+      "end": 2936,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 72,
           "column": 0
         },
         "end": {
-          "line": 20,
+          "line": 72,
           "column": 9
         }
       }
@@ -3575,15 +3303,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 585,
-      "end": 586,
+      "start": 2936,
+      "end": 2937,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 72,
           "column": 9
         },
         "end": {
-          "line": 20,
+          "line": 72,
           "column": 10
         }
       }
@@ -3601,15 +3329,15 @@
         "binop": null
       },
       "value": "addToWindow",
-      "start": 586,
-      "end": 597,
+      "start": 2937,
+      "end": 2948,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 72,
           "column": 10
         },
         "end": {
-          "line": 20,
+          "line": 72,
           "column": 21
         }
       }
@@ -3626,15 +3354,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 597,
-      "end": 598,
+      "start": 2948,
+      "end": 2949,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 72,
           "column": 21
         },
         "end": {
-          "line": 20,
+          "line": 72,
           "column": 22
         }
       }
@@ -3653,15 +3381,15 @@
         "updateContext": null
       },
       "value": "bse",
-      "start": 598,
-      "end": 603,
+      "start": 2949,
+      "end": 2954,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 72,
           "column": 22
         },
         "end": {
-          "line": 20,
+          "line": 72,
           "column": 27
         }
       }
@@ -3679,15 +3407,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 603,
-      "end": 604,
+      "start": 2954,
+      "end": 2955,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 72,
           "column": 27
         },
         "end": {
-          "line": 20,
+          "line": 72,
           "column": 28
         }
       }
@@ -3705,15 +3433,15 @@
         "binop": null
       },
       "value": "bse",
-      "start": 605,
-      "end": 608,
+      "start": 2956,
+      "end": 2959,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 72,
           "column": 29
         },
         "end": {
-          "line": 20,
+          "line": 72,
           "column": 32
         }
       }
@@ -3730,15 +3458,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 608,
-      "end": 609,
+      "start": 2959,
+      "end": 2960,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 72,
           "column": 32
         },
         "end": {
-          "line": 20,
+          "line": 72,
           "column": 33
         }
       }
@@ -3756,160 +3484,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 609,
-      "end": 610,
+      "start": 2960,
+      "end": 2961,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 72,
           "column": 33
         },
         "end": {
-          "line": 20,
+          "line": 72,
           "column": 34
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " console.log('sdjfkljd');",
-      "start": 612,
-      "end": 639,
-      "loc": {
-        "start": {
-          "line": 22,
-          "column": 0
-        },
-        "end": {
-          "line": 22,
-          "column": 27
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " const testtttt = 'test export';",
-      "start": 640,
-      "end": 674,
-      "loc": {
-        "start": {
-          "line": 23,
-          "column": 0
-        },
-        "end": {
-          "line": 23,
-          "column": 34
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " const test2 = () => {",
-      "start": 675,
-      "end": 699,
-      "loc": {
-        "start": {
-          "line": 24,
-          "column": 0
-        },
-        "end": {
-          "line": 24,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": "   console.log('test');",
-      "start": 700,
-      "end": 725,
-      "loc": {
-        "start": {
-          "line": 25,
-          "column": 0
-        },
-        "end": {
-          "line": 25,
-          "column": 25
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": "   const testArray = [1, 2, 3, 4];",
-      "start": 726,
-      "end": 762,
-      "loc": {
-        "start": {
-          "line": 26,
-          "column": 0
-        },
-        "end": {
-          "line": 26,
-          "column": 36
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": "   console.log(testArray.find(no => no > 2));",
-      "start": 763,
-      "end": 810,
-      "loc": {
-        "start": {
-          "line": 27,
-          "column": 0
-        },
-        "end": {
-          "line": 27,
-          "column": 47
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " };",
-      "start": 811,
-      "end": 816,
-      "loc": {
-        "start": {
-          "line": 28,
-          "column": 0
-        },
-        "end": {
-          "line": 28,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " export { testtttt, test2 };",
-      "start": 817,
-      "end": 847,
-      "loc": {
-        "start": {
-          "line": 29,
-          "column": 0
-        },
-        "end": {
-          "line": 29,
-          "column": 30
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " export default testtttt;",
-      "start": 848,
-      "end": 875,
-      "loc": {
-        "start": {
-          "line": 30,
-          "column": 0
-        },
-        "end": {
-          "line": 30,
-          "column": 27
         }
       }
     },
@@ -3926,15 +3510,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 876,
-      "end": 876,
+      "start": 2962,
+      "end": 2962,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 73,
           "column": 0
         },
         "end": {
-          "line": 31,
+          "line": 73,
           "column": 0
         }
       }

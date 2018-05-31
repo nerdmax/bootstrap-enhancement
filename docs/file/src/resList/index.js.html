@@ -24,7 +24,7 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-</header>
+<a style="position:relative; top:3px;" href="https://github.com/nerdmax/bootstrap-enhancement"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
@@ -120,7 +120,23 @@ function convertListToDropdown(config = {}) {
   });
 }
 
-// Init
+/**
+ * Convert a ul li menu to a select options element and display it on small device
+ * Add bse-resList attribute to ul and run bse.resList.init();
+ * @example
+ * &lt;ul bse-resList&gt;
+ *   &lt;li&gt;&lt;a class=&quot;h7&quot; href=&quot;PASSENGER&quot;&gt;PASSENGER&lt;/a&gt;&lt;/li&gt;
+ *   &lt;li&gt;&lt;a class=&quot;h7&quot; href=&quot;TRUCK&quot;&gt;TRUCK&lt;/a&gt;&lt;/li&gt;
+ *   &lt;li&gt;&lt;a class=&quot;h7&quot; href=&quot;EARTHMOVER&quot;&gt;EARTHMOVER&lt;/a&gt;&lt;/li&gt;
+ *   &lt;li&gt;&lt;a class=&quot;h7&quot; href=&quot;AGRICULTURE&quot;&gt;AGRICULTURE&lt;/a&gt;&lt;/li&gt;
+ *   &lt;li&gt;&lt;a class=&quot;h7&quot; href=&quot;AVIATION&quot;&gt;AVIATION&lt;/a&gt;&lt;/li&gt;
+ *   &lt;li&gt;&lt;a class=&quot;h7&quot; href=&quot;2R&quot;&gt;2R&lt;/a&gt;&lt;/li&gt;
+ * &lt;/ul&gt;
+ * bse.resList.init();
+ * @param {Object} config - Config object
+ * @param {string} config.breakPoint - BreakPoint
+ * @param {string} config.className - calss name that you want to add to select
+ */
 export function init(config) {
   getJquery().then(($) =&gt; {
     convertListToDropdown(config);

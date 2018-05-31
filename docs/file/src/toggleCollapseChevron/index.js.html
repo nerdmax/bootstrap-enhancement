@@ -24,7 +24,7 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-</header>
+<a style="position:relative; top:3px;" href="https://github.com/nerdmax/bootstrap-enhancement"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
@@ -54,7 +54,15 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/toggleCollapseChevron/index.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { getJquery } from &apos;../utilities/index&apos;;
-
+/**
+ * Automatically toggle bootstrap collapse&apos;s chevron based on show or hide collapse.
+ * Add bse-toggleCollapChevron attribute to chevron link and run bse.toggleCollapseChevron.init();
+ * @example
+ * &lt;a data-toggle=&quot;collapse&quot; href=&quot;#test&quot;&gt;
+ *   &lt;i class=&quot;fas fa-chevron-down&quot; bse-toggleCollapChevron&gt;&lt;/i&gt;
+ * &lt;/a&gt;
+ * bse.toggleCollapseChevron.init();
+ */
 export function init() {
   getJquery()
     .then(($) =&gt; {

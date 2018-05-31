@@ -24,7 +24,7 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-</header>
+<a style="position:relative; top:3px;" href="https://github.com/nerdmax/bootstrap-enhancement"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
@@ -94,7 +94,22 @@ function displayResTableHeading(parentEle, displayMessage) {
   }, 1);
 }
 
-// Init
+/**
+ * Add a message when the table in .table-responsive is scrollable.
+ * Add bse-resTableMess attribute to div.table-responsive and run bse.addScrollMessToResTable.init();
+ * @example
+ * &lt;div class=&quot;table-responsive&quot; bse-resTableMess&gt;
+ *   &lt;table class=&quot;table&quot;&gt;
+ *     &lt;thead&gt;
+ *     &lt;/thead&gt;
+ *     &lt;tbody&gt;
+ *     &lt;/tbody&gt;
+ *   &lt;/table&gt;
+ * &lt;/div&gt;
+ * bse.addScrollMessToResTable.init();
+ * @param {string} displayMessage - Message that you want to display, default value is:
+ * Scroll table horizontally to see more.
+ */
 export function init(displayMessage) {
   displayResTableHeading(undefined, displayMessage);
   getJquery().then(($) =&gt; {

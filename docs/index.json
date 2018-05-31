@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/addScrollMessToResTable/index.js",
-    "content": "import getJquery from './../utilities/getJquery';\n\nfunction displayResTableHeading(parentEle, displayMessage) {\n  setTimeout(() => {\n    const parentEleSafe =\n      parentEle === undefined ? document.getElementsByTagName('BODY')[0] : parentEle;\n    // console.log('parentEleSafe: ', parentEleSafe);\n    getJquery().then(($) => {\n      $(parentEleSafe)\n        .find('.table-responsive[bse-resTableMess]')\n        .each((index, tableWrapperElement) => {\n          // console.log(tableWrapperElement);\n          $(tableWrapperElement).each(() => {\n            // console.log($(tableWrapperElement));\n            const tableWrapperWidth = $(tableWrapperElement).width();\n            const tableWidth = $(tableWrapperElement)\n              .find('table')\n              .width();\n            // console.log(tableWrapperWidth);\n            // console.log(tableWidth);\n            const isMessageExist =\n              $(tableWrapperElement).siblings('.table-responsive-heading').length !== 0;\n            // console.log('isMessageExist: ', isMessageExist);\n            if (\n              tableWrapperWidth !== 0 &&\n              tableWidth !== 0 &&\n              tableWidth > tableWrapperWidth &&\n              !isMessageExist\n            ) {\n              $(`<p class=\"table-responsive-heading\">${\n                displayMessage === undefined\n                  ? 'Scroll table horizontally to see more.'\n                  : displayMessage\n              }</p>`).insertBefore($(tableWrapperElement));\n            }\n          });\n        });\n    });\n  }, 1);\n}\n\n// Init\nexport function init(displayMessage) {\n  displayResTableHeading(undefined, displayMessage);\n  getJquery().then(($) => {\n    $('.collapse').on('show.bs.collapse', () => {\n      const that = this;\n      displayResTableHeading(that, displayMessage);\n    });\n    $(window).on('hashchange', () => {\n      console.log('REGRESH');\n      displayResTableHeading(undefined, displayMessage);\n    });\n  });\n}\n\n// Force upate\nexport function update(displayMessage) {\n  displayResTableHeading(undefined, displayMessage);\n}\n",
+    "content": "import getJquery from './../utilities/getJquery';\n\nfunction displayResTableHeading(parentEle, displayMessage) {\n  setTimeout(() => {\n    const parentEleSafe =\n      parentEle === undefined ? document.getElementsByTagName('BODY')[0] : parentEle;\n    // console.log('parentEleSafe: ', parentEleSafe);\n    getJquery().then(($) => {\n      $(parentEleSafe)\n        .find('.table-responsive[bse-resTableMess]')\n        .each((index, tableWrapperElement) => {\n          // console.log(tableWrapperElement);\n          $(tableWrapperElement).each(() => {\n            // console.log($(tableWrapperElement));\n            const tableWrapperWidth = $(tableWrapperElement).width();\n            const tableWidth = $(tableWrapperElement)\n              .find('table')\n              .width();\n            // console.log(tableWrapperWidth);\n            // console.log(tableWidth);\n            const isMessageExist =\n              $(tableWrapperElement).siblings('.table-responsive-heading').length !== 0;\n            // console.log('isMessageExist: ', isMessageExist);\n            if (\n              tableWrapperWidth !== 0 &&\n              tableWidth !== 0 &&\n              tableWidth > tableWrapperWidth &&\n              !isMessageExist\n            ) {\n              $(`<p class=\"table-responsive-heading\">${\n                displayMessage === undefined\n                  ? 'Scroll table horizontally to see more.'\n                  : displayMessage\n              }</p>`).insertBefore($(tableWrapperElement));\n            }\n          });\n        });\n    });\n  }, 1);\n}\n\n/**\n * Add a message when the table in .table-responsive is scrollable.\n * Add bse-resTableMess attribute to div.table-responsive and run bse.addScrollMessToResTable.init();\n * @example\n * <div class=\"table-responsive\" bse-resTableMess>\n *   <table class=\"table\">\n *     <thead>\n *     </thead>\n *     <tbody>\n *     </tbody>\n *   </table>\n * </div>\n * bse.addScrollMessToResTable.init();\n * @param {string} displayMessage - Message that you want to display, default value is:\n * Scroll table horizontally to see more.\n */\nexport function init(displayMessage) {\n  displayResTableHeading(undefined, displayMessage);\n  getJquery().then(($) => {\n    $('.collapse').on('show.bs.collapse', () => {\n      const that = this;\n      displayResTableHeading(that, displayMessage);\n    });\n    $(window).on('hashchange', () => {\n      console.log('REGRESH');\n      displayResTableHeading(undefined, displayMessage);\n    });\n  });\n}\n\n// Force upate\nexport function update(displayMessage) {\n  displayResTableHeading(undefined, displayMessage);\n}\n",
     "static": true,
     "longname": "C:/Max/selflearn/npm/bootstrap-enhancement/src/addScrollMessToResTable/index.js",
     "access": "public",
@@ -620,15 +620,21 @@
     "export": true,
     "importPath": "bootstrap-enhancement/src/addScrollMessToResTable/index.js",
     "importStyle": "{init}",
-    "description": null,
-    "lineNumber": 43,
-    "undocument": true,
+    "description": "Add a message when the table in .table-responsive is scrollable.\nAdd bse-resTableMess attribute to div.table-responsive and run bse.addScrollMessToResTable.init();",
+    "examples": [
+      "<div class=\"table-responsive\" bse-resTableMess>\n  <table class=\"table\">\n    <thead>\n    </thead>\n    <tbody>\n    </tbody>\n  </table>\n</div>\nbse.addScrollMessToResTable.init();"
+    ],
+    "lineNumber": 58,
     "params": [
       {
-        "name": "displayMessage",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "displayMessage",
+        "description": "Message that you want to display, default value is:\nScroll table horizontally to see more."
       }
     ],
     "return": null
@@ -647,7 +653,7 @@
     "importPath": "bootstrap-enhancement/src/addScrollMessToResTable/index.js",
     "importStyle": "{update}",
     "description": null,
-    "lineNumber": 58,
+    "lineNumber": 73,
     "undocument": true,
     "params": [
       {
@@ -663,7 +669,7 @@
     "__docId__": 52,
     "kind": "file",
     "name": "src/fixModalShifting/index.js",
-    "content": "import { addStyles, hasScrollBar } from '../utilities';\n/** This is a description of the addStyleToFixModalShifting function. */\nfunction addStyleToFixModalShifting() {\n  if (hasScrollBar()) {\n    addStyles(`\n    body.modal-open {\n      padding-right: 15px;\n    }\n\n    // Fix fixed header jump to right issues\n    body.modal-open nav.affix {\n      right: 15px;\n    }\n  `);\n  }\n}\n/** This is a description of the init function. */\nexport function init() {\n  addStyleToFixModalShifting();\n}\n\nexport function update() {}\n",
+    "content": "import { addStyles, hasScrollBar } from '../utilities';\n\nfunction addStyleToFixModalShifting() {\n  if (hasScrollBar()) {\n    addStyles(`\n    body.modal-open {\n      padding-right: 15px;\n    }\n\n    // Fix fixed header jump to right issues\n    body.modal-open nav.affix {\n      right: 15px;\n    }\n  `);\n  }\n}\n\n/**\n * Fix bootstrap modal's shifting issue.\n * Run bse.fixModalShifting.init();\n * @example\n * bse.fixModalShifting.init();\n */\nexport function init() {\n  addStyleToFixModalShifting();\n}\n\nexport function update() {}\n",
     "static": true,
     "longname": "C:/Max/selflearn/npm/bootstrap-enhancement/src/fixModalShifting/index.js",
     "access": "public",
@@ -683,8 +689,9 @@
     "export": false,
     "importPath": "bootstrap-enhancement/src/fixModalShifting/index.js",
     "importStyle": null,
-    "description": "This is a description of the addStyleToFixModalShifting function.",
+    "description": null,
     "lineNumber": 3,
+    "undocument": true,
     "params": [],
     "return": null,
     "ignore": true
@@ -702,8 +709,11 @@
     "export": true,
     "importPath": "bootstrap-enhancement/src/fixModalShifting/index.js",
     "importStyle": "{init}",
-    "description": "This is a description of the init function.",
-    "lineNumber": 18,
+    "description": "Fix bootstrap modal's shifting issue.\nRun bse.fixModalShifting.init();",
+    "examples": [
+      "bse.fixModalShifting.init();"
+    ],
+    "lineNumber": 24,
     "params": [],
     "return": null
   },
@@ -721,7 +731,7 @@
     "importPath": "bootstrap-enhancement/src/fixModalShifting/index.js",
     "importStyle": "{update}",
     "description": null,
-    "lineNumber": 22,
+    "lineNumber": 28,
     "undocument": true,
     "params": [],
     "return": null
@@ -730,7 +740,7 @@
     "__docId__": 56,
     "kind": "file",
     "name": "src/index.js",
-    "content": "/** @module index */\nimport * as utilities from './utilities/index';\nimport * as addScrollMessToResTable from './addScrollMessToResTable/index';\nimport * as fixModalShifting from './fixModalShifting/index';\nimport * as toggleCollapseChevron from './toggleCollapseChevron/index';\nimport * as scrollToTop from './scrollToTop/index';\nimport * as resList from './resList/index';\n\nconst bse = {\n  utilities,\n  addScrollMessToResTable,\n  fixModalShifting,\n  toggleCollapseChevron,\n  scrollToTop,\n  resList,\n};\n/** This is a description of the init function. */\nexport default bse;\n\nutilities.addToWindow('bse', bse);\n\n// console.log('sdjfkljd');\n// const testtttt = 'test export';\n// const test2 = () => {\n//   console.log('test');\n//   const testArray = [1, 2, 3, 4];\n//   console.log(testArray.find(no => no > 2));\n// };\n// export { testtttt, test2 };\n// export default testtttt;\n",
+    "content": "import * as utilities from './utilities/index';\nimport * as addScrollMessToResTable from './addScrollMessToResTable/index';\nimport * as fixModalShifting from './fixModalShifting/index';\nimport * as toggleCollapseChevron from './toggleCollapseChevron/index';\nimport * as scrollToTop from './scrollToTop/index';\nimport * as resList from './resList/index';\n\n/**\n * utilities\n */\nconst bse = {\n  utilities,\n  addScrollMessToResTable,\n  fixModalShifting,\n  toggleCollapseChevron,\n  scrollToTop,\n  resList,\n};\n\n/**\n * This is the main object that contains all methods\n * @type {Object}\n * @property {Object} bse.utilities\n * Utilityies related to bootstrap\n * @property {function(sel: Object, strClass: string)} bse.utilities.prependClass\n * Add class names to the left most position to avoid overwriting original class's style\n * @property {function():Promise<Object, MyError>} bse.utilities.getJquery\n * Must use this way to get jQuery if we want to attach something to bootstrap's event.\n * @property {function():boolean} bse.utilities.hasScrollBar\n * Check if the current page has scroll bar.\n * @property {function():number} bse.utilities.getScrollBarWidth\n * Get scroll bar's width.\n * @property {function(css: string)} bse.utilities.addStyles\n * Add some css styles to the top most position in head tag.\n * @property {Object} bse.utilities.checkBreakPoint\n * @property {function():string} bse.utilities.checkBreakPoint.checkSize\n * Get window width's info in bootstrap 4's grid system standards.\n * @property {function():boolean} bse.utilities.checkBreakPoint.is\n * Check which grid level is window in.\n * @property {function(keyValue: string, element: Object):Promise<Object, MyError>} bse.utilities.addToWindow\n * Attach object to window without overwriting anything else.\n *\n * @property {Object} bse.addScrollMessToResTable\n * Add a message when the table in .table-responsive is scrollable.\n * @property {function(displayMessage: string)} bse.addScrollMessToResTable.init\n * Init addScrollMessToResTable\n * @property {function(displayMessage: string)} bse.addScrollMessToResTable.update\n * Update addScrollMessToResTable\n *\n * @property {Object} bse.fixModalShifting\n * Fix bootstrap modal's shifting issue.\n * @property {function()} bse.fixModalShifting.init\n * Init fixModalShifting\n *\n * @property {Object} bse.toggleCollapseChevron\n * Automatically toggle bootstrap collapse's chevron based on show or hide collapse.\n * @property {function()} bse.toggleCollapseChevron.init\n * Init toggleCollapseChevron\n *\n * @property {Object} bse.scrollToTop\n * Add scroll to top anchor on the right bottom of the whole page.\n * @property {function(innerElement: string)} bse.scrollToTop.init\n * Init scrollToTop\n *\n * @property {Object} bse.resList\n * Convert a ul li menu to a select options element and display it on small device\n * @property {function(config: Object)} bse.resList.init\n * Init resList\n */\nexport default bse;\n\nutilities.addToWindow('bse', bse);\n",
     "static": true,
     "longname": "C:/Max/selflearn/npm/bootstrap-enhancement/src/index.js",
     "access": "public",
@@ -748,19 +758,234 @@
     "export": true,
     "importPath": "bootstrap-enhancement/src/index.js",
     "importStyle": "bse",
-    "description": "This is a description of the init function.",
-    "lineNumber": 9,
+    "description": "This is the main object that contains all methods",
+    "lineNumber": 11,
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.utilities",
+        "description": "Utilityies related to bootstrap"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(sel: Object, strClass: string)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.utilities.prependClass",
+        "description": "Add class names to the left most position to avoid overwriting original class's style"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function():Promise<Object, MyError>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.utilities.getJquery",
+        "description": "Must use this way to get jQuery if we want to attach something to bootstrap's event."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function():boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.utilities.hasScrollBar",
+        "description": "Check if the current page has scroll bar."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function():number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.utilities.getScrollBarWidth",
+        "description": "Get scroll bar's width."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(css: string)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.utilities.addStyles",
+        "description": "Add some css styles to the top most position in head tag."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.utilities.checkBreakPoint",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function():string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.utilities.checkBreakPoint.checkSize",
+        "description": "Get window width's info in bootstrap 4's grid system standards."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function():boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.utilities.checkBreakPoint.is",
+        "description": "Check which grid level is window in."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(keyValue: string, element: Object):Promise<Object, MyError>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.utilities.addToWindow",
+        "description": "Attach object to window without overwriting anything else."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.addScrollMessToResTable",
+        "description": "Add a message when the table in .table-responsive is scrollable."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(displayMessage: string)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.addScrollMessToResTable.init",
+        "description": "Init addScrollMessToResTable"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(displayMessage: string)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.addScrollMessToResTable.update",
+        "description": "Update addScrollMessToResTable"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.fixModalShifting",
+        "description": "Fix bootstrap modal's shifting issue."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function()"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.fixModalShifting.init",
+        "description": "Init fixModalShifting"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.toggleCollapseChevron",
+        "description": "Automatically toggle bootstrap collapse's chevron based on show or hide collapse."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function()"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.toggleCollapseChevron.init",
+        "description": "Init toggleCollapseChevron"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.scrollToTop",
+        "description": "Add scroll to top anchor on the right bottom of the whole page."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(innerElement: string)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.scrollToTop.init",
+        "description": "Init scrollToTop"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.resList",
+        "description": "Convert a ul li menu to a select options element and display it on small device"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(config: Object)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bse.resList.init",
+        "description": "Init resList"
+      }
+    ],
     "type": {
+      "nullable": null,
       "types": [
-        "{\"utilities\": *, \"addScrollMessToResTable\": *, \"fixModalShifting\": *, \"toggleCollapseChevron\": *, \"scrollToTop\": *, \"resList\": *}"
-      ]
+        "Object"
+      ],
+      "spread": false,
+      "description": null
     }
   },
   {
     "__docId__": 58,
     "kind": "file",
     "name": "src/resList/index.js",
-    "content": "import getJquery from './../utilities/getJquery';\nimport { prependClass } from '../utilities/index';\n\nfunction convertListToDropdown(config = {}) {\n  getJquery().then(($) => {\n    // console.log(config);\n    const { breakPoint = 'lg', className } = config;\n    const windowUrl = window.location.href;\n    // console.log('windowUrl: ', windowUrl);\n    $('body')\n      .find('ul[bse-resList]')\n      .each((ulIndex, ulElement) => {\n        // Loop through all menus\n        prependClass(ulElement, `d-none d-${breakPoint}-flex`);\n        const isDropdownExist = $(ulElement).siblings('select').length !== 0;\n        if (isDropdownExist) {\n          // Update drop down list's select\n          const $dropDown = $($(ulElement).siblings('select')[0]);\n          $dropDown.find('option').each((optionIndex, optionElement) => {\n            const href = optionElement.value;\n            const isActived = windowUrl.indexOf(href) !== -1;\n            if (isActived) {\n              optionElement.selected = true;\n            } else {\n              optionElement.selected = false;\n            }\n            // console.log(optionElement.selected);\n            // console.log(optionElement.value);\n          });\n        } else {\n          // Crete new drop down list\n          const $dropDown = $('<select />', {\n            class: `d-${breakPoint}-none ${className}`,\n          });\n          $(ulElement)\n            .find('li')\n            .each((liIndex, liElement) => {\n              // console.log(liElement);\n              // console.log($(liElement).find('a'));\n              $(liElement)\n                .find('a')\n                .each((aIndex, aElement) => {\n                  const href = $(aElement).attr('href');\n                  const text = $(aElement).text();\n                  const isActived = windowUrl.indexOf(href) !== -1;\n                  const $option = $('<option />', {\n                    value: href,\n                    text,\n                    selected: isActived,\n                  });\n                  $option.appendTo($dropDown);\n                });\n            });\n          // console.log($dropDown);\n          $dropDown.insertAfter($(ulElement));\n          // Add navigate funcitonality to options\n          $dropDown.on('change', (event) => {\n            // console.log(event.currentTarget);\n            window.location = $(event.currentTarget)\n              .find('option:selected')\n              .val();\n          });\n        }\n      });\n  });\n}\n\n// Init\nexport function init(config) {\n  getJquery().then(($) => {\n    convertListToDropdown(config);\n    $(window).on('hashchange', () => {\n      convertListToDropdown(config);\n    });\n  });\n}\n\n// Force upate\nexport function update() {}\n",
+    "content": "import getJquery from './../utilities/getJquery';\nimport { prependClass } from '../utilities/index';\n\nfunction convertListToDropdown(config = {}) {\n  getJquery().then(($) => {\n    // console.log(config);\n    const { breakPoint = 'lg', className } = config;\n    const windowUrl = window.location.href;\n    // console.log('windowUrl: ', windowUrl);\n    $('body')\n      .find('ul[bse-resList]')\n      .each((ulIndex, ulElement) => {\n        // Loop through all menus\n        prependClass(ulElement, `d-none d-${breakPoint}-flex`);\n        const isDropdownExist = $(ulElement).siblings('select').length !== 0;\n        if (isDropdownExist) {\n          // Update drop down list's select\n          const $dropDown = $($(ulElement).siblings('select')[0]);\n          $dropDown.find('option').each((optionIndex, optionElement) => {\n            const href = optionElement.value;\n            const isActived = windowUrl.indexOf(href) !== -1;\n            if (isActived) {\n              optionElement.selected = true;\n            } else {\n              optionElement.selected = false;\n            }\n            // console.log(optionElement.selected);\n            // console.log(optionElement.value);\n          });\n        } else {\n          // Crete new drop down list\n          const $dropDown = $('<select />', {\n            class: `d-${breakPoint}-none ${className}`,\n          });\n          $(ulElement)\n            .find('li')\n            .each((liIndex, liElement) => {\n              // console.log(liElement);\n              // console.log($(liElement).find('a'));\n              $(liElement)\n                .find('a')\n                .each((aIndex, aElement) => {\n                  const href = $(aElement).attr('href');\n                  const text = $(aElement).text();\n                  const isActived = windowUrl.indexOf(href) !== -1;\n                  const $option = $('<option />', {\n                    value: href,\n                    text,\n                    selected: isActived,\n                  });\n                  $option.appendTo($dropDown);\n                });\n            });\n          // console.log($dropDown);\n          $dropDown.insertAfter($(ulElement));\n          // Add navigate funcitonality to options\n          $dropDown.on('change', (event) => {\n            // console.log(event.currentTarget);\n            window.location = $(event.currentTarget)\n              .find('option:selected')\n              .val();\n          });\n        }\n      });\n  });\n}\n\n/**\n * Convert a ul li menu to a select options element and display it on small device\n * Add bse-resList attribute to ul and run bse.resList.init();\n * @example\n * <ul bse-resList>\n *   <li><a class=\"h7\" href=\"PASSENGER\">PASSENGER</a></li>\n *   <li><a class=\"h7\" href=\"TRUCK\">TRUCK</a></li>\n *   <li><a class=\"h7\" href=\"EARTHMOVER\">EARTHMOVER</a></li>\n *   <li><a class=\"h7\" href=\"AGRICULTURE\">AGRICULTURE</a></li>\n *   <li><a class=\"h7\" href=\"AVIATION\">AVIATION</a></li>\n *   <li><a class=\"h7\" href=\"2R\">2R</a></li>\n * </ul>\n * bse.resList.init();\n * @param {Object} config - Config object\n * @param {string} config.breakPoint - BreakPoint\n * @param {string} config.className - calss name that you want to add to select\n */\nexport function init(config) {\n  getJquery().then(($) => {\n    convertListToDropdown(config);\n    $(window).on('hashchange', () => {\n      convertListToDropdown(config);\n    });\n  });\n}\n\n// Force upate\nexport function update() {}\n",
     "static": true,
     "longname": "C:/Max/selflearn/npm/bootstrap-enhancement/src/resList/index.js",
     "access": "public",
@@ -810,15 +1035,41 @@
     "export": true,
     "importPath": "bootstrap-enhancement/src/resList/index.js",
     "importStyle": "{init}",
-    "description": null,
-    "lineNumber": 69,
-    "undocument": true,
+    "description": "Convert a ul li menu to a select options element and display it on small device\nAdd bse-resList attribute to ul and run bse.resList.init();",
+    "examples": [
+      "<ul bse-resList>\n  <li><a class=\"h7\" href=\"PASSENGER\">PASSENGER</a></li>\n  <li><a class=\"h7\" href=\"TRUCK\">TRUCK</a></li>\n  <li><a class=\"h7\" href=\"EARTHMOVER\">EARTHMOVER</a></li>\n  <li><a class=\"h7\" href=\"AGRICULTURE\">AGRICULTURE</a></li>\n  <li><a class=\"h7\" href=\"AVIATION\">AVIATION</a></li>\n  <li><a class=\"h7\" href=\"2R\">2R</a></li>\n</ul>\nbse.resList.init();"
+    ],
+    "lineNumber": 85,
     "params": [
       {
-        "name": "config",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "config",
+        "description": "Config object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "config.breakPoint",
+        "description": "BreakPoint"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "config.className",
+        "description": "calss name that you want to add to select"
       }
     ],
     "return": null
@@ -837,7 +1088,7 @@
     "importPath": "bootstrap-enhancement/src/resList/index.js",
     "importStyle": "{update}",
     "description": null,
-    "lineNumber": 79,
+    "lineNumber": 95,
     "undocument": true,
     "params": [],
     "return": null
@@ -846,7 +1097,7 @@
     "__docId__": 62,
     "kind": "file",
     "name": "src/scrollToTop/index.js",
-    "content": "import getJquery from './../utilities/getJquery';\nimport { addStyles } from '../utilities/index';\n\nexport function init(innerElement) {\n  getJquery().then(($) => {\n    addStyles(`\n    .scroll-to-top {\n      display: none;\n      position: fixed;\n      /*z-index should be smaller than .page-loading-spinner*/\n      z-index: 9998;\n      bottom: 5px;\n      right: 5px;\n      font-size: 15px;\n      filter: alpha(opacity=40); /* For IE8 and earlier */\n    \n    .scroll-to-top:hover {\n      cursor: pointer;\n      opacity: 0.8;\n      filter: alpha(opacity=80); /* For IE8 and earlier */\n    }\n      `);\n\n    const $scrollAnchor = $(`<a class=\"scroll-to-top\" href=\"\">${innerElement}</a>`);\n\n    $('body').append($scrollAnchor);\n\n    $(window).scroll(() => {\n      if ($(window).scrollTop() > 100) {\n        $scrollAnchor.fadeIn();\n      } else {\n        $scrollAnchor.fadeOut();\n      }\n    });\n\n    $scrollAnchor.click((e) => {\n      e.preventDefault();\n      $('body, html').animate(\n        {\n          scrollTop: 0,\n        },\n        800,\n      );\n    });\n  });\n}\n\nexport function update() {}\n",
+    "content": "import getJquery from './../utilities/getJquery';\nimport { addStyles } from '../utilities/index';\n\n/**\n * Add scroll to top anchor on the right bottom of the whole page.\n * @example\n * bse.scrollToTop.init(`<span class=\"fa-stack fa-lg\">\n *    <i class=\"fa fa-circle fa-stack-2x\"></i>\n *    <i class=\"fa fa-chevron-up fa-stack-1x fa-inverse\"></i>\n *  </span>`);\n * @param {string} innerElement - Dom element string that you want to add to that anchor.\n */\nexport function init(innerElement) {\n  getJquery().then(($) => {\n    addStyles(`\n    .scroll-to-top {\n      display: none;\n      position: fixed;\n      /*z-index should be smaller than .page-loading-spinner*/\n      z-index: 9998;\n      bottom: 5px;\n      right: 5px;\n      font-size: 15px;\n      filter: alpha(opacity=40); /* For IE8 and earlier */\n    \n    .scroll-to-top:hover {\n      cursor: pointer;\n      opacity: 0.8;\n      filter: alpha(opacity=80); /* For IE8 and earlier */\n    }\n      `);\n\n    const $scrollAnchor = $(`<a class=\"scroll-to-top\" href=\"\">${innerElement}</a>`);\n\n    $('body').append($scrollAnchor);\n\n    $(window).scroll(() => {\n      if ($(window).scrollTop() > 100) {\n        $scrollAnchor.fadeIn();\n      } else {\n        $scrollAnchor.fadeOut();\n      }\n    });\n\n    $scrollAnchor.click((e) => {\n      e.preventDefault();\n      $('body, html').animate(\n        {\n          scrollTop: 0,\n        },\n        800,\n      );\n    });\n  });\n}\n\nexport function update() {}\n",
     "static": true,
     "longname": "C:/Max/selflearn/npm/bootstrap-enhancement/src/scrollToTop/index.js",
     "access": "public",
@@ -866,15 +1117,21 @@
     "export": true,
     "importPath": "bootstrap-enhancement/src/scrollToTop/index.js",
     "importStyle": "{init}",
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true,
+    "description": "Add scroll to top anchor on the right bottom of the whole page.",
+    "examples": [
+      "bse.scrollToTop.init(`<span class=\"fa-stack fa-lg\">\n   <i class=\"fa fa-circle fa-stack-2x\"></i>\n   <i class=\"fa fa-chevron-up fa-stack-1x fa-inverse\"></i>\n </span>`);"
+    ],
+    "lineNumber": 13,
     "params": [
       {
-        "name": "innerElement",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "innerElement",
+        "description": "Dom element string that you want to add to that anchor."
       }
     ],
     "return": null
@@ -893,7 +1150,7 @@
     "importPath": "bootstrap-enhancement/src/scrollToTop/index.js",
     "importStyle": "{update}",
     "description": null,
-    "lineNumber": 48,
+    "lineNumber": 57,
     "undocument": true,
     "params": [],
     "return": null
@@ -902,7 +1159,7 @@
     "__docId__": 65,
     "kind": "file",
     "name": "src/toggleCollapseChevron/index.js",
-    "content": "import { getJquery } from '../utilities/index';\n\nexport function init() {\n  getJquery()\n    .then(($) => {\n      $('.collapse').on('show.bs.collapse', (event) => {\n        // console.log('show.bs.collapse');\n        // console.log(event);\n        // console.log(event.currentTarget);\n        const $chevronIcon = $(document)\n          .find(`[href='#${$(event.target).attr('id')}']`)\n          .find('svg[bse-toggleCollapChevron]');\n        // console.log($chevronIcon);\n        $chevronIcon.attr('data-icon', 'chevron-up');\n        // $(`#${this.id}-chevron`).toggleClass('fa-chevron-down fa-chevron-up');\n        // $(`#${this.id}-hvr`).toggleClass('hvr-icon-hang hvr-icon-bob');\n      });\n      $('.collapse').on('hide.bs.collapse', (event) => {\n        const $chevronIcon = $(document)\n          .find(`[href='#${$(event.target).attr('id')}']`)\n          .find('svg[bse]');\n        $chevronIcon.attr('data-icon', 'chevron-down');\n      });\n    })\n    .catch((e) => {\n      console.error(e);\n    });\n}\n\nexport function update() {}\n",
+    "content": "import { getJquery } from '../utilities/index';\n/**\n * Automatically toggle bootstrap collapse's chevron based on show or hide collapse.\n * Add bse-toggleCollapChevron attribute to chevron link and run bse.toggleCollapseChevron.init();\n * @example\n * <a data-toggle=\"collapse\" href=\"#test\">\n *   <i class=\"fas fa-chevron-down\" bse-toggleCollapChevron></i>\n * </a>\n * bse.toggleCollapseChevron.init();\n */\nexport function init() {\n  getJquery()\n    .then(($) => {\n      $('.collapse').on('show.bs.collapse', (event) => {\n        // console.log('show.bs.collapse');\n        // console.log(event);\n        // console.log(event.currentTarget);\n        const $chevronIcon = $(document)\n          .find(`[href='#${$(event.target).attr('id')}']`)\n          .find('svg[bse-toggleCollapChevron]');\n        // console.log($chevronIcon);\n        $chevronIcon.attr('data-icon', 'chevron-up');\n        // $(`#${this.id}-chevron`).toggleClass('fa-chevron-down fa-chevron-up');\n        // $(`#${this.id}-hvr`).toggleClass('hvr-icon-hang hvr-icon-bob');\n      });\n      $('.collapse').on('hide.bs.collapse', (event) => {\n        const $chevronIcon = $(document)\n          .find(`[href='#${$(event.target).attr('id')}']`)\n          .find('svg[bse]');\n        $chevronIcon.attr('data-icon', 'chevron-down');\n      });\n    })\n    .catch((e) => {\n      console.error(e);\n    });\n}\n\nexport function update() {}\n",
     "static": true,
     "longname": "C:/Max/selflearn/npm/bootstrap-enhancement/src/toggleCollapseChevron/index.js",
     "access": "public",
@@ -922,9 +1179,11 @@
     "export": true,
     "importPath": "bootstrap-enhancement/src/toggleCollapseChevron/index.js",
     "importStyle": "{init}",
-    "description": null,
-    "lineNumber": 3,
-    "undocument": true,
+    "description": "Automatically toggle bootstrap collapse's chevron based on show or hide collapse.\nAdd bse-toggleCollapChevron attribute to chevron link and run bse.toggleCollapseChevron.init();",
+    "examples": [
+      "<a data-toggle=\"collapse\" href=\"#test\">\n  <i class=\"fas fa-chevron-down\" bse-toggleCollapChevron></i>\n</a>\nbse.toggleCollapseChevron.init();"
+    ],
+    "lineNumber": 11,
     "params": [],
     "return": null
   },
@@ -942,7 +1201,7 @@
     "importPath": "bootstrap-enhancement/src/toggleCollapseChevron/index.js",
     "importStyle": "{update}",
     "description": null,
-    "lineNumber": 30,
+    "lineNumber": 38,
     "undocument": true,
     "params": [],
     "return": null
@@ -951,7 +1210,7 @@
     "__docId__": 68,
     "kind": "file",
     "name": "src/utilities/addStyles.js",
-    "content": "export default function addStyles(css) {\n  const head = document.head || document.getElementsByTagName('head')[0];\n  const style = document.createElement('style');\n\n  style.type = 'text/css';\n  // Polyfill IE8 and below\n  if (style.styleSheet) {\n    style.styleSheet.cssText = css;\n  } else {\n    style.appendChild(document.createTextNode(css));\n  }\n\n  head.insertBefore(style, head.childNodes[0]);\n}\n",
+    "content": "/**\n * Add some css styles to the top most position in head tag.\n * @example\n * bse.utilities.addStyles('.test{color: red}');\n * @param {string} css - Css styles that you want to add.\n */\nexport default function addStyles(css) {\n  const head = document.head || document.getElementsByTagName('head')[0];\n  const style = document.createElement('style');\n\n  style.type = 'text/css';\n  // Polyfill IE8 and below\n  if (style.styleSheet) {\n    style.styleSheet.cssText = css;\n  } else {\n    style.appendChild(document.createTextNode(css));\n  }\n\n  head.insertBefore(style, head.childNodes[0]);\n}\n",
     "static": true,
     "longname": "C:/Max/selflearn/npm/bootstrap-enhancement/src/utilities/addStyles.js",
     "access": "public",
@@ -971,15 +1230,21 @@
     "export": true,
     "importPath": "bootstrap-enhancement/src/utilities/addStyles.js",
     "importStyle": "addStyles",
-    "description": null,
-    "lineNumber": 1,
-    "undocument": true,
+    "description": "Add some css styles to the top most position in head tag.",
+    "examples": [
+      "bse.utilities.addStyles('.test{color: red}');"
+    ],
+    "lineNumber": 7,
     "params": [
       {
-        "name": "css",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "css",
+        "description": "Css styles that you want to add."
       }
     ],
     "return": null
@@ -988,7 +1253,7 @@
     "__docId__": 70,
     "kind": "file",
     "name": "src/utilities/addToWindow.js",
-    "content": "export default function addToWindow(keyValue, element) {\n  return new Promise((resolve, reject) => {\n    // console.log(window[keyValue]);\n    if (typeof window !== 'undefined') {\n      if (typeof window[keyValue] === 'undefined') {\n        window[keyValue] = element;\n        window[keyValue].bseLoaded = true;\n      } else if (typeof window[keyValue].bseLoaded === 'undefined' || !window[keyValue].bseLoaded) {\n        console.error(`'${keyValue}' has been used on window object.`);\n        reject(new Error(`'${keyValue}' has been used on window object.`));\n      }\n    } else {\n      console.error('Cannot get window object');\n      reject(new Error('Cannot get window object'));\n    }\n    resolve();\n  });\n}\n",
+    "content": "/**\n * Attach object to window without overwriting anything else.\n * @example\n * bse.utilities.addToWindow('bse', bse);\n * @param {string} keyValue - Keyword that you want use to get the object from window.\n * @param {Object} element - Dom element that you want to add to window.\n * @return {Promise<Object, MyError>} Promise object.\n */\nexport default function addToWindow(keyValue, element) {\n  return new Promise((resolve, reject) => {\n    // console.log(window[keyValue]);\n    if (typeof window !== 'undefined') {\n      if (typeof window[keyValue] === 'undefined') {\n        window[keyValue] = element;\n        window[keyValue].bseLoaded = true;\n      } else if (typeof window[keyValue].bseLoaded === 'undefined' || !window[keyValue].bseLoaded) {\n        console.error(`'${keyValue}' has been used on window object.`);\n        reject(new Error(`'${keyValue}' has been used on window object.`));\n      }\n    } else {\n      console.error('Cannot get window object');\n      reject(new Error('Cannot get window object'));\n    }\n    resolve();\n  });\n}\n",
     "static": true,
     "longname": "C:/Max/selflearn/npm/bootstrap-enhancement/src/utilities/addToWindow.js",
     "access": "public",
@@ -1008,34 +1273,47 @@
     "export": true,
     "importPath": "bootstrap-enhancement/src/utilities/addToWindow.js",
     "importStyle": "addToWindow",
-    "description": null,
-    "lineNumber": 1,
-    "undocument": true,
+    "description": "Attach object to window without overwriting anything else.",
+    "examples": [
+      "bse.utilities.addToWindow('bse', bse);"
+    ],
+    "lineNumber": 9,
     "params": [
       {
-        "name": "keyValue",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "keyValue",
+        "description": "Keyword that you want use to get the object from window."
       },
       {
-        "name": "element",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "element",
+        "description": "Dom element that you want to add to window."
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Promise<Object, MyError>"
+      ],
+      "spread": false,
+      "description": "Promise object."
     }
   },
   {
     "__docId__": 72,
     "kind": "file",
     "name": "src/utilities/checkBreakPoint/checkSize.js",
-    "content": "import getJquery from '../getJquery';\n\n/**\n * Checks if the span is set to display lock via CSS\n */\nfunction checkIfBlock(target) {\n  getJquery().then(($) => {\n    const isTargetBlcok = $(target).css('display') === 'block';\n    return isTargetBlcok;\n  });\n}\n\nexport default function checkSize() {\n  getJquery().then(($) => {\n    // Add some invisible elements with Bootstrap CSS visibile utility classes\n    const $testElement = $(\"<div style='display:none;' class='breakpoint-check'><span class='xs d-block d-sm-inline'></span><span class='sm d-sm-block d-md-inline'></span><span class='md d-md-block d-lg-inline'></span><span class='lg d-lg-block d-xl-inline'></span><span class='xl d-xl-block'></span></div>\");\n    $('body').append($testElement);\n    // Set some variables to use with the if checks below\n    const xs = checkIfBlock('.breakpoint-check .xs');\n    const md = checkIfBlock('.breakpoint-check .md');\n    const sm = checkIfBlock('.breakpoint-check .sm');\n    const lg = checkIfBlock('.breakpoint-check .lg');\n    const xl = checkIfBlock('.breakpoint-check .xl');\n    $testElement.remove();\n\n    // add the breakpoint to the console\n    if (xs === true) {\n      return 'xs';\n    }\n\n    if (sm === true) {\n      return 'sm';\n    }\n\n    if (md === true) {\n      return 'md';\n    }\n\n    if (lg === true) {\n      return 'lg';\n    }\n\n    if (xl === true) {\n      return 'xl';\n    }\n\n    return 'null';\n  });\n}\n",
+    "content": "// TODO: Need to load jQuery properly.\n/**\n * Checks if the span is set to display lock via CSS\n */\nfunction checkIfBlock(target) {\n  const { $ } = window;\n  const isTargetBlcok = $(target).css('display') === 'block';\n  return isTargetBlcok;\n}\n\n/**\n * Get window width's info in bootstrap 4's grid system standards.\n * @example\n * const bsGrid = bse.utilities.checkBreakPoint.checkSize();\n * @return {string} bsGrid of current window\n */\nexport default function checkSize() {\n  const { $ } = window;\n  // Add some invisible elements with Bootstrap CSS visibile utility classes\n  const $testElement = $(\"<div style='display:none;' class='breakpoint-check'><span class='xs d-block d-sm-inline'></span><span class='sm d-sm-block d-md-inline'></span><span class='md d-md-block d-lg-inline'></span><span class='lg d-lg-block d-xl-inline'></span><span class='xl d-xl-block'></span></div>\");\n  $('body').append($testElement);\n  // Set some variables to use with the if checks below\n  const xs = checkIfBlock('.breakpoint-check .xs');\n  const md = checkIfBlock('.breakpoint-check .md');\n  const sm = checkIfBlock('.breakpoint-check .sm');\n  const lg = checkIfBlock('.breakpoint-check .lg');\n  const xl = checkIfBlock('.breakpoint-check .xl');\n  $testElement.remove();\n\n  // add the breakpoint to the console\n  if (xs === true) {\n    return 'xs';\n  }\n\n  if (sm === true) {\n    return 'sm';\n  }\n\n  if (md === true) {\n    return 'md';\n  }\n\n  if (lg === true) {\n    return 'lg';\n  }\n\n  if (xl === true) {\n    return 'xl';\n  }\n\n  return 'null';\n}\n",
     "static": true,
     "longname": "C:/Max/selflearn/npm/bootstrap-enhancement/src/utilities/checkBreakPoint/checkSize.js",
     "access": "public",
@@ -1056,7 +1334,7 @@
     "importPath": "bootstrap-enhancement/src/utilities/checkBreakPoint/checkSize.js",
     "importStyle": null,
     "description": "Checks if the span is set to display lock via CSS",
-    "lineNumber": 6,
+    "lineNumber": 5,
     "params": [
       {
         "name": "target",
@@ -1065,7 +1343,11 @@
         ]
       }
     ],
-    "return": null,
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
     "ignore": true
   },
   {
@@ -1081,11 +1363,20 @@
     "export": true,
     "importPath": "bootstrap-enhancement/src/utilities/checkBreakPoint/checkSize.js",
     "importStyle": "checkSize",
-    "description": null,
-    "lineNumber": 13,
-    "undocument": true,
-    "params": [],
-    "return": null
+    "description": "Get window width's info in bootstrap 4's grid system standards.",
+    "examples": [
+      "const bsGrid = bse.utilities.checkBreakPoint.checkSize();"
+    ],
+    "lineNumber": 17,
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": "bsGrid of current window"
+    },
+    "params": []
   },
   {
     "__docId__": 75,
@@ -1102,7 +1393,7 @@
     "__docId__": 76,
     "kind": "file",
     "name": "src/utilities/checkBreakPoint/is.js",
-    "content": "import checkSize from './checkSize';\n\nconst breakpointList = ['xs', 'sm', 'md', 'lg', 'xl'];\n\n/**\n * Determines whether passed string is a parsable expression\n */\nfunction isAnExpression(str) {\n  return str.charAt(0) === '<' || str.charAt(0) === '>';\n}\n\n/**\n * Returns true if currently active breakpoint matches the expression\n */\nfunction isAnyActive(acceptedBreakpoints) {\n  let found = false;\n  const currentBreakPpoint = checkSize();\n  acceptedBreakpoints.forEach((acceptedBreakpoint) => {\n    if (acceptedBreakpoint === currentBreakPpoint) {\n      found = true;\n    }\n  });\n  return found;\n}\n\n/**\n * Splits the expression in into <|> [=] alias\n */\nfunction splitExpression(str) {\n  // Used operator\n  const operator = str.charAt(0);\n  // Include breakpoint equal to alias?\n  const orEqual = str.charAt(1) === '=';\n\n  /**\n   * Index at which breakpoint name starts.\n   *\n   * For:  >sm, index = 1\n   * For: >=sm, index = 2\n   */\n  const index = 1 + (orEqual ? 1 : 0);\n\n  /**\n   * The remaining part of the expression, after the operator, will be treated as the\n   * breakpoint name to compare with\n   */\n  const breakpointName = str.slice(index);\n\n  return {\n    operator,\n    orEqual,\n    breakpointName,\n  };\n}\n\n/**\n * Determines whether current breakpoint matches the expression given\n */\nfunction isMatchingExpression(str) {\n  const expression = splitExpression(str);\n\n  // Get index of sought breakpoint in the list\n  const pos = breakpointList.indexOf(expression.breakpointName);\n\n  // Breakpoint found\n  if (pos !== -1) {\n    let start = 0;\n    let end = 0;\n\n    /**\n     * Parsing viewport.is('<=md') we interate from smallest breakpoint ('xs') and end\n     * at 'md' breakpoint, indicated in the expression,\n     * That makes: start = 0, end = 2 (index of 'md' breakpoint)\n     *\n     * Parsing viewport.is('<md') we start at index 'xs' breakpoint, and end at\n     * 'sm' breakpoint, one before 'md'.\n     * Which makes: start = 0, end = 1\n     */\n    if (expression.operator === '<') {\n      start = 0;\n      end = expression.orEqual ? pos + 1 : pos;\n    }\n    /**\n     * Parsing viewport.is('>=sm') we interate from breakpoint 'sm' and end at the end\n     * of breakpoint list.\n     * That makes: start = 1, end = undefined\n     *\n     * Parsing viewport.is('>sm') we start at breakpoint 'md' and end at the end of\n     * breakpoint list.\n     * Which makes: start = 2, end = undefined\n     */\n    if (expression.operator === '>') {\n      start = expression.orEqual ? pos : pos + 1;\n      end = undefined;\n    }\n\n    const acceptedBreakpoints = breakpointList.slice(start, end);\n    // console.log('acceptedBreakpoints: ', acceptedBreakpoints);\n\n    return isAnyActive(acceptedBreakpoints);\n  }\n  return false;\n}\n\nexport default function is(str) {\n  if (isAnExpression(str)) {\n    return isMatchingExpression(str);\n  }\n  return false;\n}\n",
+    "content": "import checkSize from './checkSize';\n\nconst breakpointList = ['xs', 'sm', 'md', 'lg', 'xl'];\n\n/**\n * Determines whether passed string is a parsable expression\n */\nfunction isAnExpression(str) {\n  return str.charAt(0) === '<' || str.charAt(0) === '>';\n}\n\n/**\n * Returns true if currently active breakpoint matches the expression\n */\nfunction isAnyActive(acceptedBreakpoints) {\n  let found = false;\n  const currentBreakPpoint = checkSize();\n  acceptedBreakpoints.forEach((acceptedBreakpoint) => {\n    if (acceptedBreakpoint === currentBreakPpoint) {\n      found = true;\n    }\n  });\n  return found;\n}\n\n/**\n * Splits the expression in into <|> [=] alias\n */\nfunction splitExpression(str) {\n  // Used operator\n  const operator = str.charAt(0);\n  // Include breakpoint equal to alias?\n  const orEqual = str.charAt(1) === '=';\n\n  /**\n   * Index at which breakpoint name starts.\n   *\n   * For:  >sm, index = 1\n   * For: >=sm, index = 2\n   */\n  const index = 1 + (orEqual ? 1 : 0);\n\n  /**\n   * The remaining part of the expression, after the operator, will be treated as the\n   * breakpoint name to compare with\n   */\n  const breakpointName = str.slice(index);\n\n  return {\n    operator,\n    orEqual,\n    breakpointName,\n  };\n}\n\n/**\n * Determines whether current breakpoint matches the expression given\n */\nfunction isMatchingExpression(str) {\n  const expression = splitExpression(str);\n\n  // Get index of sought breakpoint in the list\n  const pos = breakpointList.indexOf(expression.breakpointName);\n\n  // Breakpoint found\n  if (pos !== -1) {\n    let start = 0;\n    let end = 0;\n\n    /**\n     * Parsing viewport.is('<=md') we interate from smallest breakpoint ('xs') and end\n     * at 'md' breakpoint, indicated in the expression,\n     * That makes: start = 0, end = 2 (index of 'md' breakpoint)\n     *\n     * Parsing viewport.is('<md') we start at index 'xs' breakpoint, and end at\n     * 'sm' breakpoint, one before 'md'.\n     * Which makes: start = 0, end = 1\n     */\n    if (expression.operator === '<') {\n      start = 0;\n      end = expression.orEqual ? pos + 1 : pos;\n    }\n    /**\n     * Parsing viewport.is('>=sm') we interate from breakpoint 'sm' and end at the end\n     * of breakpoint list.\n     * That makes: start = 1, end = undefined\n     *\n     * Parsing viewport.is('>sm') we start at breakpoint 'md' and end at the end of\n     * breakpoint list.\n     * Which makes: start = 2, end = undefined\n     */\n    if (expression.operator === '>') {\n      start = expression.orEqual ? pos : pos + 1;\n      end = undefined;\n    }\n\n    const acceptedBreakpoints = breakpointList.slice(start, end);\n    // console.log('acceptedBreakpoints: ', acceptedBreakpoints);\n\n    return isAnyActive(acceptedBreakpoints);\n  }\n  return false;\n}\n\n/**\n * Check which grid level is window in.\n * @example\n * const is = bse.utilities.checkBreakPoint.is('md');\n * @return {boolean} True when window is in the scope. False when window is not in the scope.\n */\nexport default function is(str) {\n  if (isAnExpression(str)) {\n    return isMatchingExpression(str);\n  }\n  return false;\n}\n",
     "static": true,
     "longname": "C:/Max/selflearn/npm/bootstrap-enhancement/src/utilities/checkBreakPoint/is.js",
     "access": "public",
@@ -1263,9 +1554,19 @@
     "export": true,
     "importPath": "bootstrap-enhancement/src/utilities/checkBreakPoint/is.js",
     "importStyle": "is",
-    "description": null,
-    "lineNumber": 105,
-    "undocument": true,
+    "description": "Check which grid level is window in.",
+    "examples": [
+      "const is = bse.utilities.checkBreakPoint.is('md');"
+    ],
+    "lineNumber": 111,
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "True when window is in the scope. False when window is not in the scope."
+    },
     "params": [
       {
         "name": "str",
@@ -1273,18 +1574,13 @@
           "*"
         ]
       }
-    ],
-    "return": {
-      "types": [
-        "boolean"
-      ]
-    }
+    ]
   },
   {
     "__docId__": 83,
     "kind": "file",
     "name": "src/utilities/getJquery.js",
-    "content": "export default function getJquery() {\n  return new Promise((resolve, reject) => {\n    let $$;\n    if (window.$) {\n      $$ = window.$;\n    } else if (window.jQuery) {\n      $$ = window.jQuery;\n    } else {\n      console.error('Please make sure you loaded jQuery and added it to the window object');\n      reject(new Error('Please make sure you loaded jQuery and added it to the window object'));\n    }\n    resolve($$);\n  });\n}\n",
+    "content": "/**\n * Get jQuery from window.\n * Must use this way to get jQuery if we want to attach something to bootstrap's event.\n * @example\n * bse.utilities.getJquery().then(($)=>{console.log($)});\n * @return {Promise<Object, MyError>} Promise with jQuery from window.\n */\nexport default function getJquery() {\n  return new Promise((resolve, reject) => {\n    let $$;\n    if (window.$) {\n      $$ = window.$;\n    } else if (window.jQuery) {\n      $$ = window.jQuery;\n    } else {\n      console.error('Please make sure you loaded jQuery and added it to the window object');\n      reject(new Error('Please make sure you loaded jQuery and added it to the window object'));\n    }\n    resolve($$);\n  });\n}\n",
     "static": true,
     "longname": "C:/Max/selflearn/npm/bootstrap-enhancement/src/utilities/getJquery.js",
     "access": "public",
@@ -1304,21 +1600,26 @@
     "export": true,
     "importPath": "bootstrap-enhancement/src/utilities/getJquery.js",
     "importStyle": "getJquery",
-    "description": null,
-    "lineNumber": 1,
-    "undocument": true,
-    "params": [],
+    "description": "Get jQuery from window.\nMust use this way to get jQuery if we want to attach something to bootstrap's event.",
+    "examples": [
+      "bse.utilities.getJquery().then(($)=>{console.log($)});"
+    ],
+    "lineNumber": 8,
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "Promise<Object, MyError>"
+      ],
+      "spread": false,
+      "description": "Promise with jQuery from window."
+    },
+    "params": []
   },
   {
     "__docId__": 85,
     "kind": "file",
     "name": "src/utilities/getScrollBarWidth.js",
-    "content": "export default function getScrollBarWidth() {\n  const inner = document.createElement('p');\n  inner.style.width = '100%';\n  inner.style.height = '200px';\n\n  const outer = document.createElement('div');\n  outer.style.position = 'absolute';\n  outer.style.top = '0px';\n  outer.style.left = '0px';\n  outer.style.visibility = 'hidden';\n  outer.style.width = '200px';\n  outer.style.height = '150px';\n  outer.style.overflow = 'hidden';\n  outer.appendChild(inner);\n\n  document.body.appendChild(outer);\n  const w1 = inner.offsetWidth;\n  outer.style.overflow = 'scroll';\n  let w2 = inner.offsetWidth;\n  if (w1 === w2) w2 = outer.clientWidth;\n\n  document.body.removeChild(outer);\n\n  return w1 - w2;\n}\n",
+    "content": "/**\n * Get scroll bar's width.\n * @example\n * const scrollBarWidth = bse.utilities.getScrollBarWidth();\n * @return {number} Page's scroll bar width even if there is no scroll bar.\n * Return 0 if scroll bar is transparent(Eg: Safari on iPhone/iPad).\n */\nexport default function getScrollBarWidth() {\n  const inner = document.createElement('p');\n  inner.style.width = '100%';\n  inner.style.height = '200px';\n\n  const outer = document.createElement('div');\n  outer.style.position = 'absolute';\n  outer.style.top = '0px';\n  outer.style.left = '0px';\n  outer.style.visibility = 'hidden';\n  outer.style.width = '200px';\n  outer.style.height = '150px';\n  outer.style.overflow = 'hidden';\n  outer.appendChild(inner);\n\n  document.body.appendChild(outer);\n  const w1 = inner.offsetWidth;\n  outer.style.overflow = 'scroll';\n  let w2 = inner.offsetWidth;\n  if (w1 === w2) w2 = outer.clientWidth;\n\n  document.body.removeChild(outer);\n\n  return w1 - w2;\n}\n",
     "static": true,
     "longname": "C:/Max/selflearn/npm/bootstrap-enhancement/src/utilities/getScrollBarWidth.js",
     "access": "public",
@@ -1338,21 +1639,26 @@
     "export": true,
     "importPath": "bootstrap-enhancement/src/utilities/getScrollBarWidth.js",
     "importStyle": "getScrollBarWidth",
-    "description": null,
-    "lineNumber": 1,
-    "undocument": true,
-    "params": [],
+    "description": "Get scroll bar's width.",
+    "examples": [
+      "const scrollBarWidth = bse.utilities.getScrollBarWidth();"
+    ],
+    "lineNumber": 8,
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "number"
+      ],
+      "spread": false,
+      "description": "Page's scroll bar width even if there is no scroll bar.\nReturn 0 if scroll bar is transparent(Eg: Safari on iPhone/iPad)."
+    },
+    "params": []
   },
   {
     "__docId__": 87,
     "kind": "file",
     "name": "src/utilities/hasScrollBar.js",
-    "content": "export default function hasScrollBar() {\n  // The Modern solution\n  if (typeof window.innerWidth === 'number') {\n    return window.innerWidth > document.documentElement.clientWidth;\n  }\n\n  // rootElem for quirksmode\n  const rootElem = document.documentElement || document.body;\n\n  // Check overflow style property on body for fauxscrollbars\n  let overflowStyle;\n\n  if (typeof rootElem.currentStyle !== 'undefined') overflowStyle = rootElem.currentStyle.overflow;\n\n  overflowStyle = overflowStyle || window.getComputedStyle(rootElem, '').overflow;\n\n  // Also need to check the Y axis overflow\n  let overflowYStyle;\n\n  if (typeof rootElem.currentStyle !== 'undefined') {\n    overflowYStyle = rootElem.currentStyle.overflowY;\n  }\n\n  overflowYStyle = overflowYStyle || window.getComputedStyle(rootElem, '').overflowY;\n\n  const contentOverflows = rootElem.scrollHeight > rootElem.clientHeight;\n  const overflowShown =\n    /^(visible|auto)$/.test(overflowStyle) || /^(visible|auto)$/.test(overflowYStyle);\n  const alwaysShowScroll = overflowStyle === 'scroll' || overflowYStyle === 'scroll';\n\n  return (contentOverflows && overflowShown) || alwaysShowScroll;\n}\n",
+    "content": "/**\n * Check if the current page has scroll bar.\n * @example\n * const hasScrollBar = bse.utilities.hasScrollBar();\n * @return {boolean} True if current page has scroll bar.\n * False if doesn't have scroll bar or scroll bar is transparent(Eg: Safari on iPhone/iPad).\n */\nexport default function hasScrollBar() {\n  // The Modern solution\n  if (typeof window.innerWidth === 'number') {\n    return window.innerWidth > document.documentElement.clientWidth;\n  }\n\n  // rootElem for quirksmode\n  const rootElem = document.documentElement || document.body;\n\n  // Check overflow style property on body for fauxscrollbars\n  let overflowStyle;\n\n  if (typeof rootElem.currentStyle !== 'undefined') overflowStyle = rootElem.currentStyle.overflow;\n\n  overflowStyle = overflowStyle || window.getComputedStyle(rootElem, '').overflow;\n\n  // Also need to check the Y axis overflow\n  let overflowYStyle;\n\n  if (typeof rootElem.currentStyle !== 'undefined') {\n    overflowYStyle = rootElem.currentStyle.overflowY;\n  }\n\n  overflowYStyle = overflowYStyle || window.getComputedStyle(rootElem, '').overflowY;\n\n  const contentOverflows = rootElem.scrollHeight > rootElem.clientHeight;\n  const overflowShown =\n    /^(visible|auto)$/.test(overflowStyle) || /^(visible|auto)$/.test(overflowYStyle);\n  const alwaysShowScroll = overflowStyle === 'scroll' || overflowYStyle === 'scroll';\n\n  return (contentOverflows && overflowShown) || alwaysShowScroll;\n}\n",
     "static": true,
     "longname": "C:/Max/selflearn/npm/bootstrap-enhancement/src/utilities/hasScrollBar.js",
     "access": "public",
@@ -1372,21 +1678,26 @@
     "export": true,
     "importPath": "bootstrap-enhancement/src/utilities/hasScrollBar.js",
     "importStyle": "hasScrollBar",
-    "description": null,
-    "lineNumber": 1,
-    "undocument": true,
-    "params": [],
+    "description": "Check if the current page has scroll bar.",
+    "examples": [
+      "const hasScrollBar = bse.utilities.hasScrollBar();"
+    ],
+    "lineNumber": 8,
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "boolean"
+      ],
+      "spread": false,
+      "description": "True if current page has scroll bar.\nFalse if doesn't have scroll bar or scroll bar is transparent(Eg: Safari on iPhone/iPad)."
+    },
+    "params": []
   },
   {
     "__docId__": 89,
     "kind": "file",
     "name": "src/utilities/index.js",
-    "content": "/** @module color/mixer */\nimport prependClass from './prependClass';\nimport getJquery from './getJquery';\nimport hasScrollBar from './hasScrollBar';\nimport getScrollBarWidth from './getScrollBarWidth';\nimport addStyles from './addStyles';\nimport * as checkBreakPoint from './checkBreakPoint/index';\nimport addToWindow from './addToWindow';\n\n/** The name of the module. */\nexport {\n  prependClass,\n  getJquery,\n  hasScrollBar,\n  getScrollBarWidth,\n  addStyles,\n  checkBreakPoint,\n  addToWindow,\n};\n",
+    "content": "import prependClass from './prependClass';\nimport getJquery from './getJquery';\nimport hasScrollBar from './hasScrollBar';\nimport getScrollBarWidth from './getScrollBarWidth';\nimport addStyles from './addStyles';\nimport * as checkBreakPoint from './checkBreakPoint/index';\nimport addToWindow from './addToWindow';\n\nexport {\n  prependClass,\n  getJquery,\n  hasScrollBar,\n  getScrollBarWidth,\n  addStyles,\n  checkBreakPoint,\n  addToWindow,\n};\n",
     "static": true,
     "longname": "C:/Max/selflearn/npm/bootstrap-enhancement/src/utilities/index.js",
     "access": "public",
@@ -1397,7 +1708,7 @@
     "__docId__": 90,
     "kind": "file",
     "name": "src/utilities/prependClass.js",
-    "content": "import getJquery from './../utilities/getJquery';\n\nexport default function prependClass(sel, strClass) {\n  getJquery().then(($) => {\n    const $el = $(sel);\n\n    /* prepend class */\n    let classes = $el.attr('class') ? $el.attr('class') : '';\n    classes = `${strClass} ${classes}`;\n    $el.attr('class', classes);\n  });\n}\n",
+    "content": "import getJquery from './../utilities/getJquery';\n\n/**\n * Add class names to the left most position to avoid overwriting original class's style\n * @example\n * bse.utilities.prependClass(domElement, 'test-class');\n * @param {Object} sel - Dom element that you want to add class to.\n * @param {string} strClass - Class name that you want add.\n */\nexport default function prependClass(sel, strClass) {\n  getJquery().then(($) => {\n    const $el = $(sel);\n\n    /* prepend class */\n    let classes = $el.attr('class') ? $el.attr('class') : '';\n    classes = `${strClass} ${classes}`;\n    $el.attr('class', classes);\n  });\n}\n",
     "static": true,
     "longname": "C:/Max/selflearn/npm/bootstrap-enhancement/src/utilities/prependClass.js",
     "access": "public",
@@ -1417,21 +1728,31 @@
     "export": true,
     "importPath": "bootstrap-enhancement/src/utilities/prependClass.js",
     "importStyle": "prependClass",
-    "description": null,
-    "lineNumber": 3,
-    "undocument": true,
+    "description": "Add class names to the left most position to avoid overwriting original class's style",
+    "examples": [
+      "bse.utilities.prependClass(domElement, 'test-class');"
+    ],
+    "lineNumber": 10,
     "params": [
       {
-        "name": "sel",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "sel",
+        "description": "Dom element that you want to add class to."
       },
       {
-        "name": "strClass",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "strClass",
+        "description": "Class name that you want add."
       }
     ],
     "return": null
@@ -1446,7 +1767,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"bootstrap-enhancement\",\n  \"version\": \"1.10.4\",\n  \"description\": \"\",\n  \"main\": \"dist/bootstrap-enhancement.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n    \"start\": \"webpack --config webpack.dev.js\",\n    \"samples\": \"webpack-dev-server --config webpack.samples.js --open\"\n  },\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"babel-core\": \"^6.26.3\",\n    \"babel-eslint\": \"^8.2.3\",\n    \"babel-loader\": \"^7.1.4\",\n    \"babel-preset-env\": \"^1.7.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.19.1\",\n    \"eslint-config-airbnb\": \"^16.1.0\",\n    \"eslint-plugin-import\": \"^2.11.0\",\n    \"eslint-plugin-jsx-a11y\": \"^6.0.3\",\n    \"eslint-plugin-react\": \"^7.7.0\",\n    \"jquery\": \"^3.3.1\",\n    \"jsdoc\": \"^3.5.5\",\n    \"uglifyjs-webpack-plugin\": \"^1.2.5\",\n    \"webpack\": \"^4.9.1\",\n    \"webpack-cli\": \"^2.1.4\",\n    \"webpack-dev-server\": \"^3.1.4\",\n    \"webpack-merge\": \"^4.1.2\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"bootstrap-enhancement\",\n  \"version\": \"1.10.6\",\n  \"description\": \"\",\n  \"main\": \"dist/bootstrap-enhancement.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n    \"start\": \"webpack --config webpack.dev.js\",\n    \"samples\": \"webpack-dev-server --config webpack.samples.js --open\"\n  },\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"babel-core\": \"^6.26.3\",\n    \"babel-eslint\": \"^8.2.3\",\n    \"babel-loader\": \"^7.1.4\",\n    \"babel-preset-env\": \"^1.7.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.19.1\",\n    \"eslint-config-airbnb\": \"^16.1.0\",\n    \"eslint-plugin-import\": \"^2.11.0\",\n    \"eslint-plugin-jsx-a11y\": \"^6.0.3\",\n    \"eslint-plugin-react\": \"^7.7.0\",\n    \"jquery\": \"^3.3.1\",\n    \"uglifyjs-webpack-plugin\": \"^1.2.5\",\n    \"webpack\": \"^4.9.1\",\n    \"webpack-cli\": \"^2.1.4\",\n    \"webpack-dev-server\": \"^3.1.4\",\n    \"webpack-merge\": \"^4.1.2\"\n  }\n}\n",
     "longname": "C:\\Max\\selflearn\\npm\\bootstrap-enhancement\\package.json",
     "name": "package.json",
     "static": true,

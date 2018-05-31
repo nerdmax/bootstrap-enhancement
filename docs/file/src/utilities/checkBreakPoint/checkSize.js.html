@@ -24,7 +24,7 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-</header>
+<a style="position:relative; top:3px;" href="https://github.com/nerdmax/bootstrap-enhancement"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
@@ -53,54 +53,57 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/utilities/checkBreakPoint/checkSize.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import getJquery from &apos;../getJquery&apos;;
-
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// TODO: Need to load jQuery properly.
 /**
  * Checks if the span is set to display lock via CSS
  */
 function checkIfBlock(target) {
-  getJquery().then(($) =&gt; {
-    const isTargetBlcok = $(target).css(&apos;display&apos;) === &apos;block&apos;;
-    return isTargetBlcok;
-  });
+  const { $ } = window;
+  const isTargetBlcok = $(target).css(&apos;display&apos;) === &apos;block&apos;;
+  return isTargetBlcok;
 }
 
+/**
+ * Get window width&apos;s info in bootstrap 4&apos;s grid system standards.
+ * @example
+ * const bsGrid = bse.utilities.checkBreakPoint.checkSize();
+ * @return {string} bsGrid of current window
+ */
 export default function checkSize() {
-  getJquery().then(($) =&gt; {
-    // Add some invisible elements with Bootstrap CSS visibile utility classes
-    const $testElement = $(&quot;&lt;div style=&apos;display:none;&apos; class=&apos;breakpoint-check&apos;&gt;&lt;span class=&apos;xs d-block d-sm-inline&apos;&gt;&lt;/span&gt;&lt;span class=&apos;sm d-sm-block d-md-inline&apos;&gt;&lt;/span&gt;&lt;span class=&apos;md d-md-block d-lg-inline&apos;&gt;&lt;/span&gt;&lt;span class=&apos;lg d-lg-block d-xl-inline&apos;&gt;&lt;/span&gt;&lt;span class=&apos;xl d-xl-block&apos;&gt;&lt;/span&gt;&lt;/div&gt;&quot;);
-    $(&apos;body&apos;).append($testElement);
-    // Set some variables to use with the if checks below
-    const xs = checkIfBlock(&apos;.breakpoint-check .xs&apos;);
-    const md = checkIfBlock(&apos;.breakpoint-check .md&apos;);
-    const sm = checkIfBlock(&apos;.breakpoint-check .sm&apos;);
-    const lg = checkIfBlock(&apos;.breakpoint-check .lg&apos;);
-    const xl = checkIfBlock(&apos;.breakpoint-check .xl&apos;);
-    $testElement.remove();
+  const { $ } = window;
+  // Add some invisible elements with Bootstrap CSS visibile utility classes
+  const $testElement = $(&quot;&lt;div style=&apos;display:none;&apos; class=&apos;breakpoint-check&apos;&gt;&lt;span class=&apos;xs d-block d-sm-inline&apos;&gt;&lt;/span&gt;&lt;span class=&apos;sm d-sm-block d-md-inline&apos;&gt;&lt;/span&gt;&lt;span class=&apos;md d-md-block d-lg-inline&apos;&gt;&lt;/span&gt;&lt;span class=&apos;lg d-lg-block d-xl-inline&apos;&gt;&lt;/span&gt;&lt;span class=&apos;xl d-xl-block&apos;&gt;&lt;/span&gt;&lt;/div&gt;&quot;);
+  $(&apos;body&apos;).append($testElement);
+  // Set some variables to use with the if checks below
+  const xs = checkIfBlock(&apos;.breakpoint-check .xs&apos;);
+  const md = checkIfBlock(&apos;.breakpoint-check .md&apos;);
+  const sm = checkIfBlock(&apos;.breakpoint-check .sm&apos;);
+  const lg = checkIfBlock(&apos;.breakpoint-check .lg&apos;);
+  const xl = checkIfBlock(&apos;.breakpoint-check .xl&apos;);
+  $testElement.remove();
 
-    // add the breakpoint to the console
-    if (xs === true) {
-      return &apos;xs&apos;;
-    }
+  // add the breakpoint to the console
+  if (xs === true) {
+    return &apos;xs&apos;;
+  }
 
-    if (sm === true) {
-      return &apos;sm&apos;;
-    }
+  if (sm === true) {
+    return &apos;sm&apos;;
+  }
 
-    if (md === true) {
-      return &apos;md&apos;;
-    }
+  if (md === true) {
+    return &apos;md&apos;;
+  }
 
-    if (lg === true) {
-      return &apos;lg&apos;;
-    }
+  if (lg === true) {
+    return &apos;lg&apos;;
+  }
 
-    if (xl === true) {
-      return &apos;xl&apos;;
-    }
+  if (xl === true) {
+    return &apos;xl&apos;;
+  }
 
-    return &apos;null&apos;;
-  });
+  return &apos;null&apos;;
 }
 </code></pre>
 

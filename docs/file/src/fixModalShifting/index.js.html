@@ -24,7 +24,7 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-</header>
+<a style="position:relative; top:3px;" href="https://github.com/nerdmax/bootstrap-enhancement"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
@@ -54,7 +54,7 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/fixModalShifting/index.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { addStyles, hasScrollBar } from &apos;../utilities&apos;;
-/** This is a description of the addStyleToFixModalShifting function. */
+
 function addStyleToFixModalShifting() {
   if (hasScrollBar()) {
     addStyles(`
@@ -69,7 +69,13 @@ function addStyleToFixModalShifting() {
   `);
   }
 }
-/** This is a description of the init function. */
+
+/**
+ * Fix bootstrap modal&apos;s shifting issue.
+ * Run bse.fixModalShifting.init();
+ * @example
+ * bse.fixModalShifting.init();
+ */
 export function init() {
   addStyleToFixModalShifting();
 }

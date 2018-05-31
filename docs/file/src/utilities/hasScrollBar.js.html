@@ -24,7 +24,7 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-</header>
+<a style="position:relative; top:3px;" href="https://github.com/nerdmax/bootstrap-enhancement"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
@@ -53,7 +53,14 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/utilities/hasScrollBar.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export default function hasScrollBar() {
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * Check if the current page has scroll bar.
+ * @example
+ * const hasScrollBar = bse.utilities.hasScrollBar();
+ * @return {boolean} True if current page has scroll bar.
+ * False if doesn&apos;t have scroll bar or scroll bar is transparent(Eg: Safari on iPhone/iPad).
+ */
+export default function hasScrollBar() {
   // The Modern solution
   if (typeof window.innerWidth === &apos;number&apos;) {
     return window.innerWidth &gt; document.documentElement.clientWidth;

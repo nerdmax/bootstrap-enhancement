@@ -24,7 +24,7 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-</header>
+<a style="position:relative; top:3px;" href="https://github.com/nerdmax/bootstrap-enhancement"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
@@ -53,14 +53,16 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/index.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/** @module index */
-import * as utilities from &apos;./utilities/index&apos;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import * as utilities from &apos;./utilities/index&apos;;
 import * as addScrollMessToResTable from &apos;./addScrollMessToResTable/index&apos;;
 import * as fixModalShifting from &apos;./fixModalShifting/index&apos;;
 import * as toggleCollapseChevron from &apos;./toggleCollapseChevron/index&apos;;
 import * as scrollToTop from &apos;./scrollToTop/index&apos;;
 import * as resList from &apos;./resList/index&apos;;
 
+/**
+ * utilities
+ */
 const bse = {
   utilities,
   addScrollMessToResTable,
@@ -69,20 +71,60 @@ const bse = {
   scrollToTop,
   resList,
 };
-/** This is a description of the init function. */
+
+/**
+ * This is the main object that contains all methods
+ * @type {Object}
+ * @property {Object} bse.utilities
+ * Utilityies related to bootstrap
+ * @property {function(sel: Object, strClass: string)} bse.utilities.prependClass
+ * Add class names to the left most position to avoid overwriting original class&apos;s style
+ * @property {function():Promise&lt;Object, MyError&gt;} bse.utilities.getJquery
+ * Must use this way to get jQuery if we want to attach something to bootstrap&apos;s event.
+ * @property {function():boolean} bse.utilities.hasScrollBar
+ * Check if the current page has scroll bar.
+ * @property {function():number} bse.utilities.getScrollBarWidth
+ * Get scroll bar&apos;s width.
+ * @property {function(css: string)} bse.utilities.addStyles
+ * Add some css styles to the top most position in head tag.
+ * @property {Object} bse.utilities.checkBreakPoint
+ * @property {function():string} bse.utilities.checkBreakPoint.checkSize
+ * Get window width&apos;s info in bootstrap 4&apos;s grid system standards.
+ * @property {function():boolean} bse.utilities.checkBreakPoint.is
+ * Check which grid level is window in.
+ * @property {function(keyValue: string, element: Object):Promise&lt;Object, MyError&gt;} bse.utilities.addToWindow
+ * Attach object to window without overwriting anything else.
+ *
+ * @property {Object} bse.addScrollMessToResTable
+ * Add a message when the table in .table-responsive is scrollable.
+ * @property {function(displayMessage: string)} bse.addScrollMessToResTable.init
+ * Init addScrollMessToResTable
+ * @property {function(displayMessage: string)} bse.addScrollMessToResTable.update
+ * Update addScrollMessToResTable
+ *
+ * @property {Object} bse.fixModalShifting
+ * Fix bootstrap modal&apos;s shifting issue.
+ * @property {function()} bse.fixModalShifting.init
+ * Init fixModalShifting
+ *
+ * @property {Object} bse.toggleCollapseChevron
+ * Automatically toggle bootstrap collapse&apos;s chevron based on show or hide collapse.
+ * @property {function()} bse.toggleCollapseChevron.init
+ * Init toggleCollapseChevron
+ *
+ * @property {Object} bse.scrollToTop
+ * Add scroll to top anchor on the right bottom of the whole page.
+ * @property {function(innerElement: string)} bse.scrollToTop.init
+ * Init scrollToTop
+ *
+ * @property {Object} bse.resList
+ * Convert a ul li menu to a select options element and display it on small device
+ * @property {function(config: Object)} bse.resList.init
+ * Init resList
+ */
 export default bse;
 
 utilities.addToWindow(&apos;bse&apos;, bse);
-
-// console.log(&apos;sdjfkljd&apos;);
-// const testtttt = &apos;test export&apos;;
-// const test2 = () =&gt; {
-//   console.log(&apos;test&apos;);
-//   const testArray = [1, 2, 3, 4];
-//   console.log(testArray.find(no =&gt; no &gt; 2));
-// };
-// export { testtttt, test2 };
-// export default testtttt;
 </code></pre>
 
 </div>

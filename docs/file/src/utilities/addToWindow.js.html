@@ -24,7 +24,7 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-</header>
+<a style="position:relative; top:3px;" href="https://github.com/nerdmax/bootstrap-enhancement"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
@@ -53,7 +53,15 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/utilities/addToWindow.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export default function addToWindow(keyValue, element) {
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * Attach object to window without overwriting anything else.
+ * @example
+ * bse.utilities.addToWindow(&apos;bse&apos;, bse);
+ * @param {string} keyValue - Keyword that you want use to get the object from window.
+ * @param {Object} element - Dom element that you want to add to window.
+ * @return {Promise&lt;Object, MyError&gt;} Promise object.
+ */
+export default function addToWindow(keyValue, element) {
   return new Promise((resolve, reject) =&gt; {
     // console.log(window[keyValue]);
     if (typeof window !== &apos;undefined&apos;) {

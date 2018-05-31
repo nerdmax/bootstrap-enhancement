@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 518,
+  "end": 525,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 23,
+      "line": 29,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 518,
+    "end": 525,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 23,
+        "line": 29,
         "column": 0
       }
     },
@@ -161,30 +161,12 @@
             "raw": "'../utilities'"
           },
           "value": "../utilities"
-        },
-        "trailingComments": [
-          {
-            "type": "CommentBlock",
-            "value": "* This is a description of the addStyleToFixModalShifting function. ",
-            "start": 56,
-            "end": 128,
-            "loc": {
-              "start": {
-                "line": 2,
-                "column": 0
-              },
-              "end": {
-                "line": 2,
-                "column": 72
-              }
-            }
-          }
-        ]
+        }
       },
       {
         "type": "FunctionDeclaration",
-        "start": 129,
-        "end": 378,
+        "start": 57,
+        "end": 306,
         "loc": {
           "start": {
             "line": 3,
@@ -197,8 +179,8 @@
         },
         "id": {
           "type": "Identifier",
-          "start": 138,
-          "end": 164,
+          "start": 66,
+          "end": 92,
           "loc": {
             "start": {
               "line": 3,
@@ -210,8 +192,7 @@
             },
             "identifierName": "addStyleToFixModalShifting"
           },
-          "name": "addStyleToFixModalShifting",
-          "leadingComments": null
+          "name": "addStyleToFixModalShifting"
         },
         "generator": false,
         "expression": false,
@@ -219,8 +200,8 @@
         "params": [],
         "body": {
           "type": "BlockStatement",
-          "start": 167,
-          "end": 378,
+          "start": 95,
+          "end": 306,
           "loc": {
             "start": {
               "line": 3,
@@ -234,8 +215,8 @@
           "body": [
             {
               "type": "IfStatement",
-              "start": 171,
-              "end": 376,
+              "start": 99,
+              "end": 304,
               "loc": {
                 "start": {
                   "line": 4,
@@ -248,8 +229,8 @@
               },
               "test": {
                 "type": "CallExpression",
-                "start": 175,
-                "end": 189,
+                "start": 103,
+                "end": 117,
                 "loc": {
                   "start": {
                     "line": 4,
@@ -262,8 +243,8 @@
                 },
                 "callee": {
                   "type": "Identifier",
-                  "start": 175,
-                  "end": 187,
+                  "start": 103,
+                  "end": 115,
                   "loc": {
                     "start": {
                       "line": 4,
@@ -281,8 +262,8 @@
               },
               "consequent": {
                 "type": "BlockStatement",
-                "start": 191,
-                "end": 376,
+                "start": 119,
+                "end": 304,
                 "loc": {
                   "start": {
                     "line": 4,
@@ -296,8 +277,8 @@
                 "body": [
                   {
                     "type": "ExpressionStatement",
-                    "start": 197,
-                    "end": 372,
+                    "start": 125,
+                    "end": 300,
                     "loc": {
                       "start": {
                         "line": 5,
@@ -310,8 +291,8 @@
                     },
                     "expression": {
                       "type": "CallExpression",
-                      "start": 197,
-                      "end": 371,
+                      "start": 125,
+                      "end": 299,
                       "loc": {
                         "start": {
                           "line": 5,
@@ -324,8 +305,8 @@
                       },
                       "callee": {
                         "type": "Identifier",
-                        "start": 197,
-                        "end": 206,
+                        "start": 125,
+                        "end": 134,
                         "loc": {
                           "start": {
                             "line": 5,
@@ -342,8 +323,8 @@
                       "arguments": [
                         {
                           "type": "TemplateLiteral",
-                          "start": 207,
-                          "end": 370,
+                          "start": 135,
+                          "end": 298,
                           "loc": {
                             "start": {
                               "line": 5,
@@ -358,8 +339,8 @@
                           "quasis": [
                             {
                               "type": "TemplateElement",
-                              "start": 208,
-                              "end": 369,
+                              "start": 136,
+                              "end": 297,
                               "loc": {
                                 "start": {
                                   "line": 5,
@@ -390,38 +371,20 @@
           "directives": [],
           "trailingComments": null
         },
-        "leadingComments": [
-          {
-            "type": "CommentBlock",
-            "value": "* This is a description of the addStyleToFixModalShifting function. ",
-            "start": 56,
-            "end": 128,
-            "loc": {
-              "start": {
-                "line": 2,
-                "column": 0
-              },
-              "end": {
-                "line": 2,
-                "column": 72
-              }
-            }
-          }
-        ],
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "* This is a description of the init function. ",
-            "start": 379,
-            "end": 429,
+            "value": "*\n * Fix bootstrap modal's shifting issue.\n * Run bse.fixModalShifting.init();\n * @example\n * bse.fixModalShifting.init();\n ",
+            "start": 308,
+            "end": 436,
             "loc": {
               "start": {
-                "line": 17,
+                "line": 18,
                 "column": 0
               },
               "end": {
-                "line": 17,
-                "column": 50
+                "line": 23,
+                "column": 3
               }
             }
           }
@@ -429,15 +392,15 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 430,
-        "end": 488,
+        "start": 437,
+        "end": 495,
         "loc": {
           "start": {
-            "line": 18,
+            "line": 24,
             "column": 0
           },
           "end": {
-            "line": 20,
+            "line": 26,
             "column": 1
           }
         },
@@ -445,29 +408,29 @@
         "source": null,
         "declaration": {
           "type": "FunctionDeclaration",
-          "start": 437,
-          "end": 488,
+          "start": 444,
+          "end": 495,
           "loc": {
             "start": {
-              "line": 18,
+              "line": 24,
               "column": 7
             },
             "end": {
-              "line": 20,
+              "line": 26,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 446,
-            "end": 450,
+            "start": 453,
+            "end": 457,
             "loc": {
               "start": {
-                "line": 18,
+                "line": 24,
                 "column": 16
               },
               "end": {
-                "line": 18,
+                "line": 24,
                 "column": 20
               },
               "identifierName": "init"
@@ -481,58 +444,58 @@
           "params": [],
           "body": {
             "type": "BlockStatement",
-            "start": 453,
-            "end": 488,
+            "start": 460,
+            "end": 495,
             "loc": {
               "start": {
-                "line": 18,
+                "line": 24,
                 "column": 23
               },
               "end": {
-                "line": 20,
+                "line": 26,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ExpressionStatement",
-                "start": 457,
-                "end": 486,
+                "start": 464,
+                "end": 493,
                 "loc": {
                   "start": {
-                    "line": 19,
+                    "line": 25,
                     "column": 2
                   },
                   "end": {
-                    "line": 19,
+                    "line": 25,
                     "column": 31
                   }
                 },
                 "expression": {
                   "type": "CallExpression",
-                  "start": 457,
-                  "end": 485,
+                  "start": 464,
+                  "end": 492,
                   "loc": {
                     "start": {
-                      "line": 19,
+                      "line": 25,
                       "column": 2
                     },
                     "end": {
-                      "line": 19,
+                      "line": 25,
                       "column": 30
                     }
                   },
                   "callee": {
                     "type": "Identifier",
-                    "start": 457,
-                    "end": 483,
+                    "start": 464,
+                    "end": 490,
                     "loc": {
                       "start": {
-                        "line": 19,
+                        "line": 25,
                         "column": 2
                       },
                       "end": {
-                        "line": 19,
+                        "line": 25,
                         "column": 28
                       },
                       "identifierName": "addStyleToFixModalShifting"
@@ -548,17 +511,17 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "* This is a description of the init function. ",
-              "start": 379,
-              "end": 429,
+              "value": "*\n * Fix bootstrap modal's shifting issue.\n * Run bse.fixModalShifting.init();\n * @example\n * bse.fixModalShifting.init();\n ",
+              "start": 308,
+              "end": 436,
               "loc": {
                 "start": {
-                  "line": 17,
+                  "line": 18,
                   "column": 0
                 },
                 "end": {
-                  "line": 17,
-                  "column": 50
+                  "line": 23,
+                  "column": 3
                 }
               }
             }
@@ -568,17 +531,17 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "* This is a description of the init function. ",
-            "start": 379,
-            "end": 429,
+            "value": "*\n * Fix bootstrap modal's shifting issue.\n * Run bse.fixModalShifting.init();\n * @example\n * bse.fixModalShifting.init();\n ",
+            "start": 308,
+            "end": 436,
             "loc": {
               "start": {
-                "line": 17,
+                "line": 18,
                 "column": 0
               },
               "end": {
-                "line": 17,
-                "column": 50
+                "line": 23,
+                "column": 3
               }
             }
           }
@@ -586,15 +549,15 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 490,
-        "end": 517,
+        "start": 497,
+        "end": 524,
         "loc": {
           "start": {
-            "line": 22,
+            "line": 28,
             "column": 0
           },
           "end": {
-            "line": 22,
+            "line": 28,
             "column": 27
           }
         },
@@ -602,29 +565,29 @@
         "source": null,
         "declaration": {
           "type": "FunctionDeclaration",
-          "start": 497,
-          "end": 517,
+          "start": 504,
+          "end": 524,
           "loc": {
             "start": {
-              "line": 22,
+              "line": 28,
               "column": 7
             },
             "end": {
-              "line": 22,
+              "line": 28,
               "column": 27
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 506,
-            "end": 512,
+            "start": 513,
+            "end": 519,
             "loc": {
               "start": {
-                "line": 22,
+                "line": 28,
                 "column": 16
               },
               "end": {
-                "line": 22,
+                "line": 28,
                 "column": 22
               },
               "identifierName": "update"
@@ -637,15 +600,15 @@
           "params": [],
           "body": {
             "type": "BlockStatement",
-            "start": 515,
-            "end": 517,
+            "start": 522,
+            "end": 524,
             "loc": {
               "start": {
-                "line": 22,
+                "line": 28,
                 "column": 25
               },
               "end": {
-                "line": 22,
+                "line": 28,
                 "column": 27
               }
             },
@@ -662,33 +625,17 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "* This is a description of the addStyleToFixModalShifting function. ",
-      "start": 56,
-      "end": 128,
+      "value": "*\n * Fix bootstrap modal's shifting issue.\n * Run bse.fixModalShifting.init();\n * @example\n * bse.fixModalShifting.init();\n ",
+      "start": 308,
+      "end": 436,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 18,
           "column": 0
         },
         "end": {
-          "line": 2,
-          "column": 72
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "* This is a description of the init function. ",
-      "start": 379,
-      "end": 429,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 0
-        },
-        "end": {
-          "line": 17,
-          "column": 50
+          "line": 23,
+          "column": 3
         }
       }
     }
@@ -930,22 +877,6 @@
       }
     },
     {
-      "type": "CommentBlock",
-      "value": "* This is a description of the addStyleToFixModalShifting function. ",
-      "start": 56,
-      "end": 128,
-      "loc": {
-        "start": {
-          "line": 2,
-          "column": 0
-        },
-        "end": {
-          "line": 2,
-          "column": 72
-        }
-      }
-    },
-    {
       "type": {
         "label": "function",
         "keyword": "function",
@@ -959,8 +890,8 @@
         "binop": null
       },
       "value": "function",
-      "start": 129,
-      "end": 137,
+      "start": 57,
+      "end": 65,
       "loc": {
         "start": {
           "line": 3,
@@ -985,8 +916,8 @@
         "binop": null
       },
       "value": "addStyleToFixModalShifting",
-      "start": 138,
-      "end": 164,
+      "start": 66,
+      "end": 92,
       "loc": {
         "start": {
           "line": 3,
@@ -1010,8 +941,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 164,
-      "end": 165,
+      "start": 92,
+      "end": 93,
       "loc": {
         "start": {
           "line": 3,
@@ -1035,8 +966,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 165,
-      "end": 166,
+      "start": 93,
+      "end": 94,
       "loc": {
         "start": {
           "line": 3,
@@ -1060,8 +991,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 167,
-      "end": 168,
+      "start": 95,
+      "end": 96,
       "loc": {
         "start": {
           "line": 3,
@@ -1088,8 +1019,8 @@
         "updateContext": null
       },
       "value": "if",
-      "start": 171,
-      "end": 173,
+      "start": 99,
+      "end": 101,
       "loc": {
         "start": {
           "line": 4,
@@ -1113,8 +1044,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 174,
-      "end": 175,
+      "start": 102,
+      "end": 103,
       "loc": {
         "start": {
           "line": 4,
@@ -1139,8 +1070,8 @@
         "binop": null
       },
       "value": "hasScrollBar",
-      "start": 175,
-      "end": 187,
+      "start": 103,
+      "end": 115,
       "loc": {
         "start": {
           "line": 4,
@@ -1164,8 +1095,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 187,
-      "end": 188,
+      "start": 115,
+      "end": 116,
       "loc": {
         "start": {
           "line": 4,
@@ -1189,8 +1120,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 188,
-      "end": 189,
+      "start": 116,
+      "end": 117,
       "loc": {
         "start": {
           "line": 4,
@@ -1214,8 +1145,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 189,
-      "end": 190,
+      "start": 117,
+      "end": 118,
       "loc": {
         "start": {
           "line": 4,
@@ -1239,8 +1170,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 191,
-      "end": 192,
+      "start": 119,
+      "end": 120,
       "loc": {
         "start": {
           "line": 4,
@@ -1265,8 +1196,8 @@
         "binop": null
       },
       "value": "addStyles",
-      "start": 197,
-      "end": 206,
+      "start": 125,
+      "end": 134,
       "loc": {
         "start": {
           "line": 5,
@@ -1290,8 +1221,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 206,
-      "end": 207,
+      "start": 134,
+      "end": 135,
       "loc": {
         "start": {
           "line": 5,
@@ -1315,8 +1246,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 207,
-      "end": 208,
+      "start": 135,
+      "end": 136,
       "loc": {
         "start": {
           "line": 5,
@@ -1342,8 +1273,8 @@
         "updateContext": null
       },
       "value": "\n    body.modal-open {\n      padding-right: 15px;\n    }\n\n    // Fix fixed header jump to right issues\n    body.modal-open nav.affix {\n      right: 15px;\n    }\n  ",
-      "start": 208,
-      "end": 369,
+      "start": 136,
+      "end": 297,
       "loc": {
         "start": {
           "line": 5,
@@ -1367,8 +1298,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 369,
-      "end": 370,
+      "start": 297,
+      "end": 298,
       "loc": {
         "start": {
           "line": 14,
@@ -1392,8 +1323,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 370,
-      "end": 371,
+      "start": 298,
+      "end": 299,
       "loc": {
         "start": {
           "line": 14,
@@ -1418,8 +1349,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 371,
-      "end": 372,
+      "start": 299,
+      "end": 300,
       "loc": {
         "start": {
           "line": 14,
@@ -1443,8 +1374,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 375,
-      "end": 376,
+      "start": 303,
+      "end": 304,
       "loc": {
         "start": {
           "line": 15,
@@ -1468,8 +1399,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 377,
-      "end": 378,
+      "start": 305,
+      "end": 306,
       "loc": {
         "start": {
           "line": 16,
@@ -1483,17 +1414,17 @@
     },
     {
       "type": "CommentBlock",
-      "value": "* This is a description of the init function. ",
-      "start": 379,
-      "end": 429,
+      "value": "*\n * Fix bootstrap modal's shifting issue.\n * Run bse.fixModalShifting.init();\n * @example\n * bse.fixModalShifting.init();\n ",
+      "start": 308,
+      "end": 436,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 18,
           "column": 0
         },
         "end": {
-          "line": 17,
-          "column": 50
+          "line": 23,
+          "column": 3
         }
       }
     },
@@ -1512,15 +1443,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 430,
-      "end": 436,
+      "start": 437,
+      "end": 443,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 24,
           "column": 0
         },
         "end": {
-          "line": 18,
+          "line": 24,
           "column": 6
         }
       }
@@ -1539,15 +1470,15 @@
         "binop": null
       },
       "value": "function",
-      "start": 437,
-      "end": 445,
+      "start": 444,
+      "end": 452,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 24,
           "column": 7
         },
         "end": {
-          "line": 18,
+          "line": 24,
           "column": 15
         }
       }
@@ -1565,15 +1496,15 @@
         "binop": null
       },
       "value": "init",
-      "start": 446,
-      "end": 450,
+      "start": 453,
+      "end": 457,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 24,
           "column": 16
         },
         "end": {
-          "line": 18,
+          "line": 24,
           "column": 20
         }
       }
@@ -1590,15 +1521,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 450,
-      "end": 451,
+      "start": 457,
+      "end": 458,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 24,
           "column": 20
         },
         "end": {
-          "line": 18,
+          "line": 24,
           "column": 21
         }
       }
@@ -1615,15 +1546,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 451,
-      "end": 452,
+      "start": 458,
+      "end": 459,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 24,
           "column": 21
         },
         "end": {
-          "line": 18,
+          "line": 24,
           "column": 22
         }
       }
@@ -1640,15 +1571,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 453,
-      "end": 454,
+      "start": 460,
+      "end": 461,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 24,
           "column": 23
         },
         "end": {
-          "line": 18,
+          "line": 24,
           "column": 24
         }
       }
@@ -1666,15 +1597,15 @@
         "binop": null
       },
       "value": "addStyleToFixModalShifting",
-      "start": 457,
-      "end": 483,
+      "start": 464,
+      "end": 490,
       "loc": {
         "start": {
-          "line": 19,
+          "line": 25,
           "column": 2
         },
         "end": {
-          "line": 19,
+          "line": 25,
           "column": 28
         }
       }
@@ -1691,15 +1622,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 483,
-      "end": 484,
+      "start": 490,
+      "end": 491,
       "loc": {
         "start": {
-          "line": 19,
+          "line": 25,
           "column": 28
         },
         "end": {
-          "line": 19,
+          "line": 25,
           "column": 29
         }
       }
@@ -1716,15 +1647,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 484,
-      "end": 485,
+      "start": 491,
+      "end": 492,
       "loc": {
         "start": {
-          "line": 19,
+          "line": 25,
           "column": 29
         },
         "end": {
-          "line": 19,
+          "line": 25,
           "column": 30
         }
       }
@@ -1742,15 +1673,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 485,
-      "end": 486,
+      "start": 492,
+      "end": 493,
       "loc": {
         "start": {
-          "line": 19,
+          "line": 25,
           "column": 30
         },
         "end": {
-          "line": 19,
+          "line": 25,
           "column": 31
         }
       }
@@ -1767,15 +1698,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 487,
-      "end": 488,
+      "start": 494,
+      "end": 495,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 26,
           "column": 0
         },
         "end": {
-          "line": 20,
+          "line": 26,
           "column": 1
         }
       }
@@ -1795,15 +1726,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 490,
-      "end": 496,
+      "start": 497,
+      "end": 503,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 28,
           "column": 0
         },
         "end": {
-          "line": 22,
+          "line": 28,
           "column": 6
         }
       }
@@ -1822,15 +1753,15 @@
         "binop": null
       },
       "value": "function",
-      "start": 497,
-      "end": 505,
+      "start": 504,
+      "end": 512,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 28,
           "column": 7
         },
         "end": {
-          "line": 22,
+          "line": 28,
           "column": 15
         }
       }
@@ -1848,15 +1779,15 @@
         "binop": null
       },
       "value": "update",
-      "start": 506,
-      "end": 512,
+      "start": 513,
+      "end": 519,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 28,
           "column": 16
         },
         "end": {
-          "line": 22,
+          "line": 28,
           "column": 22
         }
       }
@@ -1873,15 +1804,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 512,
-      "end": 513,
+      "start": 519,
+      "end": 520,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 28,
           "column": 22
         },
         "end": {
-          "line": 22,
+          "line": 28,
           "column": 23
         }
       }
@@ -1898,15 +1829,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 513,
-      "end": 514,
+      "start": 520,
+      "end": 521,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 28,
           "column": 23
         },
         "end": {
-          "line": 22,
+          "line": 28,
           "column": 24
         }
       }
@@ -1923,15 +1854,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 515,
-      "end": 516,
+      "start": 522,
+      "end": 523,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 28,
           "column": 25
         },
         "end": {
-          "line": 22,
+          "line": 28,
           "column": 26
         }
       }
@@ -1948,15 +1879,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 516,
-      "end": 517,
+      "start": 523,
+      "end": 524,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 28,
           "column": 26
         },
         "end": {
-          "line": 22,
+          "line": 28,
           "column": 27
         }
       }
@@ -1974,15 +1905,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 518,
-      "end": 518,
+      "start": 525,
+      "end": 525,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 29,
           "column": 0
         },
         "end": {
-          "line": 23,
+          "line": 29,
           "column": 0
         }
       }
