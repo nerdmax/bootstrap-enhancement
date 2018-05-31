@@ -1,3 +1,10 @@
+/**
+ * Get scroll bar's width.
+ * @example
+ * bse.utilities.getScrollBarWidth();
+ * @return {number} Page's scroll bar width even if there is no scroll bar.
+ * Return 0 if scroll bar is transparent(Eg: Safari on iPhone/iPad).
+ */
 export default function getScrollBarWidth() {
   const inner = document.createElement('p');
   inner.style.width = '100%';
