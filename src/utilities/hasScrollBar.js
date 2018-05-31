@@ -1,8 +1,9 @@
 /**
  * Check if the current page has scroll bar.
  * @example
- * hasScrollBar();
- * @return {boolean} Return true if current page has scroll bar, false if doesn't have scroll bar or scroll bar is transparent(Eg: Safari on iPhone/iPad).
+ * bse.utilities.hasScrollBar();
+ * @return {boolean} True if current page has scroll bar.
+ * False if doesn't have scroll bar or scroll bar is transparent(Eg: Safari on iPhone/iPad).
  */
 export default function hasScrollBar() {
   // The Modern solution
