@@ -102,6 +102,12 @@ function isMatchingExpression(str) {
   return false;
 }
 
+/**
+ * Check which grid level is window in.
+ * @example
+ * const is = bse.utilities.checkBreakPoint.is('md');
+ * @return {boolean} True when window is in the scope. False when window is not in the scope.
+ */
 export default function is(str) {
   if (isAnExpression(str)) {
     return isMatchingExpression(str);

@@ -1,6 +1,15 @@
 import getJquery from './../utilities/getJquery';
 import { addStyles } from '../utilities/index';
 
+/**
+ * Add scroll to top anchor on the right bottom of the whole page.
+ * @example
+ * bse.scrollToTop.init(`<span class="fa-stack fa-lg">
+ *    <i class="fa fa-circle fa-stack-2x"></i>
+ *    <i class="fa fa-chevron-up fa-stack-1x fa-inverse"></i>
+ *  </span>`);
+ * @param {string} innerElement - Dom element string that you want to add to that anchor.
+ */
 export function init(innerElement) {
   getJquery().then(($) => {
     addStyles(`

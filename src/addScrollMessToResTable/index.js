@@ -39,7 +39,22 @@ function displayResTableHeading(parentEle, displayMessage) {
   }, 1);
 }
 
-// Init
+/**
+ * Add a message when the table in .table-responsive is scrollable.
+ * Add bse-resTableMess attribute to div.table-responsive and run bse.addScrollMessToResTable.init();
+ * @example
+ * <div class="table-responsive" bse-resTableMess>
+ *   <table class="table">
+ *     <thead>
+ *     </thead>
+ *     <tbody>
+ *     </tbody>
+ *   </table>
+ * </div>
+ * bse.addScrollMessToResTable.init();
+ * @param {string} displayMessage - Message that you want to display, default value is:
+ * Scroll table horizontally to see more.
+ */
 export function init(displayMessage) {
   displayResTableHeading(undefined, displayMessage);
   getJquery().then(($) => {

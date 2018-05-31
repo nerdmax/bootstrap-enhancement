@@ -1,5 +1,13 @@
 import { getJquery } from '../utilities/index';
-
+/**
+ * Automatically toggle bootstrap collapse's chevron based on show or hide collapse.
+ * Add bse-toggleCollapChevron attribute to chevron link and run bse.toggleCollapseChevron.init();
+ * @example
+ * <a data-toggle="collapse" href="#test">
+ *   <i class="fas fa-chevron-down" bse-toggleCollapChevron></i>
+ * </a>
+ * bse.toggleCollapseChevron.init();
+ */
 export function init() {
   getJquery()
     .then(($) => {

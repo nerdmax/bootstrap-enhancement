@@ -15,6 +15,12 @@ function addStyleToFixModalShifting() {
   }
 }
 
+/**
+ * Fix bootstrap modal's shifting issue.
+ * Run bse.fixModalShifting.init();
+ * @example
+ * bse.fixModalShifting.init();
+ */
 export function init() {
   addStyleToFixModalShifting();
 }

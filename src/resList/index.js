@@ -65,7 +65,23 @@ function convertListToDropdown(config = {}) {
   });
 }
 
-// Init
+/**
+ * Convert a ul li menu to a select options element and display it on small device
+ * Add bse-resList attribute to ul and run bse.resList.init();
+ * @example
+ * <ul bse-resList>
+ *   <li><a class="h7" href="PASSENGER">PASSENGER</a></li>
+ *   <li><a class="h7" href="TRUCK">TRUCK</a></li>
+ *   <li><a class="h7" href="EARTHMOVER">EARTHMOVER</a></li>
+ *   <li><a class="h7" href="AGRICULTURE">AGRICULTURE</a></li>
+ *   <li><a class="h7" href="AVIATION">AVIATION</a></li>
+ *   <li><a class="h7" href="2R">2R</a></li>
+ * </ul>
+ * bse.resList.init();
+ * @param {Object} config - Config object
+ * @param {string} config.breakPoint - BreakPoint
+ * @param {string} config.className - calss name that you want to add to select
+ */
 export function init(config) {
   getJquery().then(($) => {
     convertListToDropdown(config);
