@@ -1,3 +1,11 @@
+/**
+ * Attach object to window without overwriting anything else.
+ * @example
+ * bse.utilities.addToWindow('bse', bse);
+ * @param {string} keyValue - Keyword that you want use to get the object from window.
+ * @param {Object} element - Dom element that you want to add to window.
+ * @return {Promise<Object, MyError>} Promise object.
+ */
 export default function addToWindow(keyValue, element) {
   return new Promise((resolve, reject) => {
     // console.log(window[keyValue]);
