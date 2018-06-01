@@ -87,6 +87,15 @@ function displayResTableHeading(parentEle, displayMessage) {
                   ? &apos;Scroll table horizontally to see more.&apos;
                   : displayMessage
               }&lt;/p&gt;`).insertBefore($(tableWrapperElement));
+            } else if (
+              tableWrapperWidth !== 0 &amp;&amp;
+              tableWidth !== 0 &amp;&amp;
+              tableWidth &lt;= tableWrapperWidth &amp;&amp;
+              isMessageExist
+            ) {
+              $(tableWrapperElement)
+                .siblings(&apos;.table-responsive-heading&apos;)[0]
+                .remove();
             }
           });
         });

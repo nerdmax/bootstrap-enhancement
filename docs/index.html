@@ -52,7 +52,86 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content">
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="bootstrap-enhancement">bootstrap-enhancement</h1><p><a href="https://www.npmjs.com/package/bootstrap-enhancement"><img src="https://img.shields.io/npm/v/bootstrap-enhancement.svg?style=flat-square" alt="NPM Version"></a>
+<a href="https://www.npmjs.com/package/bootstrap-enhancement"><img src="https://img.shields.io/npm/l/bootstrap-enhancement.svg" alt="License Stats"></a>
+<a href="https://www.npmjs.com/package/bootstrap-enhancement"><img src="https://img.shields.io/npm/dm/bootstrap-enhancement.svg?style=flat-square" alt="Downloads Stats"></a>
+<a href="https://github.com/nerdmax/bootstrap-enhancement"><img src="https://img.shields.io/github/stars/nerdmax/bootstrap-enhancement.svg" alt="Github stars"></a>
+<a href="https://github.com/nerdmax/bootstrap-enhancement/issues"><img src="https://img.shields.io/github/issues/nerdmax/bootstrap-enhancement.svg" alt="Github issues"></a>
+<!-- [![Build Status][travis-image]][travis-url] --></p>
+<blockquote>
+<p>Bar chart annotation for Chart.js</p>
+</blockquote>
+<p><a href="https://www.npmjs.com/package/bootstrap-enhancement"><img src="https://nodei.co/npm/bootstrap-enhancement.png?downloads=true&amp;downloadRank=true&amp;stars=true" alt="nodei.co"></a></p>
+<h2 id="installation">Installation</h2><pre><code class="lang-sh"><code class="source-code prettyprint">npm install bootstrap-enhancement --save</code>
+</code></pre>
+<p>Or</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">&lt;script src=&quot;https://unpkg.com/bootstrap-enhancement&quot;&gt;&lt;/script&gt;</code>
+</code></pre>
+<h2 id="usage-example">Usage example</h2><pre><code class="lang-sh"><code class="source-code prettyprint">const testEle = document.getElementById(&apos;testDom&apos;);
+bse.utilities.prependClass(testEle, &apos;text-success&apos;);</code>
+</code></pre>
+<p><img src="https://rawgit.com/nerdmax/bootstrap-enhancement/master/samples/utilities/prependClass.gif" alt=""></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">bse.utilities.getJquery().then((jQueryFromWindow) =&gt; {
+  console.log(jQueryFromWindow);
+});</code>
+</code></pre>
+<p><img src="https://rawgit.com/nerdmax/bootstrap-enhancement/master/samples/utilities/getJquery.gif" alt=""></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">alert(bse.utilities.hasScrollBar());</code>
+</code></pre>
+<p><img src="https://rawgit.com/nerdmax/bootstrap-enhancement/master/samples/utilities/hasScrollBar.gif" alt=""></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">console.log(bse.utilities.getScrollBarWidth());</code>
+</code></pre>
+<p><img src="https://rawgit.com/nerdmax/bootstrap-enhancement/master/samples/utilities/getScrollBarWidth.gif" alt=""></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">bse.utilities.addStyles(`
+  .test{color: red}
+`);</code>
+</code></pre>
+<p><img src="https://rawgit.com/nerdmax/bootstrap-enhancement/master/samples/utilities/addStyles.gif" alt=""></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">$(&apos;#checkSize&apos;).on(&apos;click&apos;, () =&gt; {
+  console.log(bse.utilities.checkBreakPoint.checkSize());
+});
+$(&apos;#is&apos;).on(&apos;click&apos;, () =&gt; {
+  console.log(bse.utilities.checkBreakPoint.is(&apos;&gt;md&apos;));
+});</code>
+</code></pre>
+<p><img src="https://rawgit.com/nerdmax/bootstrap-enhancement/master/samples/utilities/checkBreakPoint.gif" alt=""></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">bse.utilities.addToWindow(&apos;test&apos;, { name: &apos;testObject&apos; });</code>
+</code></pre>
+<p><img src="https://rawgit.com/nerdmax/bootstrap-enhancement/master/samples/utilities/addToWindow.gif" alt=""></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">$(&apos;#addScrollMessToResTableInit&apos;).on(&apos;click&apos;, () =&gt; {
+  bse.addScrollMessToResTable.init();
+});
+$(&apos;#addScrollMessToResTableUpdate&apos;).on(&apos;click&apos;, () =&gt; {
+  bse.addScrollMessToResTable.update();
+});</code>
+</code></pre>
+<p><img src="https://rawgit.com/nerdmax/bootstrap-enhancement/master/samples/addScrollMessToResTable.gif" alt=""></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">$(&apos;#scrollToTopInit&apos;).on(&apos;click&apos;, () =&gt; {
+  bse.scrollToTop.init(&apos;&lt;p class=&quot;text-danger&quot;&gt;SCROLL TO TOP&lt;/p&gt;&apos;);
+});</code>
+</code></pre>
+<p><img src="https://rawgit.com/nerdmax/bootstrap-enhancement/master/samples/scrollToTop.gif" alt=""></p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">$(&apos;#resListInit&apos;).on(&apos;click&apos;, () =&gt; {
+  bse.resList.init();
+});</code>
+</code></pre>
+<p><img src="https://rawgit.com/nerdmax/bootstrap-enhancement/master/samples/resList.gif" alt=""></p>
+<p><em>For more examples and usage, please refer to the <a href="https://nerdmax.github.io/bootstrap-enhancement/">Documentation</a>.</em></p>
+<h2 id="development-setup">Development setup</h2><pre><code class="lang-sh"><code class="source-code prettyprint">git clone git@github.com:nerdmax/bootstrap-enhancement.git
+cd bootstrap-enhancement
+npm install</code>
+</code></pre>
+<h2 id="release-history">Release History</h2><h2 id="meta">Meta</h2><p>Max LIU &#x2013; <a href="#">My personal website</a> &#x2013; <a href="mailto:mrliucan@foxmail.com">mrliucan@foxmail.com</a></p>
+<h2 id="contributing">Contributing</h2><ol>
+<li>Fork it (<a href="https://github.com/nerdmax/bootstrap-enhancement/fork">https://github.com/nerdmax/bootstrap-enhancement/fork</a>)</li>
+<li>Create your feature branch (<code>git checkout -b feature/fooBar</code>)</li>
+<li>Commit your changes (<code>git commit -am &apos;Add some fooBar&apos;</code>)</li>
+<li>Push to the branch (<code>git push origin feature/fooBar</code>)</li>
+<li>Create a new Pull Request</li>
+</ol>
+<p><!-- Markdown link & img dfn's -->
+</p>
+</div>
 </div>
 
 <footer class="footer">
