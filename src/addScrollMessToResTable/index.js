@@ -32,6 +32,15 @@ function displayResTableHeading(parentEle, displayMessage) {
                   ? 'Scroll table horizontally to see more.'
                   : displayMessage
               }</p>`).insertBefore($(tableWrapperElement));
+            } else if (
+              tableWrapperWidth !== 0 &&
+              tableWidth !== 0 &&
+              tableWidth <= tableWrapperWidth &&
+              isMessageExist
+            ) {
+              $(tableWrapperElement)
+                .siblings('.table-responsive-heading')[0]
+                .remove();
             }
           });
         });
