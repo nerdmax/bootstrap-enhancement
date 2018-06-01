@@ -4,47 +4,69 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Test</title>
+  <title>Bootstrap Enhancement Samples</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
   <script src="bundle.js"></script>
-  <script src="test.js"></script>
   <!-- <script src="./bootstrap-enhancement.js"></script> -->
 </head>
 
 <body>
-  <div class="table-responsive">
-    <table class="table">
-      <caption>List of users</caption>
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="conatainer">
+    <div class="list-group">
+      <a href="/utilities" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Utilities Test</h5>
+          <small>8 Tests</small>
+        </div>
+        <p class="mb-1">Utilityies related to bootstrap</p>
+      </a>
+
+      <a href="/addScrollMessToResTable.html" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">addScrollMessToResTable Test</h5>
+          <small>2 Tests</small>
+        </div>
+        <p class="mb-1">Add a message when the table in .table-responsive is scrollable.</p>
+      </a>
+
+      <a href="/fixModalShifting.html" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">fixModalShifting Test</h5>
+          <small>1 Tests</small>
+        </div>
+        <p class="mb-1">Fix bootstrap modal's shifting issue.</p>
+      </a>
+
+      <a href="/toggleCollapseChevron.html" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">toggleCollapseChevron Test (Haven't done)</h5>
+          <small>1 Tests</small>
+        </div>
+        <p class="mb-1">Automatically toggle bootstrap collapse's chevron based on show or hide collapse.</p>
+      </a>
+
+      <a href="/scrollToTop.html" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">scrollToTop Test</h5>
+          <small>1 Tests</small>
+        </div>
+        <p class="mb-1">Add scroll to top anchor on the right bottom of the whole page.</p>
+      </a>
+
+      <a href="/resList.html" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">resList Test</h5>
+          <small>1 Tests</small>
+        </div>
+        <p class="mb-1">Convert a ul li menu to a select options element and display it on small device.</p>
+      </a>
+    </div>
   </div>
 </body>
 
