@@ -2,34 +2,38 @@ import bse from '../dist/bootstrap-enhancement';
 
 const { $ } = window;
 
-console.log($);
-console.log(bse);
+// console.log($);
+// console.log(bse);
 
 $(() => {
   if (document.title === 'Bootstrap Enhancement Samples - utilities - prependClass') {
     console.log(bse.utilities.prependClass);
-    const testEle = document.getElementById('testDom');
-    bse.utilities.prependClass(testEle, 'text-success');
+    $('#prependClass').on('click', () => {
+      const testEle = document.getElementById('testDom');
+      bse.utilities.prependClass(testEle, 'text-success');
+    });
   }
 
   if (document.title === 'Bootstrap Enhancement Samples - utilities - getJquery') {
     console.log(bse.utilities.getJquery);
-    bse.utilities.getJquery().then((jQueryFromWindow) => {
-      console.log(jQueryFromWindow);
+    $('#getJquery').on('click', () => {
+      bse.utilities.getJquery().then((jQueryFromWindow) => {
+        console.log(jQueryFromWindow);
+      });
     });
   }
 
   if (document.title === 'Bootstrap Enhancement Samples - utilities - hasScrollBar') {
     console.log(bse.utilities.hasScrollBar);
     $('#checkScrollBar').on('click', () => {
-      alert(bse.utilities.hasScrollBar());
+      console.log(bse.utilities.hasScrollBar());
     });
   }
 
   if (document.title === 'Bootstrap Enhancement Samples - utilities - getScrollBarWidth') {
     console.log(bse.utilities.getScrollBarWidth);
     $('#getScrollBar').on('click', () => {
-      alert(bse.utilities.getScrollBarWidth());
+      console.log(bse.utilities.getScrollBarWidth());
     });
   }
 
@@ -87,12 +91,12 @@ $(() => {
 
   if (document.title === 'Bootstrap Enhancement Samples - scrollToTop') {
     console.log(bse.scrollToTop);
-    // $('#scrollToTopInit').on('click', () => {
+    $('#scrollToTopInit').on('click', () => {
+      bse.scrollToTop.init('<p class="text-danger">SCROLL TO TOP</p>');
+    });
+    // $(() => {
     //   bse.scrollToTop.init('TESTSETTSE');
     // });
-    $(() => {
-      bse.scrollToTop.init('TESTSETTSE');
-    });
   }
 
   if (document.title === 'Bootstrap Enhancement Samples - resList') {
