@@ -114,9 +114,13 @@ cd bootstrap-enhancement
 npm install
 ```
 
+## Report Issues
+Please create the issues sample here: https://plnkr.co/edit/RtNBbVd3bwG3ZHzfdxMw
+This plunker contains everything you need for bootstrap-enhancement including jQuery, bootstrap, bootstrap-enhancement
+After creating the sample, click top left Fork button and copy the link and attach it to the issue page.
+
+
 ## Release History
-
-
 
 ## Meta
 
